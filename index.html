@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SIGN SYMBOL SOUND</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="./favicon-16x16.png" />
+    <link rel="icon" href="./favicon-32x32.png" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Place favicon.ico in the root directory Extra comments-->
+
+    <!--link rel="stylesheet" href="css/normalize.css"-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gifplayer.css" />
+    <style>
+      body {
+        font-family: "Arial bold", sans-serif;
+        background-color: #f1ede2;
+        transition: 1.25s;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .overlay {
+        height: 60%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 30;
+        left: 30;
+        background-color: (#f1ede2);
+        background-color: (1, 1, 1, 0.9);
+        overflow-x: hidden;
+        transition: 1.2s;
+      }
+
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      .overlay a {
+        padding: 16px;
+        text-decoration: none;
+        font-size: 24px;
+        color: #000000;
+        display: block;
+        transition: 1.5s;
+      }
+
+      .overlay a:hover,
+      .overlay a:focus {
+        transition: 1.2s;
+        font-size: 30px;
+        color: #abc7dd;
+      }
+
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 40px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .overlay a {
+          font-size: 20px;
+        }
+        .overlay .closebtn {
+          font-size: 40px;
+          top: 0px;
+          right: 35px;
+        }
+      }
+    </style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+    <!--MENU NAVIGATION START-->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="overlay-content">
+        <a href="./index.html">Home</a>
+        <a href="./artist1.html">Artist 1</a>
+        <a href="./artist2.html">Artist 2</a>
+        <a href="https://tommilnes.com/">Contact</a>
+      </div>
+    </div>
+
+    <span
+      style="font-size: 50px; margin: 20px; cursor: pointer"
+      onclick="openNav()"
+      >&#9776;</span
+    >
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "20%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
+    <!--END OF NAV MENU-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
+      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/jquery.tagcanvas.min.js"></script>
+    <script type="text/javascript"></script>
+
+    <!--h1>Tom's Test Page</h1-->
+
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!--script>
+      
+      canvas.src = '/js/jquery.tagcanvas.min.js';
+      canvas.onload = function() { TagCanvas.Start('myCanvas','myCanvasContainer'); }
+      document.documentElement.firstChild.appendChild(canvas);
+      </script-->
+
+    <div id="myCanvasContainer">
+      <canvas width="1000" height="100%" id="myCanvas">
+        <ul>
+          <li>
+            <a href="#"
+              >1<img
+                src="./img/tags/LillianTranborg.png"
+                width="266"
+                height="266"
+            /></a>
+          </li>
+          <li>
+            <a href="http://www.google.com" target="_blank"
+              >2<img
+                src="./img/tags/NiseMcCulloch.png"
+                width="200"
+                height="266"
+            /></a>
+          </li>
+          <li>
+            <a href="/fetter"
+              >3<img
+                src="./img/tags/BarryMartynski.png"
+                width="200"
+                height="200"
+            /></a>
+          </li>
+          <li>
+            <a href="/deshna"
+              >4<img src="./img/tags/DeshnaShah.png" width="200" height="336"
+            /></a>
+          </li>
+          <li>
+            <a href="/about"
+              >5<img
+                src="./img/tags/MAO_SSS_hero banner.png"
+                width="300"
+                height="300"
+            /></a>
+          </li>
+          <li>
+            <a href="/about"
+              >6<img
+                src="./img/tags/MAO_SSS blue helix.png"
+                width="300"
+                height="250"
+            /></a>
+          </li>
+          <li>
+            <a href="/about"
+              >7<img
+                src="./img/tags/MAO_SSS yellow diamond.png"
+                width="300"
+                height="250"
+            /></a>
+          </li>
+          <li>
+            <a href="/etain"
+              >8<img
+                src="./img/tags/EtainOCarroll.png"
+                width="250"
+                height="336"
+            /></a>
+          </li>
+          <li>
+            <a href="/isis"
+              >9<img
+                src="./img/tags/IsisAmelieHjorth.png"
+                width="200"
+                height="266"
+            /></a>
+          </li>
+          <li>
+            <a href="/peter"
+              >10<img src="./img/tags/PeterVance.png" width="266" height="200"
+            /></a>
+          </li>
+          <li>
+            <a href="/sarah"
+              >11<img src="./img/tags/EmmaCJ.png" width="200" height="266"
+            /></a>
+          </li>
+          <li>
+            <a href="/sarah"
+              >12<img
+                src="./img/tags/IzzyTreyvaud.png"
+                width="200"
+                height="200"
+            /></a>
+          </li>
+          <li>
+            <a href="/sarah"
+              >13<img
+                src="./img/tags/SueChamberlain.png"
+                width="266"
+                height="200"
+            /></a>
+          </li>
+          <li>
+            <a href="/sarah"
+              >14<img
+                src="./img/tags/SarahRadice2.png"
+                width="200"
+                height="200"
+            /></a>
+          </li>
+        </ul>
+      </canvas>
+    </div>
+
+    <script type="text/javascript">
+      onload = (function () {
+        var canvas = document.getElementById("myCanvas"),
+          context = canvas.getContext("2d");
+        // set canvas dimensions on page load
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // resize the canvas to fill browser window dynamically
+        window.addEventListener("resize", ()=> {
+          resizeCanvas()
+          window.location.reload()
+        }, false);
+
+        function resizeCanvas() {
+          /**
+           * Your drawings need to be inside this function otherwise they will be reset when
+           * you resize the browser window and the canvas goes will be cleared.
+           */
+          drawStuff();
+        }
+        resizeCanvas();
+
+        function drawStuff() {
+          try {
+            $("#myCanvas").tagcanvas({
+              textColour: "#000000",
+              outlineMethod: "none",
+              maxSpeed: 0.02,
+              depth: 0.75,
+              zoomStep: 0,
+              wheelZoom: true,
+              zoom: 1.2,
+              clickToFront: false,
+              noSelect: false,
+              dragControl: true,
+              //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
+              initial: [-0.1, 0.02],
+              frontSelect: true,
+              centreImage: "./img/MAO_SSS red logo300.png",
+              offsetX: -100,
+            });
+          } catch (e) {
+            // something went wrong, hide the canvas container
+            document.getElementById("myCanvasContainer").style.display = "none";
+          }
+
+          // Save the state, so we can undo the clipping
+          // context.save();
+
+          //Create a shape, of some sort
+          //context.beginPath();
+          //context.moveTo(10, 10);
+          //context.lineTo(100, 30);
+          //context.lineTo(180, 10);
+          //context.lineTo(200, 60);
+          //context.arcTo(180, 70, 120, 0, 10);
+          //context.lineTo(200, 180);
+          //context.lineTo(100, 150);
+          //context.lineTo(70, 180);
+          //context.lineTo(20, 130);
+          //context.lineTo(50, 70);
+          //context.closePath();
+          //context.fillStyle = "#a0a0a0";
+          //context.fillRect(0, 0, canvas.width, canvas.height);
+          // Clip to the current path
+          //context.clip();
+        }
+      })();
+
+      $(document).ready(function () {
+        let img = $("img"),
+          src = img.attr("src"),
+          altSrc = img.attr("data-alt-src");
+
+        img.css({
+          width: img.width(),
+          height: img.height(),
+          display: "block",
+          background: "url(" + src + ")",
+          transition: "all 0.6s ease-in-out",
+        });
+
+        img
+          .mouseenter(() => {
+            img.css({
+              background: "url(" + altSrc + ")",
+            });
+          })
+          .mouseleave(() => {
+            img.css({
+              background: "url(" + src + ")",
+            });
+          });
+      });
+
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
