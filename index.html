@@ -15,11 +15,22 @@
     <!--link rel="stylesheet" href="css/normalize.css"-->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/gifplayer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="./Coves Light.otf" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    
+
+
+
     <style>
+     
+      
       body {
-        font-family: "Arial bold", sans-serif;
+        
         background-color: #f1ede2;
-        transition: 1.25s;
+        transition: 1.0s;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -29,7 +40,26 @@
         height: 100%;
         margin: 0;
       }
-
+      @font-face {
+    font-family: 'Coves Light';
+    src: url("Coves Light.otf") format("opentype");
+}
+      #first {
+        
+        font-family: 'Paytone One', sans-serif;
+        
+      }
+      #second { 
+        
+        font-family: 'Coves Light', sans-serif !important;
+        font-weight: lighter;
+        
+      }
+      #third {
+        
+        font-family: 'Space Mono';
+        font-stretch:extra-condensed;
+      }
       .overlay {
         height: 60%;
         width: 0;
@@ -40,10 +70,11 @@
         background-color: (#f1ede2);
         background-color: (1, 1, 1, 0.9);
         overflow-x: hidden;
-        transition: 1.2s;
+        transition: 1.0s;
       }
 
       .overlay-content {
+        
         position: relative;
         top: 25%;
         width: 100%;
@@ -54,15 +85,15 @@
       .overlay a {
         padding: 16px;
         text-decoration: none;
-        font-size: 24px;
-        color: #000000;
+        font-size: 30px;
+        color: #f14632;
         display: block;
-        transition: 1.5s;
+        transition: 1.0s;
       }
 
       .overlay a:hover,
       .overlay a:focus {
-        transition: 1.2s;
+        transition: 1.0s;
         font-size: 30px;
         color: #abc7dd;
       }
@@ -71,15 +102,15 @@
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 40px;
+        font-size: 30px;
       }
 
       @media screen and (max-height: 450px) {
         .overlay a {
-          font-size: 20px;
+          font-size: 15px;
         }
         .overlay .closebtn {
-          font-size: 40px;
+          font-size: 30px;
           top: 0px;
           right: 35px;
         }
@@ -93,10 +124,10 @@
         >&times;</a
       >
       <div class="overlay-content">
-        <a href="./index.html">Home</a>
-        <a href="./artist1.html">Artist 1</a>
-        <a href="./artist2.html">Artist 2</a>
-        <a href="https://tommilnes.com/">Contact</a>
+        <a id="first" href="./index.html">Sign</a>
+        <a id="first" href="./artist1.html">Symbol</a>
+        <a id="first" href="./artist2.html">Sound</a>
+        <a id="first" href="https://tommilnes.com/">Contact</a>
       </div>
     </div>
 
@@ -287,14 +318,14 @@
               depth: 0.75,
               zoomStep: 0,
               wheelZoom: true,
-              zoom: 1.1,
+              zoom: 1.0,
               clickToFront: false,
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
               initial: [-0.1, 0.02],
               frontSelect: true,
-              centreImage: "./img/MAO_SSS red logo300.png",
+              centreImage: "img/SignSymbolSound_logo copy.png",
               offsetX: -100,
             });
           } catch (e) {
