@@ -15,22 +15,22 @@
     <!--link rel="stylesheet" href="css/normalize.css"-->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/gifplayer.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <link href="./Coves Light.otf" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./Coves Light.otf" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-     
-      
       body {
-        
         background-color: #f1ede2;
-        transition: 1.0s;
+        transition: 1s;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -41,25 +41,21 @@
         margin: 0;
       }
       @font-face {
-    font-family: 'Coves Light';
-    src: url("Coves Light.otf") format("opentype");
-}
-      #first {
-        
-        font-family: 'Paytone One', sans-serif;
-        
+        font-family: "Coves Light";
+        src: url("Coves Light.otf") format("opentype");
       }
-      #second { 
-        
-        font-family: 'Coves Light', sans-serif !important;
+      #first {
+        font-family: "Paytone One", sans-serif;
+      }
+      #second {
+        font-family: "Coves Light", sans-serif !important;
         font-weight: lighter;
-        
       }
       #third {
-        
-        font-family: 'Space Mono';
-        font-stretch:extra-condensed;
+        font-family: "Space Mono";
+        font-stretch: extra-condensed;
       }
+
       .overlay {
         height: 60%;
         width: 0;
@@ -70,13 +66,11 @@
         background-color: (#f1ede2);
         background-color: (1, 1, 1, 0.9);
         overflow-x: hidden;
-        transition: 1.0s;
+        transition: 1s;
       }
 
       .overlay-content {
-        
         position: relative;
-        top: 25%;
         width: 100%;
         text-align: left;
         margin-top: 30px;
@@ -88,12 +82,12 @@
         font-size: 30px;
         color: #f14632;
         display: block;
-        transition: 1.0s;
+        transition: 1s;
       }
 
       .overlay a:hover,
       .overlay a:focus {
-        transition: 1.0s;
+        transition: 1s;
         font-size: 30px;
         color: #abc7dd;
       }
@@ -105,7 +99,25 @@
         font-size: 30px;
       }
 
-      @media screen and (max-height: 450px) {
+      .openbtn {
+        position: absolute;
+        font-size: 40px;
+        margin: 20px;
+        cursor: pointer"
+      }
+      
+      .closebtn {
+        color: #f14632;
+      }
+
+
+      /* Style overrides for Mobile views */
+      @media screen and (max-width: 768px) {
+        /* Scale down images, width = 130px, height= automatic */
+        img {
+          width: 130px;
+          height: auto;
+        }
         .overlay a {
           font-size: 15px;
         }
@@ -114,15 +126,42 @@
           top: 0px;
           right: 35px;
         }
+
+        canvas {
+          z-index: -1; /* Make canvas be under overlay */
+          left: 0; /* reset the browser left propery, set to 70px */
+
+        }
+
+        .overlay {
+          z-index: 1000; /* overlay should always be above canvas see above */
+          height: 0;
+          width: 100%;
+          position: fixed;
+          z-index: 1;
+          background-color: inherit;
+          /*         background-color: (1, 1, 1, 0.9);
+       */
+          overflow-x: hidden;
+          transition: 1.2s;
+        }
+      }
+
+      .overlay a {
+        font-size: 40px;
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 0px;
+        right: 35px;
       }
     </style>
   </head>
   <body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
     <!--MENU NAVIGATION START-->
     <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+      <span class="closebtn" onclick="closeNav(event)">&times;</span>
       <div class="overlay-content">
         <a id="first" href="./index.html">Sign</a>
         <a id="first" href="./artist1.html">Symbol</a>
@@ -136,28 +175,6 @@
       onclick="openNav()"
       >&#9776;</span
     >
-
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "20%";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-    </script>
-    <!--END OF NAV MENU-->
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.0.min.js"
-      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="js/plugins.js"></script>
-
-    <script src="js/jquery.tagcanvas.min.js"></script>
-    <script type="text/javascript"></script>
 
     <!--h1>Tom's Test Page</h1-->
 
@@ -176,117 +193,138 @@
       document.documentElement.firstChild.appendChild(canvas);
       </script-->
 
-    <div id="myCanvasContainer">
-      <canvas width="1000" height="100%" id="myCanvas">
-        <ul>
-          <li>
-            <a href="#"
-              >1<img
-                src="./img/tags/LillianTranborg.png"
-                width="150"
-                height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="http://www.google.com" target="_blank"
-              >2<img
-                src="./img/tags/NiseMcCulloch.png"
-                width="150"
-                height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="/fetter"
-              >3<img
-                src="./img/tags/BarryMartynski.png"
-                width="150"
-                height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="/deshna"
-              >4<img src="./img/tags/DeshnaShah.png" width="150" height="166"
-            /></a>
-          </li>
-          <li>
-            <a href="/about"
-              >5<img
-                src="./img/tags/MAO_SSS_hero banner.png"
-                width="150"
-                height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="/about"
-              >6<img
-                src="./img/tags/MAO_SSS blue helix.png"
-                width="200"
-                height="166"
-            /></a>
-          </li>
-          <li>
-            <a href="/about"
-              >7<img
-                src="./img/tags/MAO_SSS yellow diamond.png"
-                width="200"
-                height="166"
-            /></a>
-          </li>
-          <li>
-            <a href="/etain"
-              >8<img
-                src="./img/tags/EtainOCarroll.png"
-                width="200"
-                height="300"
-            /></a>
-          </li>
-          <li>
-            <a href="/isis"
-              >9<img
-                src="./img/tags/IsisAmelieHjorth.png"
-                width="150"
-                height="233"
-            /></a>
-          </li>
-          <li>
-            <a href="/peter"
-              >10<img src="./img/tags/PeterVance.png" width="200" height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="/sarah"
-              >11<img src="./img/tags/EmmaCJ.png" width="150" height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="/sarah"
-              >12<img
-                src="./img/tags/IzzyTreyvaud.png"
-                width="150"
-                height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="/sarah"
-              >13<img
-                src="./img/tags/SueChamberlain.png"
-                width="200"
-                height="150"
-            /></a>
-          </li>
-          <li>
-            <a href="/sarah"
-              >14<img
-                src="./img/tags/SarahRadice2.png"
-                width="150"
-                height="150"
-            /></a>
-          </li>
-        </ul>
-      </canvas>
-    </div>
+<div id="myCanvasContainer">
+  <canvas id="myCanvas">
+    <ul>
+      <li>
+        <a href="#"
+          >1<img
+            src="./img/tags/LillianTranborg.png"
+            width="150"
+            height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="http://www.google.com" target="_blank"
+          >2<img src="./img/tags/NiseMcCulloch.png" width="150" height="200"
+        /></a>
+      </li>
+      <li>
+        <a href="/fetter"
+          >3<img src="./img/tags/BarryMartynski.png" width="150" height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="/deshna"
+          >4<img src="./img/tags/DeshnaShah.png" width="150" height="166"
+        /></a>
+      </li>
+      <li>
+        <a href="/about"
+          >5<img
+            src="./img/tags/MAO_SSS_hero banner.png"
+            width="150"
+            height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="/about"
+          >6<img
+            src="./img/tags/MAO_SSS blue helix.png"
+            width="200"
+            height="166"
+        /></a>
+      </li>
+      <li>
+        <a href="/about"
+          >7<img
+            src="./img/tags/MAO_SSS yellow diamond.png"
+            width="200"
+            height="166"
+        /></a>
+      </li>
+      <li>
+        <a href="/etain"
+          >8<img src="./img/tags/EtainOCarroll.png" width="200" height="300"
+        /></a>
+      </li>
+      <li>
+        <a href="/isis"
+          >9<img
+            src="./img/tags/IsisAmelieHjorth.png"
+            width="150"
+            height="233"
+        /></a>
+      </li>
+      <li>
+        <a href="/peter"
+          >10<img src="./img/tags/PeterVance.png" width="200" height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="/sarah"
+          >11<img src="./img/tags/EmmaCJ.png" width="150" height="200"
+        /></a>
+      </li>
+      <li>
+        <a href="/sarah"
+          >12<img src="./img/tags/IzzyTreyvaud.png" width="150" height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="/sarah"
+          >13<img
+            src="./img/tags/SueChamberlain.png"
+            width="200"
+            height="150"
+        /></a>
+      </li>
+      <li>
+        <a href="/sarah"
+          >14<img src="./img/tags/SarahRadice2.png" width="150" height="150"
+        /></a>
+      </li>
+    </ul>
+  </canvas>
+
+
+</div>
+      <script
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
+      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/jquery.tagcanvas.min.js"></script>
+    <script type="text/javascript"></script>
 
     <script type="text/javascript">
+    var mobileViewWidth = 768;
+
+      var isMobile =
+        Math.min(window.screen.width, window.screen.height) < mobileViewWidth ||
+        navigator.userAgent.indexOf("Mobi") > -1;
+      
+
+      function openNav() {
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "50%";
+        } else {
+          document.getElementById("myNav").style.width = "25%";
+        }
+      }
+
+      function closeNav(event) {
+        event.preventDefault();
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "0%";
+        } else {
+          document.getElementById("myNav").style.width = "0%";
+        }
+      }
+
       onload = (function () {
         var canvas = document.getElementById("myCanvas"),
           context = canvas.getContext("2d");
@@ -295,10 +333,14 @@
         canvas.height = window.innerHeight;
 
         // resize the canvas to fill browser window dynamically
-        window.addEventListener("resize", ()=> {
-          resizeCanvas()
-          window.location.reload()
-        }, false);
+        window.addEventListener(
+          "resize",
+          () => {
+            resizeCanvas();
+            window.location.reload();
+          },
+          false
+        );
 
         function resizeCanvas() {
           /**
