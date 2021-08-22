@@ -140,7 +140,7 @@
 
         /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
       #myCanvasContainer {
-        height: 100vh;
+        height: 150vh;
         object-fit: contain;
       }
 
@@ -387,7 +387,7 @@
             Set {offsetX} option in tagCanvas. 0px for mobile and -100px for desktop
           */
           function setOffsetX() {
-            const offsetX = isMobile ? 0 : -100;
+            const offsetX = isMobile ? 50 : -100;
             return offsetX;
           }
 
