@@ -444,7 +444,7 @@
             return stretch;
           }
           function setImageScale() {
-            const imageScale = isMobile ? 0.7 : 1.0;
+            const imageScale = isMobile ? 0.7 : 0.9;
             return imageScale;
           }
 
@@ -473,6 +473,7 @@
               maxBrightness: 1.5,
               shuffleTags: true,
               imageScale: setImageScale(),
+              
             },'tags');
           } catch (e) {
             console.log(e);
