@@ -29,7 +29,11 @@
 
     <style>
       body {
+        background-image: url("img/Lye\ Valley\ areas\ of\ wildlife\ interest\ drawn\ JW2\ copy.jpg");
         background-color: #f1ede2;
+        background-size: 100%, ;
+        background-repeat: no-repeat;
+        background-position-x: center;
         transition: 1s;
         width: 100%;
         height: 100%;
@@ -44,6 +48,11 @@
         font-family: "Coves Light";
         src: url("Coves Light.otf") format("opentype");
       }
+      @font-face {
+        font-family: "Coves-Bold";
+        src: url("Coves-Bold.ttf.woff") format("opentype");
+        font-weight: bold;
+      }
       #first {
         font-family: "Paytone One", sans-serif;
       }
@@ -51,8 +60,11 @@
         font-family: "Coves Light", sans-serif !important;
         font-weight: lighter;
       }
+      #secondb {
+          font-family: "Coves-Bold", sans-serif;
+      }
       #third {
-        font-family: "Space Mono";
+        font-family: "Space Mono", monospace;
         font-stretch: extra-condensed;
       }
 
@@ -73,7 +85,7 @@
         position: relative;
         width: 100%;
         text-align: left;
-        margin-top: 30px;
+        margin-top: 75px;
       }
 
       .overlay a {
@@ -101,7 +113,7 @@
 
       .openbtn {
         position: absolute;
-        font-size: 40px;
+        font-size: 30px;
         margin: 20px;
         cursor: pointer"
       }
@@ -114,6 +126,12 @@
       /* Style overrides for Mobile views. This comes last on the styles always. If maximum device width is 812px, apply the styles*/
       @media screen and (max-width: 812px) {
         /* Scale down images by half the sizes*/
+        body {
+          background-image: url("img/Lye\ Valley\ areas\ of\ wildlife\ interest\ drawn\ JW2.jpg");
+        background-size: 100%, ;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        }
         img {
           -moz-transform:scale(0.5, 0.5);
           -webkit-transform:scale(0.5, 0.5);
@@ -129,29 +147,29 @@
         }
 
         .overlay {
-          z-index: 100;
+          z-index: 00;
           height: 0%;
           width: 100%;
           position: fixed;
           background-color: inherit; /* Take background color from body tag */
           overflow-x: hidden;
-          transition: 1.2s;
+          transition: 1s;
         }
 
         /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
       #myCanvasContainer {
-        height: 50vh;
+        height: 40vh;
         object-fit: contain;
       }
 
       canvas {
-        top: 50px; /* Nudge the canvas up a little bit */
-        left: 40px;
+        top: 40px; /* Nudge the canvas up a little bit */
+        left: 0px;
       }
       }
 
       .overlay a {
-        font-size: 40px;
+        font-size: 30px;
       }
 
       .overlay .closebtn {
@@ -168,15 +186,14 @@
     <div id="myNav" class="overlay">
       <span class="closebtn" onclick="closeNav()">&times;</span>
       <div class="overlay-content">
-        <a id="first" href="./index.html">Sign</a>
-        <a id="first" href="./artist1.html">Symbol</a>
-        <a id="first" href="./artist2.html">Sound</a>
-        <a id="first" href="https://tommilnes.com/">Contact</a>
+        <a id="secondb" href="./index.html">Home</a>
+        <a id="secondb" href="./about.html">About</a>
+        <!--a id="secondb" href="./contact.html">Contact</a-->
       </div>
     </div>
 
     <span
-      style="font-size: 45px; margin-top: 29px; cursor: pointer"
+      style=" color: #f14636; font-size: 45px; margin-top: 29px; cursor: pointer"
       onclick="openNav()"
       >&#9776;</span
     >
@@ -200,111 +217,119 @@
 
     <div id="myCanvasContainer">
       <canvas id="myCanvas">
+        <div id="tags">
         <ul>
           <li>
-            <a href="#"
+            <a href="/petervance.html"
               >1<img
-                src="./img/tags/LillianTranborg.png"
-                width="150"
-                height="150"
+                src="./img/tags/Peter Vance title.png"
+                width="185"
+                height="185"
             /></a>
           </li>
           <li>
             <a href="http://www.google.com" target="_blank"
               >2<img
-                src="./img/tags/NiseMcCulloch.png"
-                width="150"
+                src="./img/tags/Sarah title.png"
+                width="200"
                 height="200"
             /></a>
           </li>
           <li>
-            <a href="/fetter"
+            <a href="#"
               >3<img
-                src="./img/tags/BarryMartynski.png"
-                width="100"
-                height="100"
+              src="./img/tags/Sue Chamberlin title.png"
+              width="185"
+              height="185"
             /></a>
           </li>
           <li>
             <a href="/deshna"
-              >4<img src="./img/tags/DeshnaShah.png" width="150" height="166"
+              >4<img src="./img/tags/Xiaoyi Deng title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
-            <a href="/about"
+            <a href="/about.html"
               >5<img
-                src="./img/tags/MAO_SSS_hero banner.png"
-                width="100"
-                height="100"
+              src="./img/tags/Angus title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
-            <a href="/about"
+            <a href="/about.html"
               >6<img
-                src="./img/tags/MAO_SSS blue helix.png"
-                width="200"
-                height="166"
+              src="./img/tags/Barry title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
-            <a href="/about"
+            <a href="/about.html"
               >7<img
-                src="./img/tags/MAO_SSS yellow diamond.png"
-                width="200"
-                height="166"
+              src="./img/tags/Deshna title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/etain"
               >8<img
-                src="./img/tags/EtainOCarroll.png"
-                width="150"
-                height="250"
+              src="./img/tags/Emma Coleman-Jones title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/isis"
               >9<img
-                src="./img/tags/IsisAmelieHjorth.png"
-                width="150"
-                height="233"
+              src="./img/tags/Etain title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/peter"
-              >10<img src="./img/tags/PeterVance.png" width="200" height="150"
+              >10<img src="./img/tags/Helen Ganly title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/sarah"
-              >11<img src="./img/tags/EmmaCJ.png" width="100" height="150"
+              >11<img src="./img/tags/Isis title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/sarah"
               >12<img
-                src="./img/tags/IzzyTreyvaud.png"
-                width="150"
-                height="150"
+              src="./img/tags/Izzy title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/sarah"
               >13<img
-                src="./img/tags/SueChamberlain.png"
-                width="200"
-                height="150"
+              src="./img/tags/Laura title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
           <li>
             <a href="/sarah"
               >14<img
-                src="./img/tags/SarahRadice2.png"
-                width="150"
-                height="150"
+              src="./img/tags/Lillian title.png"
+              width="200"
+              height="200"
             /></a>
           </li>
         </ul>
+      </div>
       </canvas>
     </div>
     <script
@@ -331,7 +356,7 @@
           console.log("mobile just clicked!");
           document.getElementById("myNav").style.height = "50%";
         } else {
-          document.getElementById("myNav").style.width = "25%";
+          document.getElementById("myNav").style.width = "20%";
         }
       }
 
@@ -377,7 +402,7 @@
           Set {centerImage} option for cloud. returns image locations for mobile or desktopView
           */
           function setCenterImgUrl() {
-            let mobileUrl = "img/mobile.png",
+            let mobileUrl = "img/SignSymbolSound_logo 100.png",
               desktopUrl = "img/SignSymbolSound_logo copy.png";
             const imgUrl = isMobile ? mobileUrl : desktopUrl;
             return imgUrl;
@@ -387,7 +412,7 @@
             Set {offsetX} option in tagCanvas. 0px for mobile and -100px for desktop
           */
           function setOffsetX() {
-            const offsetX = isMobile ? 0 : -100;
+            const offsetX = isMobile ? -10 : -100;
             return offsetX;
           }
 
@@ -395,36 +420,61 @@
           Set the {depth} of cloud in tagCanvas options. O.3 for mobile and 0.75 for desktop views
           */
           function setDepth() {
-            const depth = isMobile ? 0.6 : 0.75;
+            const depth = isMobile ? 0 : 0;
             return depth;
+          }
+          function setShape() {
+            let mobileShape = "hcylinder",
+              desktopShape = "vcylinder";
+            const shape = isMobile ? mobileShape : desktopShape;
+            return shape;
+          }
+          function setZoom() {
+            const zoom = isMobile ? 1.0 : 1.0;
+            return zoom;
+          }
+          function setStretchX() {
+            const stretch = isMobile ? 0.9 : 1.3;
+            return stretch;
+          }
+          function setStretchY() {
+            const stretch = isMobile ? 1.5 : 1.0;
+            return stretch;
           }
 
           try {
             $("#myCanvas").tagcanvas({
+              shape: setShape(),
+              lock: 'x',
               textColour: "#000000",
               outlineMethod: "none",
               maxSpeed: 0.02,
               depth: setDepth(),
               zoomStep: 0,
               wheelZoom: true,
-              zoom: 1.0,
+              zoom: setZoom(),
               clickToFront: false,
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
-              initial: [-0.1, 0.02],
-              frontSelect: true,
-              centreImage: setCenterImgUrl(),
+              initial: [0.009, -0.01, 1],
+              frontSelect: false,
+              //centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
-            });
+              stretchX: setStretchX(),
+              stretchY: setStretchY(),
+              minBrightness: 0.2,
+              maxBrightness: 1.5,
+              shuffleTags: true,
+            },'tags');
           } catch (e) {
             console.log(e);
             // something went wrong, hide the canvas container
             document.getElementById("myCanvasContainer").style.display = "none";
           }
 
-          // Save the state, so we can undo the clipping
-          // context.save();
+           //Save the state, so we can undo the clipping
+           //context.save();
 
           //Create a shape, of some sort
           //context.beginPath();
@@ -440,7 +490,7 @@
           //context.lineTo(50, 70);
           //context.closePath();
           //context.fillStyle = "#a0a0a0";
-          //context.fillRect(0, 0, canvas.width, canvas.height);
+         // context.fillRect(0, 0, canvas.width, canvas.height);
           // Clip to the current path
           //context.clip();
         }
