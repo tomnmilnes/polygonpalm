@@ -31,9 +31,9 @@
       body {
         background-image: url("img/Lye\ Valley\ areas\ of\ wildlife\ interest\ drawn\ JW2\ copy.jpg");
         background-color: #f1ede2;
-        background-size: 100%, ;
+        background-size: 60% ;
         background-repeat: no-repeat;
-        background-position-x: center;
+        background-position-x: 40%;
         transition: 1s;
         width: 100%;
         height: 100%;
@@ -85,11 +85,11 @@
         position: relative;
         width: 100%;
         text-align: left;
-        margin-top: 75px;
+        margin-top: 120px;
       }
 
       .overlay a {
-        padding: 16px;
+        padding: 25px;
         text-decoration: none;
         font-size: 30px;
         color: #f14632;
@@ -107,14 +107,14 @@
       .overlay .closebtn {
         position: absolute;
         top: 20px;
-        right: 45px;
+        right: 40px;
         font-size: 30px;
       }
 
       .openbtn {
         position: absolute;
         font-size: 30px;
-        margin: 20px;
+        margin: 30px;
         cursor: pointer"
       }
 
@@ -127,10 +127,12 @@
       @media screen and (max-width: 812px) {
         /* Scale down images by half the sizes*/
         body {
-          background-image: url("img/Lye\ Valley\ areas\ of\ wildlife\ interest\ drawn\ JW2.jpg");
-        background-size: 100%, ;
+          background-image: url("img/Lye\ Valley\ areas\ of\ wildlife\ interest\ drawn\ JW2\ copy.jpg");
+          background-color: #f1ede2;
+        background-size:170%;
         background-repeat: no-repeat;
         background-position-x: center;
+        background-position-y: 50%;
         }
         img {
           -moz-transform:scale(0.5, 0.5);
@@ -356,7 +358,7 @@
           console.log("mobile just clicked!");
           document.getElementById("myNav").style.height = "50%";
         } else {
-          document.getElementById("myNav").style.width = "20%";
+          document.getElementById("myNav").style.width = "15%";
         }
       }
 
@@ -412,7 +414,7 @@
             Set {offsetX} option in tagCanvas. 0px for mobile and -100px for desktop
           */
           function setOffsetX() {
-            const offsetX = isMobile ? -10 : -100;
+            const offsetX = isMobile ? 0 : -100;
             return offsetX;
           }
 
@@ -438,8 +440,12 @@
             return stretch;
           }
           function setStretchY() {
-            const stretch = isMobile ? 1.5 : 1.0;
+            const stretch = isMobile ? 1.8 : 1.0;
             return stretch;
+          }
+          function setImageScale() {
+            const imageScale = isMobile ? 0.7 : 1.0;
+            return imageScale;
           }
 
           try {
@@ -457,15 +463,16 @@
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
-              initial: [0.009, -0.01, 1],
+              initial: [0.01, -0.015, 1],
               frontSelect: false,
               //centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
               stretchX: setStretchX(),
               stretchY: setStretchY(),
-              minBrightness: 0.2,
+              minBrightness: 0.6,
               maxBrightness: 1.5,
               shuffleTags: true,
+              imageScale: setImageScale(),
             },'tags');
           } catch (e) {
             console.log(e);
