@@ -322,7 +322,7 @@ h2 {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" >
-    <span style="font-size: 80px; color: #f14636; text-align: left ; margin: 20px;" id="secondb">About<!--p>SIGN</p> <p>SYMBOL</p> <p>SOUND</p></p--><!--img src="img/SignSymbolSound_logo copy.png"/></img-->
+    <span style="font-size: 80px; color: #f14636; text-align: left ; margin: 0px;" id="secondb">About<!--p>SIGN</p> <p>SYMBOL</p> <p>SOUND</p></p--><img src="img/SignSymbolSound_logo copy.png" height="200px" style=" display: block; margin-top: 0px; margin-left: auto;margin-right: auto;"/> </img-->
         </span>
   </div>
 </div>
@@ -373,19 +373,54 @@ h2 {
     <div id="second" class="w3-content w3-container">
         <h3><p id="secondb"> The Lye Valley</strong></p></h3>
       
-        <p>Taking place online from 4 September – 11 October 2021, Modern Art Oxford and Oxford Brookes University present <em>Sign Symbol Sound</em>, a collaborative art exhibition co-created by Modern Art Oxford volunteers. Celebrating works by people from across Oxfordshire, the exhibition asks us to celebrate and question where our language comes from, and how we can better communicate with one another and our environment.</p>   
-          
-        <p>Featured works in <em>Sign Symbol Sound</em> were selected from a county-wide call-out for images, sounds, text and objects that reflect individual experiences of language and creativity.</p>
-         
-          <p>Selected artists in <em>Sign Symbol Sound</em> are:</p> <p id="secondb"> Sue Chamberlin, Emma Coleman-Jones, Xiaoyi Deng, Helen Ganly, Isis Amelie Hjorth, Angus Irvine, Barry Martynski, Denise McCulloch, Etain O’Carroll, Sarah Radice, Deshna Shah, Laura Smith, Lillian Tranborg, Izzy Treyvaud and Peter Vance.</p>
-          <p><em>Sign Symbol Sound</em> is co-curated by:</p> <p id="secondb">Martina Bani, Keren Gorea, Alice Hackney, Selena Lyons, Andres Nava H, Kashmira Patel, Hamideh Rimaz, Allesandra Vistintin, Kasia Ziniak, with Creative Associate, Laura Purseglove.</p>
-          <p id="secondb"><em>Sign Symbol Sound</em> is a collaboration between Oxford Brookes University and Modern Art Oxford.</p>
-        
-      
-        
+        <p>The Lye Brook was once the centre of a large boggy area known by various names including 'Hogley Bog' and ‘Bullingdon Bog. It is a very rare environment:  a wet area, fed by lime-rich springs along the valley walls, making it technically a 'calcareous fen'. It is home to many unusual plants that are adapted to this environment, including the marsh helleborine, an orchid which flourishes here, and grass of Parnassus, a very rare species in this part of the UK. It is also abundant in wild-life: unusual insects including the brown hairstreak butterfly and glow-worms, birds such as the reed warbler, reptiles (grass snakes, slow-worms and lizards) and of course foxes, badgers, and occasional deer. The importance of this area has led to the designation of two Sites of Special Scientific Interest, the North and South Fens, which are protected by national legislation.
+        </p><p>
+          For centuries this was common land used for grazing animals, which kept grass and reeds short, allowing the flowers to flourish. But over the last century, the valley has changed: large estates have grown up around it, trees have colonized it, and the vegetation has changed. Now there is a major threat to its continued existence because of hydrological issues. The fen is wetted by natural springs, but the catchment area for these springs, once open country, is now very much built up – and threatened by further development. In addition, water run-off from the surrounding area, instead of percolating gently into the ground, is now captured in large drains and fed into the brook. When there is heavy rain, the brook becomes a raging torrent, and the bed and the walls are being eroded. This increased flow is threatening the fenland.  As the brook sinks lower between its banks, water drains off the fen, leading to a gradual drying out of the fens.</p>
+          (Written by Friends of Lye Valley)
       </div>
 </div>
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <div>
+  <h3 id="secondb" class="w3-left w3-container">Maps of the Lye Valley</h3><br>
+  
+  <!--p id="second" class="w3-left w3-container"></p-->
+  <br>
+  <br>
+  <p id="second" class="w3-left w3-container"> Click on the images to make them bigger</p><br>
+  <div style="margin-top: 0px;"><br><p> </p></div>
+  <br>
+  </div>
+  <div ></div>
 
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div  class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="img/Vision area sketch SSSI  green outline colour.jpeg.jpeg (1).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Vision area sketch SSSI. (Courtesy of Dr Judith A Webb BEM)">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/Lye Valley areas of wildlife interest drawn JW2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Lye Valley areas of wildlife interest drawn. (Courtesy of Dr Judith A Webb BEM)">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img//Peat area in Vision for Valley.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Peat area in Vision for Valley. (Courtesy of Dr Judith A Webb BEM)">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/Lye valley footpaths and accessV2.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Lye valley footpaths and access. (Courtesy of Dr Judith A Webb BEM)">
+    </div>
+  </div>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image" style="max-height: 640px;">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+  
+</div>
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
