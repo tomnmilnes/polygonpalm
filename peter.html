@@ -131,6 +131,14 @@
           -webkit-transform:scale(0.5, 0.5);
           transform:scale(0.9, 0.9);
         }
+        iframe {
+          min-height: 100%;
+          min-width: 100%;
+          width: 400px;
+          height: 266px;
+          left: 0;
+          transform: translate(-2%, -50%);
+        }
         
         .overlay a {
           font-size: 15px;
@@ -288,7 +296,7 @@ h2 {
 <div id="myNav" class="overlay">
   <span class="closebtn" onclick="closeNav()">&times;</span>
   <div class="overlay-content">
-    <a id="secondb" href="./index.html">Home</a>
+    <a id="secondb" href="./index.html">Exhibition</a>
     <a id="secondb" href="./about.html">About</a>
     
   </div>
@@ -330,9 +338,12 @@ h2 {
 <!--BODY OF PAGE-->
 <!---->
 <!-- First Parallax Image with Logo Text -->
+<!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span style="font-size: 80px;  text-align: left ; margin: 20px;" id="span1">Peter Vance<!--p>SIGN</p> <p>SYMBOL</p> <p>SOUND</p></p--><!--img src="img/SignSymbolSound_logo copy.png"/></img-->
+  <div id="divspan" class="w3-display-middle" style="white-space:nowrap;">
+    <span id="span1" class="w3-hide-small">Peter Vance
+    </span>
+    <span id="span1" class="w3-hide-large w3-hide-medium">Peter<br>Vance
     </span>
   </div>
 </div>
@@ -397,12 +408,16 @@ h2 {
     I wanted Units of Sound to be very simple to understand. It shows how it works and what is happening. I don’t want to use technology in obscure ways, I’m interested in using very simple technology rather than a “magic box”, like phones or computers. In this way the viewer can really be part of the process and concoct their own meanings.</p>
   <p id="secondb" class="w3-left w3-container"> How does the work relate to the Lye Valley site?</p><br>
   <p id="second" class="w3-left w3-container"> I first discovered the beautiful escape of the Lye Valley during lockdown. Places like the Lye Valley force you to find creative solutions, a call for experimenting that I was very happy to respond to. In a sense, the wilderness and practical limitations of the Lye Valley resonate with my practice deeply. I’ve always had the innate desire to find ways to turn one thing into another, setting things in motion to see what happens. In other words: to play. I think there’s value in finding new ways to represent something. For instance, I’ve now recreated Units of Sound cyanotypes in jesmonite, a sturdier material for outdoor exhibiting. I would have never engaged in that creative process if it wasn’t for the Lye Valley!</p><br>
+  <div class="w3-center w3-content">
+    <iframe style="margin-top: 50px; margin-bottom: 50px;"
+    width="930" height="523"  src="https://www.youtube.com/embed/OanGmZZ7lxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
   <p id="secondb" class="w3-left w3-container"> Click on the images to make them bigger</p><br>
   <div style="margin-top: 20px;"><br><p> </p></div>
   <br>
-  <div style="padding: 40px;"></div>
+  <div "></div>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div style="padding: 15px;" class="w3-row-padding w3-center">
+  <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <img src="img/peter/FY4A2541.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Units of Sound">
     </div>
