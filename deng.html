@@ -129,6 +129,15 @@
           -webkit-transform:scale(0.5, 0.5);
           transform:scale(0.9, 0.9);
         }
+        iframe {
+          min-height: 100%;
+          min-width: 100%;
+          width: 400px;
+          height: 266px;
+          left: 0;
+          transform: translate(-2%, -50%);
+          
+        }
         
         .overlay a {
           font-size: 15px;
@@ -382,39 +391,42 @@ h2 {
   <p id="secondb" class="w3-left w3-container">How does the work relate to the Lye Valley site?</p><br>
   <p id="second" class="w3-left w3-container">With the outside environment of the Lye Valley and through this maze, I would like to highlight not just verbal and non-verbal communication among cox and rowers but also non-human actors in rowing, including weather, water, the infrastructure and material items. The installation as a whole is porous and made up of hard items as well as soft and vulnerable strings. Strings’ movement are suggestive of weather conditions (sun, wind, and rain), which refers to the interruptions communication in and across boats are subjected to.</p><br>
   <!-- Trial audio player-->
-<div style=" margin: 50px; padding: 20px;"class="w3-left w3-container">
-  <audio id="myAudio" controls autoplay>
+  <div style=" margin-top: 50px; ;"class="w3-left w3-container">
+    <audio id="myAudio" controls autoplay>
+      
+      <source src="media/cox recording.mp3" type="audio/mpeg" >
+      Your browser does not support the audio element.
+    </audio>
     
-    <source src="media/cox recording.mp3" type="audio/mpeg" >
-    Your browser does not support the audio element.
-  </audio>
-  
-  
-  
-  <!--button onclick="myFunction()">Try it</button-->
-  
-  <p id="demo" style="font-family: Coves;">Cox recording by Xiaoyi Deng</p>
-  <style>
-    #demo {
-      width: max-content;
+    
+    
+    <!--button onclick="myFunction()">Try it</button-->
+    
+    <p id="demo" style="font-family: Coves; margin-bottom: 100px;">Cox recording by Xiaoyi Deng</p>
+    <style>
+      #demo {
+        width: max-content;
+      }
+      #myAudio {
+        width: 350px;
+      }
+      audio::internal-media-controls-download-button { 
+      display:none; 
+      } 
+    </style>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myAudio").duration;
+      document.getElementById("demo").innerHTML = x;
     }
-    #myAudio {
-      width: 200%;
-    }
-    audio::internal-media-controls-download-button { 
-    display:none; 
-    } 
-  </style>
-  
-  <script>
-  function myFunction() {
-    var x = document.getElementById("myAudio").duration;
-    document.getElementById("demo").innerHTML = x;
-  }
-  </script>
-</div>
+    </script>
+    <!--END AUDIO PLAYER-->
+  </div>
+  <div class="w3-center w3-container">
+    <iframe width="930" height="523" src="https://www.youtube.com/embed/itAzjbrpavM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
-  <!--END AUDIO PLAYER-->
  <div></div>
   <div class="w3-left w3-container" style="margin-top: 20px;"><br><p> </p></div>
   <br>
