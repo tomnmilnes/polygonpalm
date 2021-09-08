@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet"/>
 <link href="./Coves Light.otf" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 <!--Menu style-->
 <style>
   body {
@@ -43,12 +44,12 @@
         font-family: "Paytone One", sans-serif;
       }
       #second {
-        font-family: "Coves Light", sans-serif !important;
-        font-weight: lighter;
+        font-family: 'Open Sans', sans-serif;
       }
     
       #secondb {
-          font-family: "Coves-Bold", sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
       }
       #third {
         font-family: "Space Mono", monospace;
@@ -88,6 +89,7 @@
       .overlay a {
         padding: 16px;
         text-decoration: none;
+        font-family: 'Coves-bold'!important;
         font-size: 30px;
         color: #f14632;
         display: block;
@@ -339,8 +341,7 @@ h2 {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div id="divspan" class="w3-display-middle" style="white-space:nowrap;">
-    <span id="span1" class="w3-hide-small">Xiaoyi Deng
-    </span>
+    <span id="span1" class="w3-hide-small">Xiaoyi Deng   </span>
     <span id="span1" class="w3-hide-large w3-hide-medium">Xiaoyi<br>Deng
     </span>
   </div>
@@ -359,7 +360,11 @@ h2 {
   
   
 </div>
-<div id="second" class="w3-content w3-container">
+<div id="second" class="w3-row w3-content">
+  <div class="w3-col m6 w3-center w3-padding-large">
+    <p>
+    <img src="img/xioayi/FY4A2981.jpg" class="w3-round w3-image" alt="Xiaoyi Deng" width="1000" height="666">
+  </div>
       <p id="secondb">Please can you describe your initial idea for the work?</p><p>
 
         England is a foreign country to me, and I have certainly experienced a new sense of what language means through using a second language. While rowing I have found the signs and sounds involved in the sport; repetitive, rhythmic and highly routinised. I explored this in my work through repetitions in materials. Through a maze of materials I reflect the complex stimuli of symbols and sounds that rowers experience. The colours, knots, and patterns of strings signify the intensity and disruptions within sound transferal and the importance of effective communication. 
@@ -392,13 +397,14 @@ h2 {
   <p id="secondb" class="w3-left w3-container">How does the work relate to the Lye Valley site?</p><br>
   <p id="second" class="w3-left w3-container">With the outside environment of the Lye Valley and through this maze, I would like to highlight not just verbal and non-verbal communication among cox and rowers but also non-human actors in rowing, including weather, water, the infrastructure and material items. The installation as a whole is porous and made up of hard items as well as soft and vulnerable strings. Strings’ movement are suggestive of weather conditions (sun, wind, and rain), which refers to the interruptions in communication that boats are subjected to.</p><br>
   <!-- Trial audio player-->
-  <div style=" margin-top: 50px; ;"class="w3-left w3-container">
-    <p id="demo" style="font-family: Coves; margin-bottom: 100px;">Cox recording by Xiaoyi Deng</p>
-    <audio id="myAudio" controls>
-      
+  <div style=" margin-top: 50px; ;" class="w3-left w3-container">
+    <audio style="margin-bottom: 100px;"
+    id="myAudio" controls>
       <source src="media/cox recording.mp3" type="audio/mpeg" >
       Your browser does not support the audio element.
     </audio>
+    <p class="w3-left w3-container" id="demo" style="font-family: Coves; margin-bottom: 100px;">Cox recording by Xiaoyi Deng</p>
+    
     
     
     
