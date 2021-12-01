@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>SIGN SYMBOL SOUND</title>
+    <title>Polygon Palm 🌴✋</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" href="./favicon-16x16.png" />
-    <link rel="icon" href="./favicon-32x32.png" />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Place favicon.ico in the root directory Extra comments-->
 
     <!--link rel="stylesheet" href="css/normalize.css"-->
@@ -20,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
       rel="stylesheet"
     />
-    <link href="./Coves Light.otf" rel="stylesheet" type="text/css" />
+    <link href="VCR_OSD_MONO_1.001.ttf" rel="stylesheet" type="font" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
@@ -28,8 +29,8 @@
 
     <style>
       body {
-        background-image: url("img/Lye\ faded.jpg");
-        background-color: #f1ede2;
+        /*background-image: url("img/palm tree 8bit.png");*/
+        background-color: #000000;
         background-size: contain ;
         background-repeat: no-repeat;
         background-position-x: 40%;
@@ -47,26 +48,44 @@
       }
       
       @font-face {
-        font-family: "Coves Light";
-        src: url("Coves Light.otf") format("opentype");
+        font-family: "VCR_OSD_MONO";
+        src: url("VCR_OSD_MONO_1.001.ttf") format("opentype");
       }
-      @font-face {
-        font-family: "Coves-Bold";
-        src: url("Coves-Bold.ttf.woff") format("opentype");
-        font-weight: bold;
+      
+      #polygon {
+        position: fixed;
+        height: 90%; 
+        left: 2%; 
+        top: 5%; 
+        color: #ffffff;
+         font-family: 'VCR_OSD_MONO';
+          font-size: 100px;
+          animation: throb 3s linear infinite;
       }
+      #patio {
+        position: fixed;
+        height: 90%; 
+        left: 6%; 
+        top: 15%; 
+        color: #ffffff;
+         font-family: 'VCR_OSD_MONO';
+          font-size: 100px;
+          animation: throb 3s reverse infinite ;
+          
+      }
+      
       #first {
-        font-family: "Paytone One", sans-serif;
+        font-family: "VCR_OSD_MONO";
       }
       #second {
-        font-family: "Coves Light", sans-serif !important;
+        font-family: "VCR_OSD_MONO";
         font-weight: lighter;
       }
       #secondb {
-          font-family: "Coves-Bold", sans-serif;
+        font-family: "VCR_OSD_MONO";
       }
       #third {
-        font-family: "Space Mono", monospace;
+        font-family: "VCR_OSD_MONO";
         font-stretch: extra-condensed;
       }
       
@@ -74,11 +93,11 @@
         height: 60%;
         width: 0;
         position: fixed;
-        z-index: 1;
+        z-index: 00;
         top: 30;
-        left: 30;
-        background-color: (#f1ede2);
-        background-color: (1, 1, 1, 0.9);
+        right: 30;
+        background-color: (#000000);
+        /*background-color: (1, 1, 1, 0.9);*/
         overflow-x: hidden;
         transition: 1s;
       }
@@ -86,15 +105,15 @@
       .overlay-content {
         position: relative;
         width: 100%;
-        text-align: left;
+        text-align: right;
         margin-top: 75px;
       }
 
       .overlay a {
-        padding: 25px;
+        padding: 20px;
         text-decoration: none;
         font-size: 30px;
-        color: #f14632;
+        color: #ffffff;
         display: block;
         transition: 1s;
       }
@@ -103,13 +122,13 @@
       .overlay a:focus {
         transition: 1s;
         font-size: 30px;
-        color: #abc7dd;
+        color: #3dee5a;
       }
 
       .overlay .closebtn {
         position: absolute;
         top: 20px;
-        right: 40px;
+        right: 0px;
         font-size: 30px;
         
       }
@@ -122,17 +141,36 @@
       }
 
       .closebtn {
-        color: #f14632;
+        color: #ffffff;
         cursor: pointer;
       }
-
+      @keyframes throb {
+        0%{ opacity: 100%}
+        40%{ opacity: 50%}
+        99%{ opacity: 100%}
+      }
+      @keyframes glitch{
+  2%,64%{ transform: translate(0,2px) skew(0deg);}
+  4%,60%{transform: translate(0,-2px) skew(0deg);}
+  62%{transform: translate(0,0) skew(0.3deg);}
+}
+@keyframes glitchTop{
+  2%,64%{transform: translate(2px,-2px);}
+  4%,60%{transform: translate(-2px,2px);}
+  62%{transform: translate(13px,-1px) skew(-3deg); }
+}
+@keyframes glitchBotom{
+  2%,64%{transform: translate(-2px,0);}
+  4%,60%{transform: translate(-2px,0);}
+  62%{transform: translate(-22px,5px) skew(21deg);}
+}
 
       /* Style overrides for Mobile views. This comes last on the styles always. If maximum device width is 812px, apply the styles*/
       @media screen and (max-width: 812px) {
         /* Scale down images by half the sizes*/
         body {
-          background-image: url("img/Lye\ faded.jpg");
-          background-color: #f1ede2;
+          /*background-image: url("img/Lye\ faded.jpg");*/
+          background-color: #000000;
         background-size:160%;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -162,6 +200,29 @@
           overflow-x: hidden;
           transition: 1s;
         }
+        #polygon {
+        position: absolute;
+        height: 80%; 
+        left: 2%; 
+        top: 2%; 
+        color: #ffffff;
+         font-family: 'VCR_OSD_MONO';
+          font-size: 75px;
+          animation: throb 2s linear infinite;
+      }
+      #patio {
+        position: absolute;
+        height: 90%; 
+        left: 85%; 
+        top: 10%; 
+        color: #ffffff;
+         font-family: 'VCR_OSD_MONO';
+          font-size: 75px;
+          animation: throb 2s reverse infinite;
+          
+      }
+      
+      
 
         /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
       #myCanvasContainer {
@@ -171,10 +232,10 @@
 
       canvas {
         top: 40px; /* Nudge the canvas up a little bit */
-        left: 0px;
+        left: 0;
         cursor: crosshair;
       }
-      }
+    }
      
 
       .overlay a {
@@ -196,17 +257,18 @@
     <div id="myNav" class="overlay">
       <span class="closebtn" onclick="closeNav()">&times;</span>
       <div class="overlay-content">
-        <a id="secondb" href="./index.html">Exhibition</a>
+        <a id="secondb" href="./index.html">Polygon</a>
         <a id="secondb" href="./about.html">About</a>
         <!--a id="secondb" href="./contact.html">Contact</a-->
       </div>
     </div>
 
     <span
-      style=" color: #f14636; font-size: 45px; margin-top: 29px; cursor: pointer"
+      style=" position:absolute; left: 97%; color: #ffffff; font-size: 45px; margin-top: 20px; cursor: pointer"
       onclick="openNav()"
       >&#9776;</span
     >
+    
 
     <!--h1>Tom's Test Page</h1-->
 
@@ -224,128 +286,68 @@
       canvas.onload = function() { TagCanvas.Start('myCanvas','myCanvasContainer'); }
       document.documentElement.firstChild.appendChild(canvas);
       </script-->
+   
+      <div>
+        <p id="polygon">P<br>O<br>L<br>Y<br>G<br>O<br>N</p>
+    </div>
+    <div>
+      <p id="patio">P<br>A<br>L<br>M<br></p>
+  </div>
 
     <div id="myCanvasContainer">
       <canvas id="myCanvas">
         <div id="tags">
         <ul>
           <li>
-            <a href="./peter-vance.html"
+            <a href="./palm.html"
               >1<img
-                src="./img/tags/Peter Vance title.png"
-                width="185"
-                height="185"
+                src="img/palmtxt.png"
+                width="175"
+                height="300"
             /></a>
           </li>
           <li>
-            <a href="./sarah-radice.html" 
+            <a href="./palm.html"
+              >1<img
+                src="img/palmtxt.png"
+                width="175"
+                height="300"
+            /></a>
+          </li>
+          <li>
+            <a href="./plaza.html" 
               >2<img
-                src="./img/tags/Sarah title.png"
-                width="200"
-                height="200"
+                src="img/plazatxt.png"
+                width="273"
+                height="217"
             /></a>
           </li>
           <li>
-            <a href="./sue-chamberlin.html"
+            <a href="./plaza.html" 
+              >2<img
+                src="img/plazatxt.png"
+                width="273"
+                height="217"
+            /></a>
+          </li>
+          <li>
+            <a href="./about.html"
               >3<img
-              src="./img/tags/Sue Chamberlin title.png"
-              width="185"
-              height="185"
+              src="img/infotxt.png"
+              width="200"
+              height="260"
             /></a>
           </li>
           <li>
-            <a href="./xiaoyi-deng.html"
-              >4<img src="./img/tags/Xiaoyi Deng title.png"
+            <a href="./about.html"
+              >3<img
+              src="img/infotxt.png"
               width="200"
-              height="200"
+              height="260"
             /></a>
           </li>
-          <li>
-            <a href="./angus-irvine.html"
-              >5<img
-              src="./img/tags/Angus title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./barry-martynski.html"
-              >6<img
-              src="./img/tags/Barry title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./deshna-shah.html"
-              >7<img
-              src="./img/tags/Deshna title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./emma-coleman-jones.html"
-              >8<img
-              src="./img/tags/Emma Coleman-Jones title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./etain-ocarroll.html"
-              >9<img
-              src="./img/tags/Etain title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./helen-ganly.html"
-              >10<img src="./img/tags/Helen Ganly title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./isis-amelie-hjorth.html"
-              >11<img src="./img/tags/Isis title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./izzy-treyvaud.html"
-              >12<img
-              src="./img/tags/Izzy title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./laura-smith.html"
-              >13<img
-              src="./img/tags/Laura title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./lillian-tranborg.html"
-              >14<img
-              src="./img/tags/lillian pin correct.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
-          <li>
-            <a href="./nise-mcculloch.html"
-              >15<img
-              src="./img/tags/Nice title.png"
-              width="200"
-              height="200"
-            /></a>
-          </li>
+          
+          
         </ul>
       </div>
       </canvas>
@@ -374,7 +376,7 @@
           console.log("mobile just clicked!");
           document.getElementById("myNav").style.height = "50%";
         } else {
-          document.getElementById("myNav").style.width = "15%";
+          document.getElementById("myNav").style.width = "25%";
         }
       }
 
@@ -420,8 +422,8 @@
           Set {centerImage} option for cloud. returns image locations for mobile or desktopView
           */
           function setCenterImgUrl() {
-            let mobileUrl = "img/SignSymbolSound_logo 100.png",
-              desktopUrl = "img/SignSymbolSound_logo copy.png";
+            let mobileUrl = "img/palm-centre300.png",
+              desktopUrl = "img/palm-centre500.png";
             const imgUrl = isMobile ? mobileUrl : desktopUrl;
             return imgUrl;
           }
@@ -430,7 +432,7 @@
             Set {offsetX} option in tagCanvas. 0px for mobile and -100px for desktop
           */
           function setOffsetX() {
-            const offsetX = isMobile ? 0 : -100;
+            const offsetX = isMobile ? 0 : 100;
             return offsetX;
           }
 
@@ -438,15 +440,15 @@
           Set the {depth} of cloud in tagCanvas options. O.3 for mobile and 0.75 for desktop views
           */
           function setDepth() {
-            const depth = isMobile ? 0 : 0;
+            const depth = isMobile ? 0.5 : 0.5;
             return depth;
           }
-          function setShape() {
-            let mobileShape = "hcylinder",
-              desktopShape = "vcylinder";
-            const shape = isMobile ? mobileShape : desktopShape;
-            return shape;
-          }
+          // function setShape() {
+          //   let mobileShape = "hcylinder",
+          //     desktopShape = "vcylinder";
+          //   const shape = isMobile ? mobileShape : desktopShape;
+          //   return shape;
+          // }
           function setZoom() {
             const zoom = isMobile ? 1.0 : 1.0;
             return zoom;
@@ -460,17 +462,17 @@
             return stretch;
           }
           function setImageScale() {
-            const imageScale = isMobile ? 0.7 : 0.9;
+            const imageScale = isMobile ? 0.5 : 0.9;
             return imageScale;
           }
 
           try {
             $("#myCanvas").tagcanvas({
-              shape: setShape(),
-              lock: 'x',
+              /*shape: setShape(),*/
+              //lock: 'x',
               textColour: "#000000",
               outlineMethod: "none",
-              maxSpeed: 0.02,
+              maxSpeed: 0.01,
               depth: setDepth(),
               zoomStep: 0,
               wheelZoom: true,
@@ -479,13 +481,13 @@
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
-              initial: [0.01, -0.015, 1],
+              initial: [0.2, 0.01],
               frontSelect: false,
               centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
               stretchX: setStretchX(),
               stretchY: setStretchY(),
-              minBrightness: 1,
+              minBrightness: 0.1,
               maxBrightness: 1.5,
               shuffleTags: true,
               imageScale: setImageScale(),
