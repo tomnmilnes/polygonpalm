@@ -93,9 +93,9 @@
         height: 60%;
         width: 0;
         position: fixed;
-        z-index: 00;
-        top: 30;
-        right: 30;
+        z-index: 1;
+        top: 0;
+        right: 0;
         background-color: (#000000);
         /*background-color: (1, 1, 1, 0.9);*/
         overflow-x: hidden;
@@ -105,8 +105,9 @@
       .overlay-content {
         position: relative;
         width: 100%;
+        /* top: 100px; */
         text-align: right;
-        margin-top: 75px;
+        margin-top: 130px;
       }
 
       .overlay a {
@@ -127,7 +128,7 @@
 
       .overlay .closebtn {
         position: absolute;
-        top: 20px;
+        top: 100px;
         right: 0px;
         font-size: 30px;
         
@@ -244,10 +245,10 @@
 
       .overlay .closebtn {
         font-size: 40px;
-        margin-right: 15px;
-        margin-left: 15px;
+        /* margin-right: 15px;
+        margin-left: 15px; */
         top: 0px;
-        right: 35px;
+        right: 150px;
       }
      
     </style>
@@ -376,7 +377,7 @@
           console.log("mobile just clicked!");
           document.getElementById("myNav").style.height = "50%";
         } else {
-          document.getElementById("myNav").style.width = "25%";
+          document.getElementById("myNav").style.width = "300px";
         }
       }
 
