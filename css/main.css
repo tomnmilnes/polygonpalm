@@ -4,6 +4,9 @@ html {
     padding: 0;
     overflow: hidden;
 }
+a {
+    color: #3dee5a ;
+}
 
 /*
  * Remove text-shadow in selection highlight:
