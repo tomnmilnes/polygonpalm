@@ -13,6 +13,274 @@ html {
  * Customize the background color to match your design.
  */
 
+
+ body {
+    /*background-image: url("img/palm tree 8bit.png");*/
+    background-color: #000000;
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: crosshair;
+    font-family: 'VCR_OSD_MONO' !important;
+  }
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: crosshair;
+  }
+  
+  @font-face {
+    font-family: "VCR_OSD_MONO";
+    src: url("/VCR_OSD_MONO_1.001.ttf") format("opentype");
+  }
+  p {
+    margin-top: 0% !important;
+  }
+
+  h1,h2, h3, h4 {
+      font-family: "VCR_OSD_MONO" !important;
+  }
+  
+  #polygon {
+      z-index: 2;
+      padding: none;
+      margin-top: none !important;
+    position: fixed;
+    height: 80%  ; 
+    left: 2%; 
+    top: 15%; 
+    color: #ffffff;
+     font-family: 'VCR_OSD_MONO';
+      font-size: 100px;
+      animation: throb 3s linear infinite;
+      line-height: 1;
+  }
+  #patio {
+      z-index: 2;
+      padding: none;
+    position: fixed;
+    height: 90%; 
+    left: 6%; 
+    top: 25%; 
+    color: #ffffff;
+     font-family: 'VCR_OSD_MONO';
+      font-size: 100px;
+      animation: throb 3s reverse infinite ;
+      line-height: 1;
+      
+  }
+  
+  #first {
+    font-family: "VCR_OSD_MONO";
+  }
+  #second {
+    font-family: "VCR_OSD_MONO";
+    font-weight: lighter;
+  }
+  #secondb {
+    font-family: "VCR_OSD_MONO";
+  }
+  #third {
+    font-family: "VCR_OSD_MONO";
+    font-stretch: extra-condensed;
+  }
+  
+  .overlay {
+    height: 60%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: (#000000);
+    /*background-color: (1, 1, 1, 0.9);*/
+    overflow-x: hidden;
+    transition: 1s;
+  }
+
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    /* top: 100px; */
+    text-align: right;
+    margin-top: 130px;
+  }
+
+  .overlay a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    display: block;
+    transition: 1s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    transition: 1s;
+    font-size: 30px;
+    color: #3dee5a;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    font-size: 30px;
+    
+  }
+
+  #menu-icon {
+      position:absolute; 
+      left: 97%; 
+      color: #ffffff; 
+      font-size: 45px; 
+      margin-top: 20px; 
+      cursor: pointer"
+  }
+
+  .openbtn {
+    position: absolute;
+    font-size: 30px;
+    margin: 30px;
+    cursor: pointer"
+  }
+
+  .closebtn {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  @keyframes throb {
+    0%{ opacity: 100%}
+    40%{ opacity: 50%}
+    99%{ opacity: 100%}
+  }
+            @keyframes glitch{
+            2%,64%{ transform: translate(0,2px) skew(0deg);}
+            4%,60%{transform: translate(0,-2px) skew(0deg);}
+            62%{transform: translate(0,0) skew(0.3deg);}
+            }
+            @keyframes glitchTop{
+            2%,64%{transform: translate(2px,-2px);}
+            4%,60%{transform: translate(-2px,2px);}
+            62%{transform: translate(13px,-1px) skew(-3deg); }
+            }
+            @keyframes glitchBotom{
+            2%,64%{transform: translate(-2px,0);}
+            4%,60%{transform: translate(-2px,0);}
+            62%{transform: translate(-22px,5px) skew(21deg);}
+            }
+
+/* Style overrides for Mobile views. This comes last on the styles always. If maximum device width is 812px, apply the styles*/
+  @media screen and (max-width: 812px) {
+    /* Scale down images by half the sizes*/
+    body {
+      /*background-image: url("img/Lye\ faded.jpg");*/
+      background-color: #000000;
+    background-size:160%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50%;
+    
+    }
+    img {
+      -moz-transform:scale(0.5, 0.5);
+      -webkit-transform:scale(0.5, 0.5);
+      transform:scale(0.5, 0.5);
+    }
+    .overlay a {
+      font-size: 15px;
+    }
+    .overlay .closebtn {
+      font-size: 30px;
+      top: 0px;
+      left: 5px;
+      
+    }
+
+    .overlay {
+      z-index: 00;
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      background-color: inherit; /* Take background color from body tag */
+      overflow-x: hidden;
+      transition: 1s;
+    }
+
+    .overlay-content {
+        position: relative;
+        width: 100%;
+        /* top: 100px; */
+        text-align: right;
+        margin-top: 75px;
+      }
+
+    #menu-icon {
+        z-index: 2;
+        position:absolute; 
+        left: 90%; 
+        
+        color: #ffffff; 
+        font-size: 45px; 
+        margin-top: 10px; 
+        cursor: pointer"
+    }
+    #polygon {
+    position: absolute;
+    height: 50px; 
+    left: 0%; 
+    top: 5%; 
+    color: #ffffff;
+     font-family: 'VCR_OSD_MONO';
+      font-size: 60px;
+      animation: throb 2s linear infinite;
+  }
+  #patio {
+    position: absolute;
+    height: 20%; 
+    left: 0%; 
+    top: 12%; 
+    color: #ffffff;
+     font-family: 'VCR_OSD_MONO';
+      font-size: 60px;
+      animation: throb 2s reverse infinite;
+      
+  }
+  
+  
+
+    /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
+  #myCanvasContainer {
+    height: 40vh;
+    object-fit: contain;
+  }
+
+  canvas {
+    top: 40px; /* Nudge the canvas up a little bit */
+    left: 0;
+    cursor: crosshair;
+  }
+}
+ 
+
+  .overlay a {
+    font-size: 30px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    /* margin-right: 15px;
+    margin-left: 15px; */
+    top: 0px;
+    right: 150px;
+  }
+
 ::-moz-selection {
     
     text-shadow: none;

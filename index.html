@@ -15,7 +15,7 @@
 
     <!--link rel="stylesheet" href="css/normalize.css"-->
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/gifplayer.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
@@ -28,230 +28,12 @@
     />
 
     <style>
-      body {
-        /*background-image: url("img/palm tree 8bit.png");*/
-        background-color: #000000;
-        background-size: contain ;
-        background-repeat: no-repeat;
-        background-position-x: 40%;
-        transition: 1s;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        cursor: crosshair;
+      p {
+        margin-top: 0% !important;
       }
-      html {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        cursor: crosshair;
-      }
-      
-      @font-face {
-        font-family: "VCR_OSD_MONO";
-        src: url("VCR_OSD_MONO_1.001.ttf") format("opentype");
-      }
-      
-      #polygon {
-        position: fixed;
-        height: 90%; 
-        left: 2%; 
-        top: 5%; 
-        color: #ffffff;
-         font-family: 'VCR_OSD_MONO';
-          font-size: 100px;
-          animation: throb 3s linear infinite;
-      }
-      #patio {
-        position: fixed;
-        height: 90%; 
-        left: 6%; 
-        top: 15%; 
-        color: #ffffff;
-         font-family: 'VCR_OSD_MONO';
-          font-size: 100px;
-          animation: throb 3s reverse infinite ;
-          
-      }
-      
-      #first {
-        font-family: "VCR_OSD_MONO";
-      }
-      #second {
-        font-family: "VCR_OSD_MONO";
-        font-weight: lighter;
-      }
-      #secondb {
-        font-family: "VCR_OSD_MONO";
-      }
-      #third {
-        font-family: "VCR_OSD_MONO";
-        font-stretch: extra-condensed;
-      }
-      
-      .overlay {
-        height: 60%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: (#000000);
-        /*background-color: (1, 1, 1, 0.9);*/
-        overflow-x: hidden;
-        transition: 1s;
-      }
+     </style>
 
-      .overlay-content {
-        position: relative;
-        width: 100%;
-        /* top: 100px; */
-        text-align: right;
-        margin-top: 130px;
-      }
 
-      .overlay a {
-        padding: 20px;
-        text-decoration: none;
-        font-size: 30px;
-        color: #ffffff;
-        display: block;
-        transition: 1s;
-      }
-
-      .overlay a:hover,
-      .overlay a:focus {
-        transition: 1s;
-        font-size: 30px;
-        color: #3dee5a;
-      }
-
-      .overlay .closebtn {
-        position: absolute;
-        top: 100px;
-        right: 0px;
-        font-size: 30px;
-        
-      }
-
-      .openbtn {
-        position: absolute;
-        font-size: 30px;
-        margin: 30px;
-        cursor: pointer"
-      }
-
-      .closebtn {
-        color: #ffffff;
-        cursor: pointer;
-      }
-      @keyframes throb {
-        0%{ opacity: 100%}
-        40%{ opacity: 50%}
-        99%{ opacity: 100%}
-      }
-      @keyframes glitch{
-  2%,64%{ transform: translate(0,2px) skew(0deg);}
-  4%,60%{transform: translate(0,-2px) skew(0deg);}
-  62%{transform: translate(0,0) skew(0.3deg);}
-}
-@keyframes glitchTop{
-  2%,64%{transform: translate(2px,-2px);}
-  4%,60%{transform: translate(-2px,2px);}
-  62%{transform: translate(13px,-1px) skew(-3deg); }
-}
-@keyframes glitchBotom{
-  2%,64%{transform: translate(-2px,0);}
-  4%,60%{transform: translate(-2px,0);}
-  62%{transform: translate(-22px,5px) skew(21deg);}
-}
-
-      /* Style overrides for Mobile views. This comes last on the styles always. If maximum device width is 812px, apply the styles*/
-      @media screen and (max-width: 812px) {
-        /* Scale down images by half the sizes*/
-        body {
-          /*background-image: url("img/Lye\ faded.jpg");*/
-          background-color: #000000;
-        background-size:160%;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 50%;
-        }
-        img {
-          -moz-transform:scale(0.5, 0.5);
-          -webkit-transform:scale(0.5, 0.5);
-          transform:scale(0.5, 0.5);
-        }
-        .overlay a {
-          font-size: 15px;
-        }
-        .overlay .closebtn {
-          font-size: 30px;
-          top: 0px;
-          right: 35px;
-          
-        }
-
-        .overlay {
-          z-index: 00;
-          height: 0%;
-          width: 100%;
-          position: fixed;
-          background-color: inherit; /* Take background color from body tag */
-          overflow-x: hidden;
-          transition: 1s;
-        }
-        #polygon {
-        position: absolute;
-        height: 80%; 
-        left: 2%; 
-        top: 2%; 
-        color: #ffffff;
-         font-family: 'VCR_OSD_MONO';
-          font-size: 75px;
-          animation: throb 2s linear infinite;
-      }
-      #patio {
-        position: absolute;
-        height: 90%; 
-        left: 85%; 
-        top: 10%; 
-        color: #ffffff;
-         font-family: 'VCR_OSD_MONO';
-          font-size: 75px;
-          animation: throb 2s reverse infinite;
-          
-      }
-      
-      
-
-        /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
-      #myCanvasContainer {
-        height: 40vh;
-        object-fit: contain;
-      }
-
-      canvas {
-        top: 40px; /* Nudge the canvas up a little bit */
-        left: 0;
-        cursor: crosshair;
-      }
-    }
-     
-
-      .overlay a {
-        font-size: 30px;
-      }
-
-      .overlay .closebtn {
-        font-size: 40px;
-        /* margin-right: 15px;
-        margin-left: 15px; */
-        top: 0px;
-        right: 150px;
-      }
-     
-    </style>
   </head>
   <body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
     <!--MENU NAVIGATION START-->
@@ -264,8 +46,8 @@
       </div>
     </div>
 
-    <span
-      style=" position:absolute; left: 97%; color: #ffffff; font-size: 45px; margin-top: 20px; cursor: pointer"
+    <span id="menu-icon"
+      
       onclick="openNav()"
       >&#9776;</span
     >
@@ -288,12 +70,19 @@
       document.documentElement.firstChild.appendChild(canvas);
       </script-->
    
-      <div>
+      <div class="w3-hide-small">
         <p id="polygon">P<br>O<br>L<br>Y<br>G<br>O<br>N</p>
     </div>
-    <div>
+    <div class="w3-hide-small">
       <p id="patio">P<br>A<br>L<br>M<br></p>
   </div>
+
+  <div class="w3-hide-large">
+    <p id="polygon">POLYGON</p>
+</div>
+<div class="w3-hide-large">
+  <p id="patio">PALM</p>
+</div>
 
     <div id="myCanvasContainer">
       <canvas id="myCanvas">
@@ -436,12 +225,16 @@
             const offsetX = isMobile ? 0 : 100;
             return offsetX;
           }
+          function setOffsetY() {
+            const offsetX = isMobile ? 60 : 0;
+            return offsetX;
+          }
 
           /*
           Set the {depth} of cloud in tagCanvas options. O.3 for mobile and 0.75 for desktop views
           */
           function setDepth() {
-            const depth = isMobile ? 0.5 : 0.5;
+            const depth = isMobile ? 0.2 : 0.5;
             return depth;
           }
           // function setShape() {
@@ -451,15 +244,15 @@
           //   return shape;
           // }
           function setZoom() {
-            const zoom = isMobile ? 1.0 : 1.0;
+            const zoom = isMobile ? 0.9 : 1.0;
             return zoom;
           }
           function setStretchX() {
-            const stretch = isMobile ? 0.9 : 1.3;
+            const stretch = isMobile ? 1.2 : 1.3;
             return stretch;
           }
           function setStretchY() {
-            const stretch = isMobile ? 1.8 : 1.0;
+            const stretch = isMobile ? 1.5 : 1.0;
             return stretch;
           }
           function setImageScale() {
@@ -486,6 +279,8 @@
               frontSelect: false,
               centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
+              offsetY: setOffsetY(),
+
               stretchX: setStretchX(),
               stretchY: setStretchY(),
               minBrightness: 0.1,
