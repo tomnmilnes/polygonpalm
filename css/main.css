@@ -252,7 +252,16 @@ html {
       animation: throb 2s reverse infinite;
       
   }
-  
+  a{
+    color: #3dee5a ;
+    text-decoration: none;
+
+  }
+  #plazalink {
+color: #3dee5a ;
+animation: throb 3s reverse infinite ;
+text-decoration: none;
+}
   
 
     /* Style the canvas container. Styling the canvas directly I think breaks the functionality of the cloud */
