@@ -53,10 +53,10 @@ html {
     position: fixed;
     height: 80%  ; 
     left: 2%; 
-    top: 15%; 
+    top: 12%; 
     color: #ffffff;
      font-family: 'VCR_OSD_MONO';
-      font-size: 100px;
+      font-size: 90px;
       animation: throb 3s linear infinite;
       line-height: 1;
   }
@@ -66,10 +66,10 @@ html {
     position: fixed;
     height: 90%; 
     left: 6%; 
-    top: 25%; 
+    top: 12%; 
     color: #ffffff;
      font-family: 'VCR_OSD_MONO';
-      font-size: 100px;
+      font-size: 90px;
       animation: throb 3s reverse infinite ;
       line-height: 1;
       
