@@ -56,7 +56,7 @@ html {
     top: 12%; 
     color: #ffffff;
      font-family: 'VCR_OSD_MONO';
-      font-size: 190px;
+      font-size: 150px;
       animation: throb 3s linear infinite;
       line-height: 1;
   }
