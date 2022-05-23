@@ -259,6 +259,10 @@
             const imageScale = isMobile ? 0.5 : 0.9;
             return imageScale;
           }
+          function setmaxSpeed() {
+            const maxSpeed = isMobile ? 0.04 : 0.03;
+            return maxSpeed;
+          }
 
           try {
             $("#myCanvas").tagcanvas({
@@ -266,7 +270,7 @@
               //lock: 'x',
               textColour: "#000000",
               outlineMethod: "none",
-              maxSpeed: 0.02,
+              maxSpeed: setmaxSpeed(),
               depth: setDepth(),
               zoomStep: 0,
               wheelZoom: true,
