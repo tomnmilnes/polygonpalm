@@ -78,10 +78,10 @@
   </div>
 
   <div class="w3-hide-large">
-    <p id="polygon">POLYGON</p>
+    <!--p id="polygon">POLYGON</p-->
 </div>
 <div class="w3-hide-large">
-  <p id="patio">PALM</p>
+  <!--p id="patio">PALM</p-->
 </div>
 
     <div id="myCanvasContainer">
@@ -227,7 +227,7 @@
             return offsetX;
           }
           function setOffsetY() {
-            const offsetX = isMobile ? 60 : -320;
+            const offsetX = isMobile ? -100 : -320;
             return offsetX;
           }
 
@@ -280,7 +280,7 @@
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
-              initial: [0.02, 0.00],
+              initial: [0.03, 0.00],
               frontSelect: false,
               //centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
