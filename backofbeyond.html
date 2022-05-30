@@ -227,7 +227,7 @@
             return offsetX;
           }
           function setOffsetY() {
-            const offsetX = isMobile ? -100 : -320;
+            const offsetX = isMobile ? -350 : -950;
             return offsetX;
           }
 
@@ -235,7 +235,7 @@
           Set the {depth} of cloud in tagCanvas options. O.3 for mobile and 0.75 for desktop views
           */
           function setDepth() {
-            const depth = isMobile ? 0.2 : 0.5;
+            const depth = isMobile ? 0.2 : 0.15;
             return depth;
           }
           // function setShape() {
@@ -285,11 +285,11 @@
               //centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
               offsetY: setOffsetY(),
-              shape: "vring(0.9)",
+              shape: "vring(2.9)",
               //stretchX: setStretchX(),
               //stretchY: setStretchY(),
-              minBrightness: 0.1,
-              maxBrightness: 1.5,
+              minBrightness: 0.3,
+              maxBrightness: 1.0,
               shuffleTags: true,
               imageScale: setImageScale(),
               
