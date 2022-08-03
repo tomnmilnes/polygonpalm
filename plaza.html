@@ -50,6 +50,20 @@
     </style>
     </head>
     <body>
+      <div id="myNav" class="overlay">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <div class="overlay-content">
+          <a id="secondb" href="./index.html">Home</a>
+          <a id="secondb" href="./about.html">INFO</a>
+          <a id="secondb" href="./backofbeyond.html">The Back Of Beyond</a>
+          <a id="secondb" href="./plaza2.html">Invisble Cities</a>
+          <!--a id="secondb" href="./contact.html">Contact</a-->
+        </div>
+      </div>
+      <span id="menu-icon"
+      
+      onclick="openNav()"
+      >&#9776;</span>
       <div class="w3-hide-small w3-hide-medium">
         <a href="/index.html"><p id="polygon">P<br>O<br>L<br>Y<br>G<br>O<br>N</p></a>
        </div>
@@ -80,6 +94,30 @@
   </div>
       
         
-        <script src="" async defer></script>
+  <script type="text/javascript">
+    // max-device width in pixels for tablets and mobile phones
+    var mobileViewWidth = 768;
+    // one Line expression to determine if browser is on a mobile device or not
+    var isMobile =
+      Math.min(window.screen.width, window.screen.height) < mobileViewWidth ||
+      navigator.userAgent.indexOf("Mobi") > -1;
+
+          function openNav() {
+        if (isMobile) {
+          console.log("mobile just clicked!");
+          document.getElementById("myNav").style.height = "50%";
+        } else {
+          document.getElementById("myNav").style.width = "300px";
+        }
+      }
+
+      function closeNav() {
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "0%";
+        } else {
+          document.getElementById("myNav").style.width = "0%";
+        }
+      }
+        </script>
     </body>
 </html>
