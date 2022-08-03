@@ -1,0 +1,86 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>2d</title>
+
+<style>
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  color: rgba(168, 141, 141);
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+a:link {
+  color: rgba(227, 0, 0);
+}
+
+a:visited {
+  color: rgba(227, 0, 0);
+}
+
+.bg {
+  /* The image used */
+  background-image: url('../../work/2d/TC2d.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 25% 40% 25% 10fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  padding: 10px;
+  grid-template-areas:
+    "audio"
+    "image"
+    "text"
+    "home";
+}
+
+.audio { grid-area: audio; }
+
+.image { grid-area: image; }
+
+.text { grid-area: text;}
+
+.home { grid-area: home; }
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg">
+
+<div class="container">
+  <div class="audio"></div>
+  <div class="image">
+  </div>
+  <div class="text">It was tissuey in parts and <a href="../d/3d.html">glittered</a> in the light- yet immensely strong too, 
+  the inconspicuous durability of a spider’s web. A rough gossamer was threaded through the block, 
+  a delicate wiring holding the body of it all together. Maybe it was still sand in part, but 
+  <a href="../d/5d.html">something</a> had possessed it; taken hold and meddled with its properties.</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -25,7 +25,7 @@ html {
     height: 100%;
     margin: 0;
     cursor: crosshair;
-    font-family: 'VCR_OSD_MONO' !important;
+    font-family: 'VCR_OSD_MONO';
   }
   html {
     width: 100%;
@@ -45,6 +45,10 @@ html {
   h1,h2, h3, h4 {
       font-family: "VCR_OSD_MONO" !important;
   }
+  #m1 {
+    font-family: "VCR_OSD_MONO" !important;
+    font-size: medium !important;
+}
   
   #polygon {
       z-index: 2;
@@ -74,6 +78,11 @@ html {
       line-height: 1;
       
   }
+  #bobartist1 {overflow: hidden; padding: none; animation: throb 4s linear infinite;}
+  #bobartist2 {overflow: hidden; padding: none; animation: throb 5s linear infinite;}
+  #bobartist3 {overflow: hidden; padding: none; animation: throb 3s linear infinite;}
+  #bobartist4 {overflow: hidden; padding: none; animation: throb 4s reverse infinite;}
+  #bobartist5 {overflow: hidden; padding: none; animation: throb 3s reverse infinite;}
   
   #first {
     font-family: "VCR_OSD_MONO";

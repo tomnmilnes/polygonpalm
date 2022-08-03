@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>3b</title>
+
+<style>
+
+
+body {
+  background-image: url(../../work/3b/MEM3b.jpg);
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+.grid-item {
+  border: 1px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+* {box-sizing: border-box}
+body {font-family: "Times New Roman", Times, serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(255, 0, 242);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(255, 0, 242);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  font-size: large;
+}
+
+a:visited {
+  color: rgb(255, 0, 242);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  font-size: large;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- top nav -->
+
+<div class="grid-container">
+  <div class="grid-item">
+<a href="../b/1b.html">⍝</a><br>
+  </div>
+</div>
+
+<!-- book / slideshow -->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page1.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page2.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page3.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page4.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page5.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="../../work/3b/page6.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<!-- audio -->
+
+<div class="grid-container">
+  <div class="grid-item">
+        <audio controls loop  id="playAudio">
+            <source src="../../work/3b/bind-us-leyline.mp3">
+        </audio>
+  </div>
+</div>
+
+<!-- bottom nav -->
+
+<div class="grid-container">
+  <div class="grid-item">
+  <a href="../c/3c.html">⌘</a><br>
+  </div>
+</div>
+
+<script>
+
+// slideshow script
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+</body>
+</html> 
