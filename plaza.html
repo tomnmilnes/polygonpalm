@@ -33,7 +33,7 @@
 
     <style>
       html {
-   overflow: inherit ;
+   overflow-y: auto ;
       }
 
       a{
@@ -45,11 +45,31 @@
         background: linear-gradient(to right, #df0e0e 30%, #e715cb 50%, #ebdd21 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    animation: throb 3s  infinite ;
-    
-    }
-      
+    animation: throb 3s  infinite ;}
+
+    table  {
+      table-layout: auto;
+      width: 100%;
+      height:inherit;
+  border: none;
+}
+img {
+  width: 33%;
+  height: 300px;
+ margin-top: 70px;
+  object-fit:contain;
+  display: block;
+} 
+tr{
+  width: 100%;
+  height: 370px;
+  display: flex;
+  border: none;
+}
+
     </style>
+
+    <!--HTML BODY-->
     </head>
     <body>
       <div id="myNav" class="overlay">
@@ -79,11 +99,11 @@
       <div class="w3-hide-large">
         <a href="index.html"><p id="patio">PALM</p></a>
       </div>
-      <div style="color: #ffffff; position:absolute; text-align: center; height: 20%; width: 70%; top: 25%; left: 15%; line-height: 1.5;">
+      <div style="color: #ffffff; position:absolute; text-align: center; height: 15%; width: 70%; top: 15%; left: 15%; line-height: 1.5;">
           <h2>Polygon ⬛ Plaza ⬛ is a desktop exhibition platform, specialising in interactive virtual exhibitions</h2>
       </div>
-      <div class="w3-hide-small w3-hide-medium" style="position:absolute; width: 15%; height: 250px; top: 40%; left: 42%; border: none;">
-        <img style="height: 72%; width: 100%; object-fit: cover; object-position: top;" src="img/plazatxt.png">
+      <div class="w3-hide-small w3-hide-medium" style="position:absolute; width: 25%; height: 575px; top: 12%; left: 37.5%; border: none;">
+        <a href="ironic-ephemera.html"><img style="height: 72%; width: 100%; object-fit: cover; object-position: top;" src="img/IronicE/Sam Turner IE Icon title.png"></a>
       </div>
 
       <div class="w3-hide-small w3-hide-medium" style="color: #ffffff; position:absolute; text-align: center; height: 20%; width: 60%; top: 65%; left: 20%;">
@@ -94,7 +114,29 @@
       <h2> Visit on desktop to view the exhibition </h2>
       
   </div>
-      
+  <div style="color: #a09d9d; position:absolute; text-align: left; height: 20%; width: 70%; top: 90%; left: 15%; line-height: 1.5;">
+    <h2>Previous Exhibitions</h2>
+</div>
+<div>
+  <table style="  color: #a09d9d; position:absolute; text-align: center; height: 100%; width: 70%; top: 95%; left: 15%;">
+    <tr>
+      <td style="width:33%;"><a href="/plaza2.html"><h1>Tom Milnes</h1><img src="img/Invisible Cities icon PP.png"></a></td>
+      <th style="width:33%;"></th>
+      <th style="width:33%;"></th>
+    </tr>
+    <tr>
+      <th style="width:33%;"></th>
+      <th style="width:33%;"></th>
+      <th style="width:33%;"></th>
+    </tr>
+    <tr>
+      <th style="width:33%;"></th>
+      <th style="width:33%;"></th>
+      <th style="width:33%;"></th>
+    </tr>
+   
+  </table>
+</div>
         
   <script type="text/javascript">
     // max-device width in pixels for tablets and mobile phones
