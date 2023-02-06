@@ -110,7 +110,18 @@ html {
     font-size: 80px;
     animation: throb 4s reverse infinite ;
     line-height: 1;
-    
+}
+#juice {
+  color: #00ff37;
+   font-family: 'Rubik';
+    font-size: 80px;
+    animation: throb 4s reverse infinite ;
+}
+#squif {
+  color: #ff00ea;
+  font-family: 'Rubik';
+   font-size: 80px;
+   animation: throb 4s linear infinite;
 }
   #bobartist1 {overflow: hidden; padding: none; animation: throb 4s linear infinite;}
   #bobartist2 {overflow: hidden; padding: none; animation: throb 5s linear infinite;}
