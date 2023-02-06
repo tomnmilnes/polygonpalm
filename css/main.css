@@ -213,6 +213,7 @@ html {
             4%,60%{transform: translate(-2px,0);}
             62%{transform: translate(-22px,5px) skew(21deg);}
             }
+  
 
 /* Style overrides for Mobile views. This comes last on the styles always. If maximum device width is 812px, apply the styles*/
   @media screen and (max-width: 812px) {
