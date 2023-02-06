@@ -78,6 +78,35 @@ html {
       line-height: 1;
       
   }
+
+  #juicy {
+    z-index: 2;
+    padding: none;
+    margin-top: none !important;
+  position: fixed;
+  height: 80%  ; 
+  left: 6%; 
+  top: 4%; 
+  color: #ff00ea;
+   font-family: 'VCR_OSD_MONO';
+    font-size: 80px;
+    animation: throb 4s linear infinite;
+    line-height: 1;
+}
+#squish {
+    z-index: 2;
+    padding: none;
+  position: fixed;
+  height: 80%; 
+  left: 6%; 
+  top: 12%; 
+  color: #00ff37;
+   font-family: 'VCR_OSD_MONO';
+    font-size: 80px;
+    animation: throb 4s reverse infinite ;
+    line-height: 1;
+    
+}
   #bobartist1 {overflow: hidden; padding: none; animation: throb 4s linear infinite;}
   #bobartist2 {overflow: hidden; padding: none; animation: throb 5s linear infinite;}
   #bobartist3 {overflow: hidden; padding: none; animation: throb 3s linear infinite;}
