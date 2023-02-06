@@ -38,6 +38,11 @@ html {
     font-family: "VCR_OSD_MONO";
     src: url("/VCR_OSD_MONO_1.001.ttf") format("opentype");
   }
+  @font-face {
+      font-family: "Rubik";
+      src: url("/RubikBubbles-Regular.ttf") format("opentype");
+  }
+
   p {
     margin-top: 0% !important;
   }
@@ -88,7 +93,7 @@ html {
   left: 6%; 
   top: 4%; 
   color: #ff00ea;
-   font-family: 'VCR_OSD_MONO';
+   font-family: 'Rubik';
     font-size: 80px;
     animation: throb 4s linear infinite;
     line-height: 1;
@@ -101,7 +106,7 @@ html {
   left: 6%; 
   top: 12%; 
   color: #00ff37;
-   font-family: 'VCR_OSD_MONO';
+   font-family: 'Rubik';
     font-size: 80px;
     animation: throb 4s reverse infinite ;
     line-height: 1;
