@@ -121,7 +121,60 @@ html {
   color: #ff00ea;
   font-family: 'Rubik';
    font-size: 80px;
-   animation: throb 4s linear infinite;
+   animation: throb 4s linear infinite;}
+
+#invertimg {
+  
+  transform: translatey(0px);
+  animation: invertkeff 2s ease-in-out infinite;
+  
+  
+}
+
+#floatimg {
+
+  transform: translatey(0px);
+  animation: floatkeff 6s reverse ease-in-out infinite;
+}
+
+@keyframes floatkeff {
+  0% {
+    
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+  50% {
+    
+    transform: translatey(-20px);
+    opacity: 30%;
+  }
+  100% {
+    
+    transform: translatey(0px);
+    opacity: 100%
+  }
+}
+
+@keyframes invertkeff {
+  0% {
+    
+    transform: translatey(0px);
+    opacity: 100%;
+    mix-blend-mode: 0%;
+  }
+  50% {
+    
+    transform: translatey(0px);
+    /*opacity: 30%;*/
+    -webkit-filter:hue-rotate(100%);
+    filter: invert(100%);
+    
+  }
+  100% {
+    
+    transform: translatey(0px);
+    opacity: 100%
+  }
 }
   #bobartist1 {overflow: hidden; padding: none; animation: throb 4s linear infinite;}
   #bobartist2 {overflow: hidden; padding: none; animation: throb 5s linear infinite;}
