@@ -50,6 +50,14 @@ html {
   h1,h2, h3, h4 {
       font-family: "VCR_OSD_MONO" !important;
   }
+
+  td {
+    height:100px;
+    padding: none !important;
+  }
+img {
+  contain: inherit;
+}
   #m1 {
     font-family: "VCR_OSD_MONO" !important;
     font-size: medium !important;
@@ -123,12 +131,13 @@ html {
    font-size: 80px;
    animation: throb 4s linear infinite;}
 
-#invertimg {
-  
+#invertimg {  
   transform: translatey(0px);
-  animation: invertkeff 2s ease-in-out infinite;
-  
-  
+  animation: invertkeff 2s ease-in-out infinite
+}
+#invertimg2 {  
+  transform: translatey(0px);
+  animation: invertkeff 2s reverse infinite
 }
 
 #floatimg {
@@ -162,7 +171,7 @@ html {
     opacity: 100%;
     mix-blend-mode: 0%;
   }
-  50% {
+  30% {
     
     transform: translatey(0px);
     /*opacity: 30%;*/
@@ -297,9 +306,9 @@ html {
     
     }
     img {
-      -moz-transform:scale(0.5, 0.5);
+      -moz-transform:scale(0.5 , 0.5);
       -webkit-transform:scale(0.5, 0.5);
-      transform:scale(0.5, 0.5);
+      transform:scale(0.5, 1);
     }
     .overlay a {
       font-size: 15px;
