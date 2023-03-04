@@ -52,12 +52,12 @@ html {
   }
 
   td {
-    height:100px !important;
+   
     padding: none !important;
   }
 img {
   position: absolute;
-  height: fit-content !important;
+ 
 }
   #m1 {
     font-family: "VCR_OSD_MONO" !important;
