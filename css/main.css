@@ -140,6 +140,10 @@ img {
   transform: translatey(0px);
   animation: invertkeff 3s reverse infinite
 }
+#bothvert {  
+  transform: translatey(0px);
+  animation: invertkeff 3s reverse infinite, floatkeff 1s reverse ease-in-out infinite; 
+}
 
 #floatimg {
 
