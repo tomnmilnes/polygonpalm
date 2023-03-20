@@ -37,10 +37,33 @@
    overflow-x: none !important;
  }
 body {
-  background-image: url("img/juicysquish/juicysquish_wallpaper_9635_BACKGROUND.gif");
-  background-repeat: repeat; 
-  
+  /*background-image: url("img/juicysquish/juicysquish_wallpaper_9635_BACKGROUND.gif");
+  background-repeat: repeat; */
+  animation-name: backgroundColorPalette;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear; 
+	/* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
 }
+@keyframes backgroundColorPalette {
+	0% {
+		background: #f700ff;
+	}
+	25% {
+		background: #09ff00;
+	}
+	50% {
+		background: #aaf683;
+	}
+	75% {
+		background: #ffd97d;
+	}
+	100% {
+		background: #ff9b85;
+	}
+}
+
 table {
   position: absolute;
   text-align: center;
@@ -154,7 +177,7 @@ img {
           <img style="height: auto; width: 100% ; " src="img/juicysquish/mattkeffsmile.png">
       </div>
       <div class="w3-hide-large" style="position:absolute; height: 30%; width: 100%; top: 28%; border: none;">
-        <a href="https://apps.apple.com/us/developer/matthew-keff/id1527463168"><img id="floatimg" style="height: auto; width: 100% ;" src="img/juicysquish/faces_.png"></a>
+        <a href="mattkeff.art"><img id="floatimg" style="height: auto; width: 100% ;" src="img/juicysquish/faces_.png"></a>
     </div>
     <div class="w3-hide-large" style="position:absolute; height: 30%; width: 100%; top: 42%; border: none;">
       <a href="https://play.google.com/store/apps/details?id=com.SWEETSWEET.JUICYSQUISH"><img style=" position: absolute; height: auto; width: 130% ; left: -15%;" src="img/juicysquish/Google-badge.png"></a>
@@ -167,7 +190,9 @@ img {
 </div>
 <div class="w3-hide-large" style="position:absolute; height: 100%; width: 100%; top: 60%; border: none;">
 <div class="w3-hide-large" style="position:absolute; height: 100%; width: 100%; top: 122%; border: none;">
-  <a href="https://apps.apple.com/us/developer/matthew-keff/id1527463168"><img id="bothvert" style="height: auto; width: 50%; left: 25%; " src="img/juicysquish/gummy_.png"></a>
+  <!--a href="https://apps.apple.com/us/developer/matthew-keff/id1527463168"><img id="bothvert" style="height: auto; width: 15%; left: 7%; top: 5%; " src="img/juicysquish/iconmonstr-google-play-5-240.png"></a-->
+<a href="/jslink.html"><img id="bothvert" style="height: auto; width: 50%; left: 25%; " src="img/juicysquish/gummy_.png"></a>
+<!--a href="https://apps.apple.com/us/developer/matthew-keff/id1527463168"><img id="bothvert" style="height: auto; width: 15%; left: 77%; top: 5%; " src="img/juicysquish/iconmonstr-apple-os-5-240.png"></a-->
 </div>
 <div class="w3-hide-large" style="position:absolute; height: 100%; width: 100%; top: 135%; border: none;">
   <a href="https://apps.apple.com/us/developer/matthew-keff/id1527463168"><img id="invertimg2" style="height: auto; width: 50%; left: 25%; " src="img/juicysquish/neonHorse_.png"></a>
