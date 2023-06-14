@@ -48,7 +48,33 @@
 
   </head>
   <body>
+<!-- MENU SCRIPT-->
+<script>
+  // max-device width in pixels for tablets and mobile phones
+  var mobileViewWidth = 768;
+      // one Line expression to determine if browser is on a mobile device or not
+      var isMobile =
+        Math.min(window.screen.width, window.screen.height) < mobileViewWidth ||
+        navigator.userAgent.indexOf("Mobi") > -1;
 
+      function openNav() {
+        if (isMobile) {
+          console.log("mobile just clicked!");
+          document.getElementById("myNav").style.height = "50%";
+        } else {
+          document.getElementById("myNav").style.width = "25%";
+        }
+      }
+
+      function closeNav() {
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "0%";
+        } else {
+          document.getElementById("myNav").style.width = "0%";
+        }
+      }
+  </script>
+  <!--END OF NAV MENU--> 
 
     <!--MENU NAVIGATION START-->
     <div id="myNav" class="overlay">
@@ -61,6 +87,11 @@
         <!--a id="secondb" href="./contact.html">Contact</a-->
       </div>
     </div>
+    <span id="menu-icon"
+      
+      onclick="openNav()"
+      >&#9776;</span>
+
 <!-- START LARGE SCREEN MESSAGE-->
 
 <!--div class="w3-hide-small w3-hide-medium">
@@ -77,13 +108,19 @@
 </div-->
 
 <!--MENU ICON-->
+<div>
+  
+</div>
     
-    
-    <div id="visions" class="w3-hide-small" style=" position:absolute;  height: 15%; width: 100%; top: 10%; left: 23%; ">
-      <a href="./bittersweetmemory.html"><img src="./img/fleetingvisions/spinningtext.gif"></a><br>
+<div id="visions" class="w3-hide-small" style=" position:absolute; width: 80%; top: 10%; left: 3%;">
+  <a href="/bittersweetmemory.html"><img style="width: 15%;" src="./img/fleetingvisions/backbutton.png"></a><br>
+</div>
+
+    <div id="visions" class="w3-hide-small" style=" position:absolute;  height: 15%; width: 70%; top: -5%; left: 28%; ">
+      <a href="./bittersweetmemory.html"><img style="width: 60%;" src="./img/fleetingvisions/endisover.gif"></a><br>
     </div>
     <div style="position: absolute; height: 628px; width: 1080px; left: 400px; top: 300px;">
-      <iframe frameborder="0" src="https://itch.io/embed-upload/7932781?color=000000" allowfullscreen="" ><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>
+      <iframe frameborder="0" src="https://itch.io/embed-upload/8101170?color=000000" allowfullscreen="" ><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>
     </div>
     <!--iframe style="height: 608px; width: 1080px; left: 20%; top: 25%;" frameborder="0" src="https://spacelionz.itch.io/bittersweet-memory-end-is-over" allowfullscreen="" width="1080" height="628"><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>" 
       <iframe style="height: 608px; width: 1080px; left: 20%; top: 25%;" frameborder="0" src="https://itch.io/embed/2073034" width="552"><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Bittersweet Memory: End Is Over by Spacelionz</a></iframe-->
@@ -104,7 +141,6 @@
 
     </div>
 
-   
   
 
   </body>
