@@ -61,9 +61,9 @@
       <span class="closebtn" onclick="closeNav()">&times;</span>
       <div class="overlay-content">
         <a id="secondb" href="./index.html">Home</a>
-        <a id="secondb" href="./about.html">Info</a>
-        <!--a id="secondb" href="./backofbeyond.html">The Back Of Beyond</a-->
-        <a id="secondb" href="./plaza.html">Ironic Ephemera</a>
+          <a id="secondb" href="./about.html">Info</a>
+          <a id="secondb" href="./juicysquish.html">Juicy Squish</a>
+          <!--a id="secondb" href="./plaza.html">Ironic Ephemera</a-->
         <!--a id="secondb" href="./contact.html">Contact</a-->
       </div>
     </div>
@@ -145,7 +145,31 @@
     </div>
  <div id="visions">
 </div>
+<script>
+  // max-device width in pixels for tablets and mobile phones
+  var mobileViewWidth = 768;
+      // one Line expression to determine if browser is on a mobile device or not
+      var isMobile =
+        Math.min(window.screen.width, window.screen.height) < mobileViewWidth ||
+        navigator.userAgent.indexOf("Mobi") > -1;
 
+      function openNav() {
+        if (isMobile) {
+          console.log("mobile just clicked!");
+          document.getElementById("myNav").style.height = "50%";
+        } else {
+          document.getElementById("myNav").style.width = "25%";
+        }
+      }
+
+      function closeNav() {
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "0%";
+        } else {
+          document.getElementById("myNav").style.width = "0%";
+        }
+      }
+  </script>
   
 
   </body>
