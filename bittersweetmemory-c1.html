@@ -44,19 +44,22 @@
   /* This element defines the size the iframe will take.
    In this example we want to have a ratio of 25:14 */
 .aspect-ratio {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+  position: absolute;
+  left: 18%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+    
+    
+   /* The height of the item will now be 56.25% of the width. */
 }
 
 /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
-.aspect-ratio iframe {
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  left: 20%;
-  top: 28%;
+.aspect-ratio-iframe {
+ 
+
+ width: 1080px;
+ height: 612px;
+
 }
       
      </style>
@@ -136,7 +139,7 @@
       <a href="https://nicholeshinn.com/"><img style="width: 60%;" src="./img/fleetingvisions/endisover.gif"></a><br>
     </div>
     <div class="aspect-ratio">
-      <iframe frameborder="0" src="https://itch.io/embed-upload/8101170?color=000000" width="100%" height="100%" allowfullscreen="" ><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>
+      <iframe class="aspect-ratio-iframe" frameborder="0" src="https://itch.io/embed-upload/8101170?color=000000" allowfullscreen="" width="1080" height="628"><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>     
     </div>
     <!--iframe style="height: 608px; width: 1080px; left: 20%; top: 25%;" frameborder="0" src="https://spacelionz.itch.io/bittersweet-memory-end-is-over" allowfullscreen="" width="1080" height="628"><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Play Bittersweet Memory: End Is Over on itch.io</a></iframe>" 
       <iframe style="height: 608px; width: 1080px; left: 20%; top: 25%;" frameborder="0" src="https://itch.io/embed/2073034" width="552"><a href="https://spacelionz.itch.io/bittersweet-memory-end-is-over">Bittersweet Memory: End Is Over by Spacelionz</a></iframe-->
