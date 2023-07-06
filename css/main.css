@@ -45,6 +45,10 @@ html {
       font-family: "Rubik";
       src: url("/RubikBubbles-Regular.ttf") format("opentype");
   }
+  @font-face {
+    font-family: "Ai";
+    src: url("/Ai-Yzq8y.ttf") format("opentype");
+}
 
   p {
     margin-top: 0% !important;
@@ -220,6 +224,15 @@ img {
   #bobartist3 {overflow: hidden; padding: none; animation: throb 3s linear infinite;}
   #bobartist4 {overflow: hidden; padding: none; animation: throb 4s reverse infinite;}
   #bobartist5 {overflow: hidden; padding: none; animation: throb 3s reverse infinite;}
+ 
+  #rolo1 {font-size: larger; overflow: hidden; padding: none; font-family: 'Ai'; animation: throb 0.5s linear infinite;}
+  #rolo2 {
+    font-size: larger;
+    overflow: hidden; 
+    padding: none; 
+    font-family: 'Ai'; 
+    animation: throb 0.5s reverse infinite;
+  }
   
   #first {
     font-family: "VCR_OSD_MONO";
