@@ -1,0 +1,23 @@
+# mod_rewrite starts here
+
+
+RewriteEngine on
+
+# doesn not apply to exisiting
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Check for file in directory 
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+#bla bla bla
+
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/mp4 .m4v
+AddType video/mp4 .m4p
+AddType video/webm .webm    
