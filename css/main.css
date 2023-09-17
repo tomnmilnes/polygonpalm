@@ -225,13 +225,13 @@ img {
   #bobartist4 {overflow: hidden; padding: none; animation: throb 4s reverse infinite;}
   #bobartist5 {overflow: hidden; padding: none; animation: throb 3s reverse infinite;}
  
-  #rolo1 { overflow: hidden; padding: none; font-family: 'Ai'; animation: throb 0.5s linear infinite;}
+  #rolo1 { overflow: hidden; padding: none; font-family: 'Ai'; animation: throb 3s linear infinite;}
   #rolo2 {
     
     overflow: hidden; 
     padding: none; 
     font-family: 'Ai'; 
-    animation: throb 0.5s reverse infinite;
+    animation: throb 3s reverse infinite;
   }
   
   #first {
@@ -429,7 +429,10 @@ text-decoration: none;
     height: 40vh;
     object-fit: contain;
   }
-
+  #looptitle {
+    height: 40vh;
+    object-fit: contain;
+  }
   canvas {
     top: 40px; /* Nudge the canvas up a little bit */
     left: 0;
