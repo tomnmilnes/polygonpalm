@@ -30,6 +30,7 @@
     <style>
       html {
         overflow-y: scroll;
+        overflow-x: none;
       }
       body {
         background: #000000;
@@ -215,11 +216,7 @@ img.hover-shadow {
 </div>
 
 <!--MENU ICON-->
-    <span id="menu-icon"
-      
-      onclick="openNav()"
-      >&#9776;</span
-    >
+    <span id="menu-icon" style="z-index: 1;"onclick="openNav()">&#9776;</span>
     
     <div class="w3-hide-large" style="color: #ffffff; position:absolute; text-align: center; height: 15%; width: 80%; top: 5%; left: 10%;">
       <!--h1 style="  color: #000000; ;"><span id="rolo1">ROLODEX</span>    </h1>
@@ -326,12 +323,38 @@ img.hover-shadow {
 
 
     <div style="position: absolute;top: 220%;"><h3> .</h3></div>
-    <script
-      src="https://code.jquery.com/jquery-3.2.0.min.js"
-      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
-      crossorigin="anonymous"
-    ></script>
 
+
+
+   <!--MENU SCRIPT--> 
+   
+  <script>
+  // max-device width in pixels for tablets and mobile phones
+  var mobileViewWidth = 768;
+      // one Line expression to determine if browser is on a mobile device or not
+      var isMobile =
+        Math.min(window.screen.width, window.screen.height) < mobileViewWidth ||
+        navigator.userAgent.indexOf("Mobi") > -1;
+
+      function openNav() {
+        if (isMobile) {
+          console.log("mobile just clicked!");
+          document.getElementById("myNav").style.height = "50%";
+        } else {
+          document.getElementById("myNav").style.width = "300px";
+        }
+      }
+
+      function closeNav() {
+        if (isMobile) {
+          document.getElementById("myNav").style.height = "0%";
+        } else {
+          document.getElementById("myNav").style.width = "0%";
+        }
+      }
+      </script>
+      
+<!--LIGHTBOX SCRIPT--> 
     <script>
       // Open the Modal
       function openModal() {
