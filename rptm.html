@@ -216,7 +216,7 @@ img.hover-shadow {
 </div>
 
 <!--MENU ICON-->
-    <span id="menu-icon"
+    <span style="z-index: 2;" id="menu-icon"
       
       onclick="openNav()"
       >&#9776;</span
@@ -232,7 +232,7 @@ img.hover-shadow {
     </div>
     
 
-    <div class="w3-hide-large" style=" position: absolute;top: 25%; width: 90%; left: 5%; font-family: VCR_OSD_MONO;">
+    <div class="w3-hide-large" style=" position: absolute;top: 25%; width: 90%; left: 5%; font-family: VCR_OSD_MONO; z-index: -1;">
       <H3><mark>Tom Milnes</mark></H3><br>
       <h1><mark>Ex-Machines</mark></h1>
       <h3 style=" position: absolute;top: 100%;"><mark>Ex-Machines began in a pre-user-generated-AI era. 
@@ -253,7 +253,7 @@ img.hover-shadow {
 <!-- Images used to open the lightbox -->
 <div class="w3-hide-large w3-hide-medium">
 
-<div class="row" style="position: absolute; top: 100%; width: 90%; left: 5%;">
+<div class="row" style="position: absolute; top: 100%; width: 90%; left: 5%; z-index: -2;">
   <div class="column">
     <img src="img/rolodex/TM/Ex-Machine SMALLTeletextCPU copy.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" style="position: absolute; top: -380px; width: 220%; left: -60%; z-index: -1;">
   </div>
