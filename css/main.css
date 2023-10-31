@@ -13,7 +13,7 @@
     /*background-image: url("img/palm tree 8bit.png");*/
     background-color: #000000;
     background-size: contain ;
-    background-repeat: no-repeat;
+  
     background-position-x: 50%;
     transition: 1s;
     width: 100%;
@@ -21,6 +21,7 @@
     margin: 0;
     cursor: crosshair;
     font-family: 'VCR_OSD_MONO';
+    
     
   }
 
@@ -32,6 +33,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
   }
   
   @font-face {
@@ -364,7 +366,8 @@ img {
   @media screen and (max-width: 812px) {
     /* Scale down images by half the sizes*/
     body {
-      /*background-image: url("img/Lye\ faded.jpg");*/
+      width: 100%;
+      background-image: url("img/Lye\ faded.jpg");
       background-color: #000000;
     background-size:160%;
     background-repeat: no-repeat;
