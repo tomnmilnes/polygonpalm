@@ -20,7 +20,7 @@
     height: 100%;
     margin: 0;
     cursor: crosshair;
-    font-family: 'VCR_OSD_MONO';
+    font-family: 'VCR_OSD_MONO', 'Reenie Beanie';
     
     
   }
@@ -46,8 +46,12 @@
   }
   @font-face {
     font-family: "Ai";
-    src: url("/Ai-Yzq8y.ttf") format("opentype");
-}
+    src: url("/Ai-Yzq8y.ttf") format("opentype");}
+    
+    @font-face {
+    font-family: "Reenie Beanie";
+    src: url("/ReenieBeanie-Regular.ttf") format("opentype");}
+
 
   p {
     margin-top: 0% !important;
