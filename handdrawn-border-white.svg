@@ -1,0 +1,13 @@
+<!-- public/handdrawn-border.svg -->
+<svg width="220" height="70" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10,10 
+           C15,5 205,5 210,10 
+           L210,60 
+           C205,65 15,65 10,60 
+           Z"
+        fill="rgb(246, 246, 246)"
+        stroke="rgb(12, 12, 12)"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

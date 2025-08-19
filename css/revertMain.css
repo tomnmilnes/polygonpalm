@@ -1,0 +1,107 @@
+/* === Undo main.css styles === */
+body {
+  background-image: none;
+  background-color: initial;
+  background-size: initial;
+  background-position-x: initial;
+  transition: none;
+  width: auto;
+  height: auto;
+  margin: initial;
+  cursor: initial;
+  font-family: initial;
+}
+
+html {
+  width: auto;
+  height: auto;
+  margin: initial;
+  cursor: initial;
+  padding: initial;
+  overflow: initial;
+}
+
+p {
+  margin-top: initial;
+}
+
+h1, h2, h3, h4 {
+  font-family: initial;
+}
+
+td {
+  padding: initial;
+}
+
+img {
+  position: static;
+}
+
+#m1 {
+  font-family: initial;
+  font-size: initial;
+}
+
+#polygon, #patio, #smallpolygon, #smallpatio, #juicy, #squish, #juice, #squif {
+  z-index: auto;
+  padding: initial;
+  margin-top: initial;
+  position: static;
+  height: auto;
+  left: auto;
+  top: auto;
+  color: initial;
+  font-family: initial;
+  font-size: initial;
+  animation: none;
+  line-height: initial;
+}
+
+#invertimg, #invertimg2, #bothvert, #floatimg {
+  transform: none;
+  animation: none;
+}
+
+#bmbutton, #bmbutton:hover {
+  border: initial;
+  animation: none;
+}
+
+.myCanvasContainer {
+  position: static;
+  left: auto;
+}
+
+audio, iframe, canvas, svg, video {
+  position: static;
+  vertical-align: initial;
+  width: auto;
+  height: auto;
+  top: auto;
+  left: auto;
+  outline: initial;
+}
+
+@media print {
+  *, *:before, *:after, *:first-letter, *:first-line {
+    background: initial;
+    color: initial;
+    box-shadow: initial;
+    text-shadow: initial;
+  }
+  a, a:visited {
+    text-decoration: initial;
+  }
+  a[href]:after, abbr[title]:after {
+    content: initial;
+  }
+}
+
+/* overrides */
+@media screen and (max-width: 812px) {
+    img {
+      transform: initial;
+    }
+  }
+  
+/* === End undo main.css styles === */

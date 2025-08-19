@@ -7,13 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./stylesAR.css" rel="stylesheet"/>
   </head>
+  <script>
+  const modelViewer = document.querySelector('#my-model');
+
+  function playAnimation() {
+    modelViewer.animationName = 'your_animation'; // Set the animation
+    modelViewer.play(); // Start the animation
+  }
+</script>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="/Barn Owl anim.glb" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" autoplay camera-orbit="-70.49deg 71.22deg 14.11m" field-of-view="30deg">
+    <model-viewer src="Barn Owl anim.glb" autoplay ar ar-modes="webxr scene-viewer quick-look"  camera-controls touch-action="pan-y" tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"  scale="0.1 0.1 0.1" camera-orbit="-120.49deg 71.22deg 14.11m" field-of-view="30deg">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
-      <button slot="ar-button" id="ar-button">
+      <button onclick=playAnimation() slot="ar-button" id="ar-button">
           View in your space
       </button>
       <div id="ar-prompt">
