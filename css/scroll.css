@@ -52,7 +52,7 @@ body {
   top: 0px;
   left: 0px;*/
   margin: 0px; 
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   font-weight: 400;
   font-style: normal;
   
@@ -197,12 +197,13 @@ display: block;
   top: 0vh;
   display: none;
   height: 100svh;
+  width: 100vw;
   z-index: 10000;
   color: rgb(246, 246, 246);
   background-color: rgb(12, 12, 12);
   flex-direction: column;
   justify-content: center;
-  padding: 4svh;
+  padding: 0;
   gap: 1svh;
   
   /* -webkit-text-stroke: rgb(47 18 18) 2px; */
@@ -225,9 +226,9 @@ display: block;
   display: block;
   position: relative;
   margin: 0;
-  padding: 0;
-  font-size: 150%;
-  line-height: 5svh;
+  padding: 5%;
+  font-size: 130%;
+  line-height: 4svh;
 }
 
 .startOverButton {
@@ -237,8 +238,8 @@ display: block;
   align-items: center;        /* vertical centering */
   justify-content: center;    /* horizontal centering */
   
-  width: 80vw;                /* Fixed width instead of 100% */
-  height: 12vh;               /* Fixed height to maintain SVG proportions */
+  width: 110%;
+  height: 100%;
   max-width: 300px;           /* Maximum width for larger screens */
   margin: 0 auto;             /* Center the button */
   aspect-ratio: 220 / 70;     /* Match SVG shape - uncommented */
@@ -255,17 +256,23 @@ display: block;
 
   -webkit-tap-highlight-color: transparent;
 
-  opacity: 0;
+  opacity: 1;
 
 
 }
 
+.buttonContainer{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 50%;
+  opacity: 0;
+}
 
 
 .startOverButtonText {
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   position: relative;
-  font-size: 200%;
+  font-size: 150%;
   
   padding: 0.5svh 1svh;        /* Adjusted padding for better fit */
   font-weight: bold;
@@ -278,11 +285,12 @@ display: block;
   display: flex;
   position: relative;
   top: -3%;
+  left: -10%;
   align-items: center;        /* vertical centering */
   justify-content: center;    /* horizontal centering */
   
-  width: 80vw;                /* Fixed width instead of 100% */
-  height: 12vh;               /* Fixed height to maintain SVG proportions */
+  width: 110%;
+  height: 100%;
   max-width: 300px;           /* Maximum width for larger screens */
   margin: 0 auto;             /* Center the button */
   aspect-ratio: 220 / 70;     /* Match SVG shape - uncommented */
@@ -299,17 +307,17 @@ display: block;
 
   -webkit-tap-highlight-color: transparent;
 
-  opacity: 0;
+  opacity: 1;
  
 }
 
 
 
 .backToPolygonPalmButtonText {
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   position: relative;
-  font-size: 150%;
-  top: -1svw;
+  font-size: 120%;
+  top: -0.5svw;
   padding: 0.5svh 1svh;        /* Adjusted padding for better fit */
   font-weight: bold;
   color: rgb(227 227 227);
@@ -319,8 +327,9 @@ display: block;
 .introPage{
   position: fixed;
   top: 0vh;
+  font-weight: bold;
   display: flex;
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   z-index: 10000;
   background-color:rgb(234 231 231);
@@ -379,7 +388,7 @@ display: block;
 }
 
 .startButtonText {
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   position: relative;
   font-size: 10vw;
   padding: 1vw;
@@ -399,6 +408,8 @@ display: block;
 .introText{
   display: flex;
   font-size: 7vw;
+  text-align: center;
+  line-height: 4.5vh;
   position: relative;
   top: -1%;
   opacity: 0;
@@ -424,7 +435,7 @@ display: block;
     box-sizing: border-box;
     top: 0;
     color: rgb(12, 12, 12);
-    font-family: "Reenie Beanie", cursive;
+    font-family: "Reenie Beanie", sans-serif;
 }
 
 #essayInput{
@@ -437,7 +448,7 @@ display: block;
   padding-right: 2%;
   margin: 0 auto;
   font-size: 10vw;
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   border: 1vw solid black;
   box-sizing: border-box;
   text-align: center;
@@ -477,7 +488,7 @@ display: block;
 }
 
 #submitButtonText{
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   position: relative;
   font-size: 10vw;
   padding: 1vw;
@@ -490,7 +501,7 @@ display: block;
 }
 
 #opinionResponse{
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   font-size: 12vw;
 }
 
@@ -527,7 +538,7 @@ display: block;
 }
 
 .rateButtonText{
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   position: relative;
   font-size: 10vw;
   padding: 1vw;
@@ -542,7 +553,7 @@ display: block;
   text-align: center;
   display: block;
   position: relative;
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", sans-serif;
   line-height:2;
   top: 15vh;
   font-size: 17vw;
@@ -605,4 +616,50 @@ display: block;
 .content-block > * {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.loadingContainer {
+  text-align: center;
+  margin: 2vh 0;
+}
+
+.loadingText{
+  font-family: "Reenie Beanie", sans-serif;
+  font-size: 10vw;
+  font-weight: bold;
+  color: rgb(12, 12, 12);
+  margin: 0;
+  text-align: center;
+  animation-name: fadeInElement;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.dots{
+  font-family: "Reenie Beanie", sans-serif;
+  font-size: 12vw;
+  font-weight: bold;
+  animation-name: fadeInElement;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.dots::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%, 100% {
+    content: '...';
+  }
 }
