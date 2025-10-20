@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Natural Intelligence · mobile only</title>
+<style>
+/* ====== Mobile-only gate using @media + orientation ====== */
+:root{
+  --bg:#000; --fg:#fff; --muted:#9a9a9a; --rule:#222; --w:720px;
+  --pad-x:16px; --radius:10px;
+  --violet:#6F7BFF; --violet-hover:#8790FF; --violet-open:#A0A9FF;
+}
+
+/* Default: block desktop/tablet + landscape */
+html,body{margin:0;height:100%;background:#000;color:#fff}
+.blocker{
+  display:flex; align-items:center; justify-content:center;
+  min-height:100dvh; padding:24px; text-align:center;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:#9a9a9a;
+}
+.mobile{ display:none; }
+
+/* Allow only small portrait screens (phones) */
+@media screen and (max-width:600px) and (orientation:portrait){
+  .mobile{ display:block; }
+  .blocker{ display:none; }
+}
+
+/* ====== Exhibition styles (apply only when .mobile is visible) ====== */
+.mobile *{ box-sizing:border-box; }
+.mobile body, .mobile{ background:var(--bg); color:var(--fg); }
+
+.wrap{ max-width: var(--w); margin:0 auto; padding:20px 16px; }
+
+header{ position:sticky; top:0; background:#000; border-bottom:1px solid var(--rule); z-index:9; }
+.title{ font-weight:700; font-size:20px; margin:0; }
+.subtitle{ color:#666; font-size:12px; font-weight:400; margin:4px 0 0; text-align:left; }
+.wall{ padding:18px 16px; border-bottom:1px solid var(--rule); }
+.lead{ font-size:15px; max-width:54ch; line-height:1.55; }
+
+/* Index */
+.index{ padding:10px 16px; border-bottom:1px solid var(--rule); }
+.index h2{ font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:0 0 10px; }
+.tags{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag{ border:1px solid var(--rule); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--fg); text-decoration:none; }
+.tag:hover{ background:#111; }
+
+/* Works */
+main{ padding:10px 0 20px; }
+.work{
+  margin:32px 0;
+  padding:0 var(--pad-x); /* both sides padded */
+  opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease;
+}
+.work.show{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){ .work{ transition:none; } }
+
+.num{ font-size:12px; color:var(--muted); margin:0 0 4px; }
+.name{ font-weight:600; font-size:16px; margin:0 0 12px; }
+.name .agent{ color:var(--muted); font-weight:500; }
+
+/* Media block: image is the play/pause trigger */
+figure{ margin:0; position:relative; }
+.media-btn{
+  display:block; border:0; padding:0; background:transparent; cursor:pointer; width:100%; text-align:left;
+}
+.media-btn:focus-visible{ outline:2px solid #fff; outline-offset:2px; border-radius:var(--radius); }
+.img{ width:100%; border-radius:var(--radius); background:#111; display:block; }
+
+/* Placeholder if images are not present yet */
+.img.placeholder{
+  aspect-ratio: 16/10;
+  background:linear-gradient(180deg,#151515,#0c0c0c);
+  border:1px solid #1e1e1e;
+  display:grid; place-items:center; color:#bdbdbd; font-size:12px;
+}
+
+/* Play overlay icon */
+.overlay{
+  position:absolute; inset:auto 12px 12px auto;
+  width:42px; height:42px; border-radius:999px;
+  background:rgba(0,0,0,.5); display:grid; place-items:center;
+  border:1px solid rgba(255,255,255,.25);
+  transition:transform .2s ease, background .2s ease;
+}
+.overlay svg{ width:14px; height:14px; fill:#fff; }
+.media-btn:hover .overlay{ transform:scale(1.03); background:rgba(0,0,0,.6); }
+.media-btn[data-state="playing"] .overlay{ background:rgba(255,255,255,.14); }
+
+/* Native audio control beneath image */
+audio{ width:100%; height:32px; margin-top:10px; }
+
+/* Prompt disclosure */
+details{ margin-top:10px; }
+summary{
+  list-style:none; cursor:pointer; font-size:13px; font-weight:600;
+  color:var(--violet);
+}
+summary:hover{ color:var(--violet-hover); }
+details[open] > summary{ color:var(--violet-open); }
+summary::-webkit-details-marker{ display:none; }
+.prompt{ margin-top:6px; color:#e5e5e5; font-size:14px; }
+
+/* Footer */
+footer{ border-top:1px solid var(--rule); color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+
+<!-- Blocker screen for anything that's not small portrait -->
+<div class="blocker" role="region" aria-label="Mobile required">
+  <div>
+    <div style="font-size:14px; color:#bdbdbd; margin-bottom:8px;">Natural Intelligence</div>
+    <div style="font-size:16px; line-height:1.5; max-width:32ch;">
+      This work is viewable on mobile in portrait orientation.<br>
+      Please open on your phone and rotate upright.
+    </div>
+  </div>
+</div>
+
+<!-- Mobile-only content -->
+<div class="mobile" role="main">
+  <header>
+    <div class="wrap">
+      <h1 class="title">Natural Intelligence</h1>
+      <p class="subtitle"><em>experimental translations between non-human perception and human-centric AI</em></p>
+    </div>
+  </header>
+
+  <section class="wall">
+    <div class="wrap" style="padding:0;">
+      <p class="lead">
+        Eight bird species native to the Eastern United States were used as source audio to train an AI voice.
+        Their songs, forced through a human-speech model, emerged as warped outputs that do not register birdsong as “speech.”
+        In parallel, text-to-image systems were prompted to depict each species’ biological vision despite being trained on human perception.
+        These glitches and mistranslations expose a human-centric AI that only reads what resembles us.
+      </p>
+    </div>
+  </section>
+
+  <section class="index">
+    <div class="wrap" style="padding:0;">
+      <h2>Works</h2>
+      <nav class="tags" aria-label="Works index">
+        <a class="tag" href="#northern-cardinal">Northern cardinal (Drew)</a>
+        <a class="tag" href="#pine-siskin">Pine siskin (Aria)</a>
+        <a class="tag" href="#mourning-dove">Mourning dove (Charlotte)</a>
+        <a class="tag" href="#house-finch">House finch (Alice)</a>
+        <a class="tag" href="#woodpecker">Woodpecker (Antoni)</a>
+        <a class="tag" href="#northern-flicker">Northern flicker (Adam)</a>
+        <a class="tag" href="#american-goldfinch">American goldfinch (Daniel)</a>
+        <a class="tag" href="#white-breasted-nuthatch">White-breasted nuthatch (Arnold)</a>
+      </nav>
+    </div>
+  </section>
+
+  <main id="works"></main>
+
+  <footer><div class="wrap">© polygonpalm · Natural Intelligence</div></footer>
+</div>
+
+<script>
+/* Production: place this HTML next to your media files */
+const WORKS = [
+ {id:"northern-cardinal", name:"Northern cardinal", agent:"Drew", img:"/timespacetransmat/Kimberly-lyle/Northern Cardinal_POV.png", audio:"Drew_Northern Cardinal.mp3",
+  prompt:"Render a scene from the POV of a northern cardinal with tetrachromatic vision including ultraviolet reflectance on foliage and surfaces; non-human color mapping beyond RGB."},
+ {id:"pine-siskin", name:"Pine siskin", agent:"Aria", img:"/timespacetransmat/Kimberly-lyle/Pine Siskin_POV.png", audio:"Aria_Pine Siskin Song, Calls.mp3",
+  prompt:"Render conifer branches as seen by a pine siskin with high discrimination of near-green spectral differences and additional cone class; non-human spectral mapping."},
+ {id:"mourning-dove", name:"Mourning dove", agent:"Charlotte", img:"Mourning Dove_POV.png", audio:"Charlotte_Mourning Dove.mp3",
+  prompt:"Render open ground from a mourning dove POV: wide lateral monocular field, low acuity, low saturation, panoramic distortion; avoid human-like focus and contrast."},
+ {id:"house-finch", name:"House finch", agent:"Alice", img:"House Finch_POV.png", audio:"Alice_House Finch Song.mp3",
+  prompt:"Render feeder scene from a house finch POV with UV-reflective plumage highlights on nearby birds; emphasize four-cone spectral mapping and social signal salience."},
+ {id:"woodpecker", name:"Woodpecker", agent:"Antoni", img:"Woodpecker_POV.png", audio:"Antoni_Woodpecker Calls.mp3",
+  prompt:"Render bark surface from woodpecker POV with close-range textural salience, enhanced motion sensitivity for insects, narrow forward binocular cone; color fidelity secondary."},
+ {id:"northern-flicker", name:"Northern flicker", agent:"Adam", img:"Northern Flicker_POV.png", audio:"Adam_Northern Flicker Call.mp3",
+  prompt:"Render forest floor from northern flicker POV with heightened detection of micro-motion and contrast over color, tuned for prey detection rather than human photometry."},
+ {id:"american-goldfinch", name:"American goldfinch", agent:"Daniel", img:"American Goldfinch_POV.png", audio:"Daniel_American Goldfinch Song, Call.mp3",
+  prompt:"Render meadow from an American goldfinch POV with ultraviolet reflectance on seedheads and leaves; tetrachromatic spectrum beyond human RGB assumptions."},
+ {id:"white-breasted-nuthatch", name:"White-breasted nuthatch", agent:"Arnold", img:"White-Breasted Nuthatch_POV.png", audio:"Arnold_White-breasted Nuthatch Song.mp3",
+  prompt:"Render close bark surface from white-breasted nuthatch POV with texture mapping and insect cue sensitivity during vertical and inverted locomotion; non-human perceptual weighting."}
+];
+
+const root = document.getElementById("works");
+WORKS.forEach((w, i) => {
+  const sec = document.createElement("section");
+  sec.className = "work"; sec.id = w.id;
+  const imgTag = `<img class="img" alt="${w.name} speculative vision" src="${w.img}">`;
+  sec.innerHTML = `
+    <p class="num">${i+1}</p>
+    <h2 class="name">${w.name} <span class="agent">(${w.agent})</span></h2>
+    <figure>
+      <button class="media-btn" type="button" aria-label="Play or pause ${w.name}" data-state="paused">
+        ${imgTag}
+        <span class="overlay" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </button>
+      <audio preload="none" src="${w.audio}" aria-label="${w.name} distorted audio"></audio>
+    </figure>
+    <details>
+      <summary>Prompt</summary>
+      <div class="prompt">${w.prompt}</div>
+    </details>
+  `;
+  root.appendChild(sec);
+});
+
+/* Image click to play/pause (works when audio files are present) */
+document.querySelectorAll(".work").forEach(work => {
+  const btn = work.querySelector(".media-btn");
+  const audio = work.querySelector("audio");
+  const overlay = work.querySelector(".overlay svg");
+
+  audio.addEventListener("play", () => {
+    document.querySelectorAll("audio").forEach(a => { if (a !== audio) a.pause(); });
+    btn.dataset.state = "playing";
+    overlay.innerHTML = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+  });
+  audio.addEventListener("pause", () => {
+    btn.dataset.state = "paused";
+    overlay.innerHTML = '<path d="M8 5v14l11-7z"/>';
+  });
+  btn.addEventListener("click", () => {
+    if (audio.paused) audio.play().catch(()=>{}); else audio.pause();
+  });
+  btn.addEventListener("keydown", (e) => {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); btn.click(); }
+  });
+});
+
+/* Reveal-on-scroll (subtle) */
+(function(){
+  const works = document.querySelectorAll('.work');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); } });
+    }, {root:null, rootMargin:'0px 0px -20% 0px', threshold:0.1});
+    works.forEach(w=>io.observe(w));
+  } else {
+    works.forEach(w=>w.classList.add('show'));
+  }
+})();
+</script>
+</body>
+</html>
