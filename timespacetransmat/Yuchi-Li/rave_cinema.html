@@ -145,10 +145,19 @@
 
     /* MEDIA GALLERY — CSS generated visuals (no external assets) */
     .gallery {
-      display: grid; gap: .9rem; margin-top: .5rem;
-      grid-template-columns: 1fr 1fr;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      margin-top: 1rem;
     }
-    .tile {
+
+    @media (min-width: 480px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .media-tile {
       position: relative; aspect-ratio: 1/1; border-radius: .9rem;
       overflow: hidden; border: 1px solid rgba(255,77,95,.16);
       background: radial-gradient(60% 50% at 40% 40%, rgba(255,77,95,.25), rgba(138,0,26,.35) 40%, transparent 70%),
@@ -156,7 +165,14 @@
                   #0b0002;
       box-shadow: inset 0 0 40px rgba(255,77,95,.08);
       isolation: isolate;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
+
+    .media-tile:hover {
+      transform: scale(1.02);
+    }
+
     .tile::before { /* scanning beam */
       content: ""; position: absolute; inset: -20% -40%; transform: rotate(20deg);
       background: linear-gradient(90deg, transparent, rgba(255,77,95,.35), transparent);
@@ -172,6 +188,56 @@
         </filter>\
         <rect width='120' height='120' filter='url(%23n)' opacity='.12'/>\
       </svg>"); opacity: .8; mix-blend-mode: screen; }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: .5rem;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox.active img {
+      transform: scale(1);
+    }
+
+    /* Close button */
+    .lightbox-close {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      background: rgba(255,77,95,.2);
+      border: 1px solid rgba(255,77,95,.3);
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1001;
+    }
 
     /* ACCESSIBILITY: focus styles */
     :focus-visible { outline: 2px solid var(--red-300); outline-offset: 3px; border-radius: 8px; }
@@ -198,6 +264,48 @@
 
     /* SMALL PRINT */
     .small { color: #bdb7b9; font-size: .78rem; opacity: .9; }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,77,95,.16);
+      border-radius: .9rem;
+      background: #0b0002;
+      aspect-ratio: 16/9;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .media-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .media-tile::before {
+      z-index: 2;
+    }
+
+    .media-tile .grain {
+      z-index: 3;
+      opacity: 0.3;
+    }
+
+    .media-tile.placeholder {
+      background: linear-gradient(45deg, 
+        var(--red-900), 
+        var(--red-800) 50%,
+        var(--red-900));
+    }
+    .media-tile.placeholder::before {
+      opacity: 0.5;
+    }
 
   </style>
 </head>
@@ -295,24 +403,80 @@
       </div>
     </section>
 
-    <!-- Gallery (coded media) -->
+    <!-- Gallery Section Update -->
     <section class="section" id="gallery" aria-label="Media Gallery">
       <h2>Media Gallery</h2>
+      
+      <!-- Updated Video Section -->
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/FPRJ3npmEL0?si=K9zM8MwotxOUJK24" 
+          title="RAVE CINEMA Performance"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          style="border-radius: .9rem;"
+          onerror="this.style.display='none'; this.parentElement.innerHTML += '<p style=\'text-align:center;padding:2rem;\'>Video temporarily unavailable</p>'"
+        ></iframe>
+      </div>
+
       <div class="gallery" role="list">
-        <figure class="tile" role="listitem" aria-label="Glitch porthole">
-          <div class="grain" aria-hidden="true"></div>
+        <!-- Updated image tiles - now 6 of them -->
+        <figure class="tile media-tile" role="listitem" aria-label="Glitch porthole">
+          <img 
+            src="./RAVE CINEMA 1.png" 
+            alt="RAVE CINEMA performance still 1" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
         </figure>
-        <figure class="tile" role="listitem" aria-label="Ritual spiral">
-          <div class="grain" aria-hidden="true"></div>
+        <figure class="tile media-tile" role="listitem" aria-label="Ritual spiral">
+          <img 
+            src="./RAVE CINEMA 2.png" 
+            alt="RAVE CINEMA performance still 2" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
         </figure>
-        <figure class="tile" role="listitem" aria-label="Laser veil">
-          <div class="grain" aria-hidden="true"></div>
+        <figure class="tile media-tile" role="listitem" aria-label="Laser veil">
+          <img 
+            src="./RAVE CINEMA 3.png" 
+            alt="RAVE CINEMA performance still 3" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
         </figure>
-        <figure class="tile" role="listitem" aria-label="Body—machine dissolve">
-          <div class="grain" aria-hidden="true"></div>
+        <figure class="tile media-tile" role="listitem" aria-label="Body—machine dissolve">
+          <img 
+            src="./RAVE CINEMA 4.png" 
+            alt="RAVE CINEMA performance still 4" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
+        </figure>
+        <figure class="tile media-tile" role="listitem" aria-label="Digital transformation">
+          <img 
+            src="./RAVE CINEMA 5.png" 
+            alt="RAVE CINEMA performance still 5" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
+        </figure>
+        <figure class="tile media-tile" role="listitem" aria-label="Techno ritual">
+          <img 
+            src="./RAVE CINEMA 6.png" 
+            alt="RAVE CINEMA performance still 6" 
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"
+          >
+          <div class="grain"></div>
         </figure>
       </div>
-      <p class="small" style="margin-top:.6rem">All visuals are code-generated on-page (no external assets), ensuring portability and exhibition resilience.</p>
     </section>
 
     <!-- Contact / Booking -->
@@ -334,6 +498,12 @@
       <button class="tabbtn" data-target="#contact" aria-controls="contact">Contact</button>
     </nav>
   </main>
+
+  <!-- Lightbox container -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image preview">
+    <button class="lightbox-close" aria-label="Close preview">×</button>
+    <img src="" alt="" />
+  </div>
 
   <script>
     // =============================
@@ -391,6 +561,56 @@
     const disableFocus = () => document.documentElement.classList.remove('user-is-tabbing');
     window.addEventListener('keydown', (e) => { if (e.key === 'Tab') { hadKeyboardEvent = true; enableFocus(); } });
     window.addEventListener('mousedown', disableFocus);
+
+    // Enhanced Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    
+    function openLightbox(imgSrc, imgAlt) {
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = imgAlt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      // Clear source after animation
+      setTimeout(() => {
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+      }, 300);
+    }
+
+    // Set up click handlers for all gallery images
+    document.querySelectorAll('.media-tile').forEach(tile => {
+      const img = tile.querySelector('img');
+      if (img) {
+        tile.addEventListener('click', () => {
+          openLightbox(img.src, img.alt);
+        });
+      }
+    });
+
+    // Multiple ways to close
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
 
   </script>
 </body>
