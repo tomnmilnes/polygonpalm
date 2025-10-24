@@ -21,12 +21,12 @@
         document.body.appendChild(renderer.domElement);
 
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        camera.position.set(0, -5, 5);  // Moved camera below and back
+        camera.position.set(3, 3, 5);  // Moved camera below and back
         camera.lookAt(0, 0, 0);
 
         const loader = new THREE.PLYLoader();
         loader.load(
-            'Tender2.ply',
+            'Tender_table30k.ply',
             function (geometry) {
                 const material = new THREE.PointsMaterial({
                     color: 0xffffff,

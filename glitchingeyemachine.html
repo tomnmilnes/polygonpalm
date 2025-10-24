@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Glitching Machine Eye</title>
+    <title>Glitching Eye Machine</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -168,12 +168,12 @@
               height="250"/></a>
           </li>
           <li>
-            <a href="" 
+            <a href="/glitchingeyemachine/glitching3.html" 
               ><h1 style="color: #ffffff;">2</h1>
-              <!--img
-                src="/img/space_invis.png"
-                width="300"
-                height="100"/--></a>
+              <img
+                src="/img/tendermachines/Tender_table1.png"
+                width="400"
+                height="400"/></a>
           </li>
           <li>
             <a href=""
@@ -302,7 +302,7 @@
         ctx.font = '60px "Space Mono"'; // Increased font size
         ctx.textAlign = 'center';
         ctx.fillText('GLITCHING', canvas.width/2, 100);
-        ctx.fillText('MACHINE EYE', canvas.width/2, 170);
+        ctx.fillText('EYE MACHINE', canvas.width/2, 170);
         
         const textCoordinates = ctx.getImageData(0, 0, canvas.width, canvas.height);
         
@@ -466,11 +466,11 @@
               zoomStep: 0,
               wheelZoom: true,
               zoom: setZoom(),
-              clickToFront: false,
+              clickToFront: true,
               noSelect: false,
               dragControl: true,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
-              initial: [-0.05, 0.01],
+              initial: [-0.01, 0.005],
               frontSelect: false,
               centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
