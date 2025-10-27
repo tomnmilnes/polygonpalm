@@ -458,7 +458,7 @@
           try {
             $("#myCanvas").tagcanvas({
               /*shape: setShape(),*/
-              //lock: 'x',
+              lock: 'y',
               textColour: "#ffffff",
               outlineMethod: "none",
               maxSpeed: setmaxSpeed(),
@@ -468,14 +468,14 @@
               zoom: setZoom(),
               clickToFront: true,
               noSelect: false,
-              dragControl: true,
+              dragControl: false,
               //activeAudio: "./media/click.ogg", audioVolume: 1, audioIconDark: 0,
               initial: [-0.01, 0.005],
               frontSelect: true,
               centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
               offsetY: setOffsetY(),
-              shape: "vring(0.4)",
+              shape: "vring(0.2, 1)",
               stretchX: setStretchX(),
               stretchY: setStretchY(),
               minBrightness: 0.3,
