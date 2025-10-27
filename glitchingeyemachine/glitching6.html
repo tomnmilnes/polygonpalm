@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Images Gallery</title>
+    <style>
+        body {
+            background: #000000;
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+            background: #000000;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            border-color: #ffffff;
+        }
+
+        .text-section {
+            grid-column: 1 / -1;
+            padding: 20px;
+            margin: 20px 0;
+            background: #111111;
+            color: #ffffff;
+            border: 1px solid #333;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 999;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="workshop/20250913_123926.JPEG" alt="Workshop Image 1" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0953.jpg" alt="Workshop Image 2" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0954.jpg" alt="Workshop Image 3" onclick="openLightbox(this.src)">
+        
+        <div class="text-section">
+            <p>Initial scanning setup and material exploration</p>
+        </div>
+
+        <img src="workshop/IMG_0956.jpg" alt="Workshop Image 4" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0958.jpg" alt="Workshop Image 5" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0959.jpg" alt="Workshop Image 6" onclick="openLightbox(this.src)">
+        
+        <div class="text-section">
+            <p>Testing different scanning techniques and lighting conditions</p>
+        </div>
+
+        <img src="workshop/IMG_0961.JPG" alt="Workshop Image 7" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0962.JPG" alt="Workshop Image 8" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0967.jpg" alt="Workshop Image 9" onclick="openLightbox(this.src)">
+
+        <div class="text-section">
+            <p>Digital processing and glitch experimentation</p>
+        </div>
+
+        <img src="workshop/IMG_0973.JPG" alt="Workshop Image 10" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0976.JPG" alt="Workshop Image 11" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0978.JPG" alt="Workshop Image 12" onclick="openLightbox(this.src)">
+
+        <div class="text-section">
+            <p>Final results and material documentation</p>
+        </div>
+        <img src="workshop/IMG_0981.JPG" alt="Workshop Image 10" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0983.JPG" alt="Workshop Image 11" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0984.JPG" alt="Workshop Image 12" onclick="openLightbox(this.src)">
+
+        <div class="text-section">
+            <p>Final results and material documentation</p>
+        </div>
+        <img src="workshop/IMG_0985.JPG" alt="Workshop Image 10" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0986.JPG" alt="Workshop Image 11" onclick="openLightbox(this.src)">
+        <img src="workshop/IMG_0989.JPG" alt="Workshop Image 12" onclick="openLightbox(this.src)">
+
+        <div class="text-section">
+            <p>Final results and material documentation</p>
+        </div>
+        <img src="workshop/IMG_0990.JPG" alt="Workshop Image 10" onclick="openLightbox(this.src)">
+    <img src="workshop/IMG_0990.JPG" alt="Workshop Image 11" onclick="openLightbox(this.src)">
+    <img src="workshop/IMG_0998.JPG" alt="Workshop Image 12" onclick="openLightbox(this.src)">
+
+    <div class="text-section">
+        <p>Final results and material documentation</p>
+    </div>
+    <img src="workshop/IMG_1001.JPG" alt="Workshop Image 10" onclick="openLightbox(this.src)">
+    <img src="workshop/IMG_1002.JPG" alt="Workshop Image 11" onclick="openLightbox(this.src)">
+    <img src="workshop/IMG_1003.JPG" alt="Workshop Image 12" onclick="openLightbox(this.src)">
+
+    <div class="text-section">
+        <p>Final results and material documentation</p>
+    </div>
+    </div>
+    
+    </div>
+
+    <div class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img src="" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.querySelector('.lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.querySelector('.lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitching Eye Machine - Documentation</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .image-block {
+            margin: 60px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .image-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-block {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .text-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .text-block {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-block">
+            <h2>Glitching Eye Machine</h2>
+            <p>An exploration of machine vision through the lens of failure and glitch aesthetics.</p>
+        </div>
+
+        <div class="image-block">
+            <img src="/glitchingeyemachine/tenderC6.png" alt="Tender Documentation 1">
+        </div>
+
+        <div class="text-block">
+            <p>The machine's inability to properly capture transparent and reflective surfaces creates unexpected artifacts and distortions.</p>
+        </div>
+
+        <div class="image-block">
+            <img src="/glitchingeyemachine/tenderC7.png" alt="Tender Documentation 2">
+        </div>
+
+        <div class="text-block">
+            <p>These digital artifacts become a new form of aesthetic expression, revealing the limitations and biases of computer vision systems.</p>
+        </div>
+
+        <div class="image-block">
+            <img src="/glitchingeyemachine/tenderC8.png" alt="Tender Documentation 3">
+        </div>
+        <div class="text-block">
+            <p>[TEXT HERE]</p>
+        </div>
+
+        <div class="image-block">
+            <img src="/glitchingeyemachine/tenderC9.png" alt="Tender Documentation 4">
+        </div>
+    
+        <div class="text-block">
+            <p>[TEXT HERE]</p>
+        </div>
+
+        <div class="image-block">
+            <img src="/glitchingeyemachine/tenderC10.png" alt="Tender Documentation 5">
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer for fade-in effects
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all image and text blocks
+        document.querySelectorAll('.image-block, .text-block').forEach((block) => {
+            observer.observe(block);
+        });
+
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
+        });
+    </script>
+</body>
+</html>
