@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ambient Gradient Portal — GSAP</title>
+  <style>
+    /* Reset + full-bleed canvas */
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #0a0d12; /* deep night backdrop */
+      overflow: hidden;
+    }
+    #wrap {
+      position: fixed;
+      inset: 0;
+    }
+    canvas { display: block; }
+
+    /* Subtle film grain overlay (tiled from a tiny canvas, set in JS) */
+    .grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      mix-blend-mode: soft-light;
+      opacity: 0.08; /* keep this gentle */
+      background-size: 180px 180px; /* tile scale */
+      background-repeat: repeat;
+    }
+
+    /* Optional: tiny instruction overlay (can be removed) */
+    .hint {
+      position: fixed;
+      left: 50%;
+      bottom: 2rem;
+      transform: translateX(-50%);
+      color: #c9d2e1;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.35;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="viz"></canvas>
+    <div class="grain" id="grain"></div>
+  </div>
+  <!--div class="hint">Turrell-inspired: complementary glow • slow breathing</div-->
+
+  <!-- GSAP CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <script>
+    /*
+      Turrell-inspired ambient portal:
+      - Warm inner ellipse glows against a cool field (complementary contrast)
+      - Multiple blurred layers build soft edges / chromatic bleed
+      - Very slow, gentle motion driven by GSAP; canvas redraws via rAF
+    */
+
+    const canvas = document.getElementById('viz');
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+
+    const state = {
+      // Palette — base endpoints for slow morph
+      warmA: '#bfe9ff',  // inner core start (light cyan)
+      warmB: '#69c5ff',  // inner halo start (cyan-blue)
+      coolA: '#0b2a59',  // background field start (deep indigo)
+      coolB: '#1a8f9b',  // peripheral tint start (teal)
+
+      // Animated parameters
+      pulse: 0.0,     // 0..1 breathing
+      driftX: 0.0,    // -1..1 subtle offset
+      driftY: 0.0,    // -1..1 subtle offset
+      hueShift: 0.0,  // -1..1 slow hue meander
+      tone: 0.0       // 0..1 palette morph over ~3 minutes
+    };
+
+    function resize() {
+      const { innerWidth: w, innerHeight: h } = window;
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+
+    // timebase for liquid motion
+    let startTime = performance.now();
+
+    // Utility: lerp + color helpers
+    const lerp = (a,b,t)=>a+(b-a)*t;
+
+    function hexToRgb(hex){
+      const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return m ? { r: parseInt(m[1],16), g: parseInt(m[2],16), b: parseInt(m[3],16) } : {r:0,g:0,b:0};
+    }
+    function rgbToHex({r,g,b}){
+      const h = (n)=>Math.max(0,Math.min(255, n|0)).toString(16).padStart(2,'0');
+      return `#${h(r)}${h(g)}${h(b)}`;
+    }
+    function lerpColor(aHex,bHex,t){
+      const a=hexToRgb(aHex), b=hexToRgb(bHex);
+      return rgbToHex({ r: lerp(a.r,b.r,t), g: lerp(a.g,b.g,t), b: lerp(a.b,b.b,t) });
+    }
+
+    // Gentle HSV-ish hue wander (approx): rotate both palettes together
+    function hueRotate(hex, deg){
+      // rgb -> hsl, rotate hue, back to rgb (lightweight implementation)
+      const {r,g,b} = hexToRgb(hex);
+      const rn=r/255, gn=g/255, bn=b/255;
+      const max=Math.max(rn,gn,bn), min=Math.min(rn,gn,bn);
+      let h,s,l=(max+min)/2;
+      if(max===min){ h=0; s=0; }
+      else {
+        const d=max-min;
+        s = l>0.5 ? d/(2-max-min) : d/(max+min);
+        switch(max){
+          case rn: h = (gn-bn)/d + (gn<bn?6:0); break;
+          case gn: h = (bn-rn)/d + 2; break;
+          case bn: h = (rn-gn)/d + 4; break;
+        }
+        h/=6;
+      }
+      h = (h + deg/360) % 1; if(h<0) h+=1;
+      function hslToRgb(h,s,l){
+        const hue2rgb=(p,q,t)=>{ if(t<0) t+=1; if(t>1) t-=1; if(t<1/6) return p+(q-p)*6*t; if(t<1/2) return q; if(t<2/3) return p+(q-p)*(2/3 - t)*6; return p; };
+        let r,g,b;
+        if(s===0){ r=g=b=l; }
+        else {
+          const q = l < 0.5 ? l*(1+s) : l + s - l*s;
+          const p = 2*l - q;
+          r = hue2rgb(p,q,h+1/3); g=hue2rgb(p,q,h); b=hue2rgb(p,q,h-1/3);
+        }
+        return { r: Math.round(r*255), g: Math.round(g*255), b: Math.round(b*255) };
+      }
+      return rgbToHex(hslToRgb(h,s,l));
+    }
+
+    function paint() {
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      const t = (performance.now() - startTime) / 1000; // seconds
+      // Multi-oscillator "liquid" drift (slow, smooth, non-repeating)
+      const fx = (Math.sin(t*0.070) + Math.sin(t*0.037 + 1.3) + Math.sin(t*0.023 - 0.7)) / 3;
+      const fy = (Math.sin(t*0.061 - 0.4) + Math.sin(t*0.031 + 2.2) + Math.sin(t*0.017)) / 3;
+
+      const cx = w * 0.5 + (state.driftX * 0.20 + fx * 0.28) * w; // up to ~28% of width
+      const cy = h * 0.5 + (state.driftY * 0.20 + fy * 0.23) * h; // up to ~23% of height
+
+      // slowly breathe scale and intensity
+      const breathe = 1 + (state.pulse - 0.5) * 0.12; // +/-6%
+
+      // background gradient (cool field)
+      const gBg = ctx.createLinearGradient(0, 0, w, h);
+      // Morph background field slowly between two nearby palettes
+      const coolA = hueRotate( lerpColor('#0b2a59', '#1b2550', state.tone), state.hueShift*12 );
+      const coolB = hueRotate( lerpColor('#1a8f9b', '#23b8a7', state.tone), state.hueShift*12 );
+      gBg.addColorStop(0, coolA);
+      gBg.addColorStop(1, coolB);
+      ctx.fillStyle = gBg;
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.save();
+      ctx.filter = 'blur(100px)';
+      ctx.globalCompositeOperation = 'lighter';
+
+      // Outer ambient halo (cool/warm mix)
+      const rOuter = Math.max(w,h) * 0.55 * breathe;
+      let grad1 = ctx.createRadialGradient(cx, cy, 0, cx, cy, rOuter);
+      grad1.addColorStop(0, lerpColor(hueRotate('#000000', 0), hueRotate('#ffeaba', state.hueShift*18), 0.65));
+      grad1.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = grad1;
+      ctx.beginPath();
+      ctx.arc(cx, cy, rOuter, 0, Math.PI*2);
+      ctx.fill();
+
+      // Inner portal ellipse (warm core)
+      ctx.save();
+      const t2 = (performance.now() - startTime) / 1000;
+      const eW = Math.min(w,h) * (0.78 + 0.06*Math.sin(t2*0.033) + 0.03*Math.sin(t2*0.021+1.7)) * breathe;
+      const eH = eW * (0.66 + 0.04*Math.sin(t2*0.029+0.5));
+      ctx.translate(cx, cy);
+      ctx.rotate(0.03 * Math.sin(state.pulse * Math.PI * 2) + 0.06 * Math.sin(((performance.now()-startTime)/1000)*0.025));
+      ctx.scale(1.2, 0.9);
+      const grad2 = ctx.createRadialGradient(0, 0, 2, 0, 0, eW*0.55);
+      const innerA = hueRotate( lerpColor('#ffeaba', '#d7f7ff', state.tone), state.hueShift*18 );
+      const innerB = hueRotate( lerpColor('#69c5ff', '#7fd9ff', state.tone), state.hueShift*18 );
+      grad2.addColorStop(0.0, innerA);
+      grad2.addColorStop(0.6, innerB);
+      grad2.addColorStop(1.0, 'rgba(0,0,0,0)');
+      ctx.fillStyle = grad2;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, eW*0.5, eH*0.5, 0, 0, Math.PI*2);
+      ctx.fill();
+      ctx.restore();
+
+      // Peripheral complementary tint blobs (subtle counters)
+      const rBlob = Math.min(w,h) * 0.35;
+      const offs = Math.min(w,h) * 0.28;
+      const blob = (bx,by,hex)=>{
+        const g = ctx.createRadialGradient(bx,by,0,bx,by,rBlob);
+        g.addColorStop(0, hueRotate(hex, state.hueShift*12));
+        g.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(bx,by,rBlob,0,Math.PI*2);
+        ctx.fill();
+      };
+      blob(cx - offs*1.2, cy + offs*0.2, '#1aa9b0'); // cool
+      blob(cx + offs*0.9,  cy - offs*0.3, '#ff9955'); // warm echo
+
+      ctx.restore();
+
+      // Vignette for focus
+      const vignette = ctx.createRadialGradient(cx, cy, Math.min(w,h)*0.4, cx, cy, Math.max(w,h)*0.8);
+      vignette.addColorStop(0, 'rgba(0,0,0,0)');
+      vignette.addColorStop(1, 'rgba(0,0,0,0.35)');
+      ctx.fillStyle = vignette;
+      ctx.fillRect(0,0,w,h);
+    }
+
+    // GSAP drives the parameters; rAF handles drawing
+    gsap.to(state, { pulse: 1, duration: 10, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+    gsap.to(state, { driftX: 0.1, duration: 80, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+    gsap.to(state, { driftY: -0.4, duration: 95, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+    gsap.to(state, { hueShift: 3.2, duration: 140, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+
+    // More noticeable palette evolution (~2 minutes round-trip)
+    gsap.to(state, { tone: 1, duration: 120, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+
+    // Very slow palette evolution (~2.5-3 minutes round-trip)
+    gsap.to(state, { tone: 1, duration: 160, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+
+    // Render loop
+    function loop(){
+      paint();
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    // Build a tiny noise tile and assign as .grain background
+    function makeGrainTile(size=180){
+      const c = document.createElement('canvas');
+      c.width = c.height = size;
+      const x = c.getContext('2d');
+      const img = x.createImageData(size, size);
+      for(let i=0;i<img.data.length;i+=4){
+        const n = 240 + Math.random()*15; // very light, near-white
+        img.data[i] = n; img.data[i+1] = n; img.data[i+2] = n; img.data[i+3] = Math.random()*32; // low alpha
+      }
+      x.putImageData(img, 0, 0);
+      return c.toDataURL('image/png');
+    }
+    document.getElementById('grain').style.backgroundImage = `url(${makeGrainTile(160)})`;
+
+    // Hide the hint after a few seconds
+    gsap.to(document.querySelector('.hint'), { opacity: 0, delay: 6, duration: 2, onComplete(){ this.targets()[0].style.display='none'; } });
+  </script>
+</body>
+</html>
