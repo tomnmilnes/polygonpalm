@@ -10,6 +10,7 @@
   --bg:#000; --fg:#fff; --muted:#9a9a9a; --rule:#222; --w:720px;
   --pad-x:16px; --radius:10px;
   --violet:#6F7BFF; --violet-hover:#8790FF; --violet-open:#A0A9FF;
+  --font-stack: Helvetica, Arial, sans-serif;
 }
 
 /* Default: block desktop/tablet + landscape */
@@ -17,7 +18,7 @@ html,body{margin:0;height:100%;background:#000;color:#fff}
 .blocker{
   display:flex; align-items:center; justify-content:center;
   min-height:100dvh; padding:24px; text-align:center;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  font-family:var(--font-stack);
   color:#9a9a9a;
 }
 .mobile{ display:none; }
@@ -29,22 +30,22 @@ html,body{margin:0;height:100%;background:#000;color:#fff}
 }
 
 /* ====== Exhibition styles (apply only when .mobile is visible) ====== */
-.mobile *{ box-sizing:border-box; }
+.mobile *{ box-sizing:border-box; font-family:var(--font-stack); }
 .mobile body, .mobile{ background:var(--bg); color:var(--fg); }
 
 .wrap{ max-width: var(--w); margin:0 auto; padding:20px 16px; }
 
 header{ position:sticky; top:0; background:#000; border-bottom:1px solid var(--rule); z-index:9; }
-.title{ font-weight:700; font-size:20px; margin:0; }
-.subtitle{ color:#666; font-size:12px; font-weight:400; margin:4px 0 0; text-align:left; }
+.title{ font-weight:700; font-size:20px; margin:0; font-family:var(--font-stack); }
+.subtitle{ color:#666; font-size:12px; font-weight:400; margin:4px 0 0; text-align:left; font-family:var(--font-stack); }
 .wall{ padding:18px 16px; border-bottom:1px solid var(--rule); }
-.lead{ font-size:15px; max-width:54ch; line-height:1.55; }
+.lead{ font-size:15px; max-width:54ch; line-height:1.55; font-family:var(--font-stack); }
 
 /* Index */
 .index{ padding:10px 16px; border-bottom:1px solid var(--rule); }
 .index h2{ font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:0 0 10px; }
 .tags{ display:flex; flex-wrap:wrap; gap:8px; }
-.tag{ border:1px solid var(--rule); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--fg); text-decoration:none; }
+.tag{ border:1px solid var(--rule); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--fg); text-decoration:none; font-family:var(--font-stack); }
 .tag:hover{ background:#111; }
 
 /* Works */
@@ -58,7 +59,7 @@ main{ padding:10px 0 20px; }
 @media (prefers-reduced-motion: reduce){ .work{ transition:none; } }
 
 .num{ font-size:12px; color:var(--muted); margin:0 0 4px; }
-.name{ font-weight:600; font-size:16px; margin:0 0 12px; }
+.name{ font-weight:600; font-size:16px; margin:0 0 12px; font-family:var(--font-stack); }
 .name .agent{ color:var(--muted); font-weight:500; }
 
 /* Media block: image is the play/pause trigger */
@@ -96,15 +97,15 @@ audio{ width:100%; height:32px; margin-top:10px; }
 details{ margin-top:10px; }
 summary{
   list-style:none; cursor:pointer; font-size:13px; font-weight:600;
-  color:var(--violet);
+  color:var(--violet); font-family:var(--font-stack);
 }
 summary:hover{ color:var(--violet-hover); }
 details[open] > summary{ color:var(--violet-open); }
 summary::-webkit-details-marker{ display:none; }
-.prompt{ margin-top:6px; color:#e5e5e5; font-size:14px; }
+.prompt{ margin-top:6px; color:#e5e5e5; font-size:14px; font-family:var(--font-stack); }
 
 /* Footer */
-footer{ border-top:1px solid var(--rule); color:var(--muted); font-size:12px; }
+footer{ border-top:1px solid var(--rule); color:var(--muted); font-size:12px; font-family:var(--font-stack); }
 </style>
 </head>
 <body>
