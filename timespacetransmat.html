@@ -195,12 +195,12 @@
           <li><a href=""><img src="img/transmat_invis.png" width="400" height="90"/></a></li>
           
           <!-- Simplify the artist entries -->
-          <li><a href="/timespacetransmat/David-Lisser/mirror-404-page.html" data-weight="1.2">David<br>Lisser<!--img src="/timespacetransmat/asteroid.png" height="200px" width="200px";--></a></li>
-          <li><a href="/timespacetransmat/Joseph-Farbrook/farbrook.html" data-weight="1.2">Joseph<br>Farbrook</a></li>
-          <li><a href="/timespacetransmat/Kimberly-lyle/natural-intelligence.html" data-weight="1.2">Kimberly<br>Lyle</a></li>
-          <li><a href="/timespacetransmat/Mocksim/folkstone-protocols.htm" data-weight="1.2">Mocksim</a></li>
-          <li><a href="/timespacetransmat/Tom-Milnes/invisiblecapture.html" data-weight="1.2">Tom<br>Milnes</a></li>
-          <li><a href="/timespacetransmat/Yuchi-Li/rave_cinema.html" data-weight="1.2">Yichu<br>Li</a></li>
+          <li><a href="/timespacetransmat/David-Lisser/mirror-404-page.html" data-weight="1.2"><img src="/timespacetransmat/David-icon.png" height="200px" width="200px";></a></li>
+          <li><a href="/timespacetransmat/Joseph-Farbrook/farbrook.html" data-weight="1.2"><img src="/timespacetransmat/Joe-icon.png" width="200" height="200"/></a></li>
+          <li><a href="/timespacetransmat/Kimberly-lyle/natural-intelligence.html" data-weight="1.2"><img src="/timespacetransmat/Kimberly-icon.png" width="200" height="200"/></a></li>
+          <li><a href="/timespacetransmat/Mocksim/folkstone-protocols.html" data-weight="1.2"><img src="/timespacetransmat/Mocksim-icon.png" width="200" height="200"/></a></li>
+          <li><a href="/timespacetransmat/Tom-Milnes/slow-internet.html" data-weight="1.2"><img src="/timespacetransmat/Tom-icon.png" width="200" height="200"/></a></li>
+          <li><a href="/timespacetransmat/Yichu-Li/rave_cinema.html" data-weight="1.2"><img src="/timespacetransmat/Yichu-icon.png" width="200" height="200"/></a></li>
         </ul>
       </div>
       </canvas>
@@ -312,7 +312,7 @@
             return zoom;
           }
           function setStretchX() {
-            const stretch = isMobile ? 1.2 : 1.3;
+            const stretch = isMobile ? 0.6 : 1.3;
             return stretch;
           }
           function setStretchY() {
@@ -332,17 +332,19 @@
             $("#myCanvas").tagcanvas({
               textColour: "#ffffff",
               outlineMethod: "none",
+              lock: "x",
               maxSpeed: setmaxSpeed(),
               depth: setDepth(),
               zoomStep: 0,
               wheelZoom: true,
               zoom: setZoom(),
               dragControl: true,
-              initial: [0.03, 0.00],
+              initial: [0, 0.05],
               centreImage: setCenterImgUrl(),
               offsetX: setOffsetX(),
               offsetY: setOffsetY(),
-              shape: "helix(0.4)",
+              shape: "hcylinder(0)", // set shape to hring
+              rotate: true,
               stretchX: setStretchX(),
               stretchY: setStretchY(),
               minBrightness: 0.3,
