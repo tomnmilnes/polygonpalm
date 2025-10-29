@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Space Transmat - Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            text-align: left;
+        }
+        .content {
+            max-width: 100%;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 768px) {
+            .content {
+                max-width: 600px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 1; text-shadow: none; }
+            25% { opacity: 0.7; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+            50% { opacity: 1; text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 25px rgba(255,255,255,0.6); }
+            75% { opacity: 0.8; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+            100% { opacity: 1; text-shadow: none; }
+        }
+
+        .artist-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            animation: twinkle 3s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .artist-link:nth-child(2) { animation-delay: 0s; }
+        .artist-link:nth-child(3) { animation-delay: 1s; }
+        .artist-link:nth-child(4) { animation-delay: 0.5s; }
+        .artist-link:nth-child(5) { animation-delay: 2s; }
+        .artist-link:nth-child(6) { animation-delay: 1.5s; }
+
+        .artist-link:hover {
+            animation: none;
+            text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 25px rgba(255,255,255,0.6);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .artist-link {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="/timespacetransmat/TST-logo4.png" alt="Time Space Transmat Logo" class="logo">
+        <p class="artist-link">Time. Space. Transmat.</p>
+        <p>Signals slip, codes fracture, and meaning drifts across unstable networks. Time. Space. Transmat channels the glitch between translation, teleportation, and remote control, where AI mediates communication and transforms digital gestures into material echoes. The exhibition unfolds as a constellation of misalignments, transmissions, and re-materialisations—uncertain passages across time, space, and system.</p>
+        <p>Work by <a href="https://farbrook.net/" class="artist-link">Joseph Farbrook</a>, 
+        <a href="https://www.yichuliart.com/" class="artist-link">Yichu Li</a>, 
+        <a href="https://kimberlyle.net/" class="artist-link">Kimberly Lyle</a>, 
+        <a href="https://davidlisser.co.uk/" class="artist-link">David Lisser</a>, 
+        <a href="https://www.mocksim.org/works.htm" class="artist-link">Micheál O'Connell/ Mocksim</a> & 
+        <a href="https://www.tommilnes.com/" class="artist-link">Tom Milnes</a>.</p>
+        <p>Embassy at Under.<br>Plymouth, England.<br>March 2026 (more info TBA)</p>
+        <p>Curated by Tom Milnes for Polygon Palm.<br></p>
+    </div>
+</body>
+</html>
