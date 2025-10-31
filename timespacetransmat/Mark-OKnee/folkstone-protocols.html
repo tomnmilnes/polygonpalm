@@ -93,7 +93,7 @@
     .section{padding:12px 16px 0}
     .diary{display:grid;gap:12px;margin-top:10px}
     .entry{position:relative;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid var(--glass-2);overflow:hidden}
-    .entry button.entry-head{all:unset;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:14px;width:100%;cursor:pointer}
+    .entry .entry-head{all:unset;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:14px;width:100%;cursor:pointer}
     .num{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(13,246,231,.08);border:1px solid rgba(13,246,231,.25);color:var(--primary);font-weight:600;font-variant-numeric:tabular-nums}
     .meta{display:grid;gap:2px;min-width:0}
     .meta b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -155,7 +155,7 @@
     <div class="hero-figure">
       <picture>
         <source type="image/avif" srcset="/timespacetransmat/Mark-OKnee/folkstone-hero-16x9.avif" />
-        <source type="image/webp" srcset="/timespacetransmat/Mocksim/folkstone-hero-16x9.avif" />
+        <source type="image/webp" srcset="./media/folkstone-hero-16x9.webp" />
         <img src="/timespacetransmat/Mark-OKnee/folkstone-hero-16x9.avif" alt="Silhouette and turbines composition, landscape 16:9." loading="eager" />
       </picture>
       <div class="hero-mask" aria-hidden="true"></div>
@@ -169,7 +169,7 @@
 
 
 <p>
-  Mark O’Knee will re-stage a famous journey between Bath and Folkstone, UK over 
+  Mark O’Knee will re-stage a famous journey between Bath and Folkstone ‘U’K over 
   <b>one hundred days</b>, beginning <b>25 November 2025</b>. Daily diary entries will appear along the route. 
   Unorthodox techniques may be employed. There are many forms of transport, and different ways to travel.
 </p>
@@ -215,7 +215,106 @@
 
     <!-- Diary Panel -->
     <section id="panel-diary" class="section" role="tabpanel" aria-labelledby="tab-diary">
-      <div class="diary" id="diary-list" aria-live="polite"></div>
+      <div class="diary" id="diary-list" aria-live="polite"><article class="entry" data-day="1"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.tl7zb09g1zpu"><div class="num">01</div><div class="meta"><b>Bath Spa</b><span>25 November 2025 • Day 01</span></div></a></article>
+<article class="entry" data-day="2"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.r8iwvul2fj19"><div class="num">02</div><div class="meta"><b>Oldfield Park</b><span>26 November 2025 • Day 02</span></div></a></article>
+<article class="entry" data-day="3"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.s5zl45siies"><div class="num">03</div><div class="meta"><b>Box</b><span>27 November 2025 • Day 03</span></div></a></article>
+<article class="entry" data-day="4"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qglzcsfo338l"><div class="num">04</div><div class="meta"><b>Corsham</b><span>28 November 2025 • Day 04</span></div></a></article>
+<article class="entry" data-day="5"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nphxkpry1ei7"><div class="num">05</div><div class="meta"><b>Chippenham</b><span>29 November 2025 • Day 05</span></div></a></article>
+<article class="entry" data-day="6"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.xcimzt5au4yb"><div class="num">06</div><div class="meta"><b>Christian Malford</b><span>30 November 2025 • Day 06</span></div></a></article>
+<article class="entry" data-day="7"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.dtmmltgz5dj3"><div class="num">07</div><div class="meta"><b>Royal Wootton Bassett</b><span>1 December 2025 • Day 07</span></div></a></article>
+<article class="entry" data-day="8"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wedcrxtqitrb"><div class="num">08</div><div class="meta"><b>Swindon</b><span>2 December 2025 • Day 08</span></div></a></article>
+<article class="entry" data-day="9"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.utz7kua9f4d"><div class="num">09</div><div class="meta"><b>Wanborough</b><span>3 December 2025 • Day 09</span></div></a></article>
+<article class="entry" data-day="10"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.x0pv9drio4u2"><div class="num">10</div><div class="meta"><b>Ashbury</b><span>4 December 2025 • Day 10</span></div></a></article>
+<article class="entry" data-day="11"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cxkpbjjrocqe"><div class="num">11</div><div class="meta"><b>Lambourn</b><span>5 December 2025 • Day 11</span></div></a></article>
+<article class="entry" data-day="12"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ou91kf8j71w3"><div class="num">12</div><div class="meta"><b>Newbury</b><span>6 December 2025 • Day 12</span></div></a></article>
+<article class="entry" data-day="13"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.c5gmxd54d4mv"><div class="num">13</div><div class="meta"><b>Thatcham</b><span>7 December 2025 • Day 13</span></div></a></article>
+<article class="entry" data-day="14"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.79fstmdez3ry"><div class="num">14</div><div class="meta"><b>Theale</b><span>8 December 2025 • Day 14</span></div></a></article>
+<article class="entry" data-day="15"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.jpfwo5tkjb7d"><div class="num">15</div><div class="meta"><b>Reading</b><span>9 December 2025 • Day 15</span></div></a></article>
+<article class="entry" data-day="16"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.83cysjxta4m9"><div class="num">16</div><div class="meta"><b>Sonning</b><span>10 December 2025 • Day 16</span></div></a></article>
+<article class="entry" data-day="17"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.914ubksa1zep"><div class="num">17</div><div class="meta"><b>Node-α</b><span>11 December 2025 • Day 17</span></div></a></article>
+<article class="entry" data-day="18"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ctv2ghbk3hhz"><div class="num">18</div><div class="meta"><b>Twyford</b><span>12 December 2025 • Day 18</span></div></a></article>
+<article class="entry" data-day="19"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7wp14wciqwrs"><div class="num">19</div><div class="meta"><b>Wargrave</b><span>13 December 2025 • Day 19</span></div></a></article>
+<article class="entry" data-day="20"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.g3yb9o38z8sx"><div class="num">20</div><div class="meta"><b>Henley</b><span>14 December 2025 • Day 20</span></div></a></article>
+<article class="entry" data-day="21"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.2rl0vsjxrv7"><div class="num">21</div><div class="meta"><b>Maidenhead</b><span>15 December 2025 • Day 21</span></div></a></article>
+<article class="entry" data-day="22"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.6xsf358pji7h"><div class="num">22</div><div class="meta"><b>Taplow</b><span>16 December 2025 • Day 22</span></div></a></article>
+<article class="entry" data-day="23"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.va2nd0w1endn"><div class="num">23</div><div class="meta"><b>Slough</b><span>17 December 2025 • Day 23</span></div></a></article>
+<article class="entry" data-day="24"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8vmh20oupi30"><div class="num">24</div><div class="meta"><b>Langley</b><span>18 December 2025 • Day 24</span></div></a></article>
+<article class="entry" data-day="25"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.zaj88yojtxzm"><div class="num">25</div><div class="meta"><b>West Drayton</b><span>19 December 2025 • Day 25</span></div></a></article>
+<article class="entry" data-day="26"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qz07basogyga"><div class="num">26</div><div class="meta"><b>Ealing Broadway</b><span>20 December 2025 • Day 26</span></div></a></article>
+<article class="entry" data-day="27"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.g0d4u8iy630v"><div class="num">27</div><div class="meta"><b>Acton</b><span>21 December 2025 • Day 27</span></div></a></article>
+<article class="entry" data-day="28"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.z9lmztxm304m"><div class="num">28</div><div class="meta"><b>Hammersmith</b><span>22 December 2025 • Day 28</span></div></a></article>
+<article class="entry" data-day="29"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nina37h8b9t1"><div class="num">29</div><div class="meta"><b>Fulham</b><span>23 December 2025 • Day 29</span></div></a></article>
+<article class="entry" data-day="30"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ar0zq275yy7x"><div class="num">30</div><div class="meta"><b>Battersea</b><span>24 December 2025 • Day 30</span></div></a></article>
+<article class="entry" data-day="31"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y414ttr9i0tu"><div class="num">31</div><div class="meta"><b>Brixton</b><span>25 December 2025 • Day 31</span></div></a></article>
+<article class="entry" data-day="32"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.mf92y5jkycfw"><div class="num">32</div><div class="meta"><b>Herne Hill</b><span>26 December 2025 • Day 32</span></div></a></article>
+<article class="entry" data-day="33"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.jnq5bgmk8xno"><div class="num">33</div><div class="meta"><b>Node-β</b><span>27 December 2025 • Day 33</span></div></a></article>
+<article class="entry" data-day="34"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cdqn29hxzao4"><div class="num">34</div><div class="meta"><b>Crystal Palace</b><span>28 December 2025 • Day 34</span></div></a></article>
+<article class="entry" data-day="35"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.9ekzbvjet9p5"><div class="num">35</div><div class="meta"><b>Penge</b><span>29 December 2025 • Day 35</span></div></a></article>
+<article class="entry" data-day="36"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7viljwedrhau"><div class="num">36</div><div class="meta"><b>Beckenham</b><span>30 December 2025 • Day 36</span></div></a></article>
+<article class="entry" data-day="37"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.9qs78gi00jq"><div class="num">37</div><div class="meta"><b>Orpington</b><span>31 December 2025 • Day 37</span></div></a></article>
+<article class="entry" data-day="38"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.kdnx1se5h6vr"><div class="num">38</div><div class="meta"><b>Knockholt</b><span>1 January 2026 • Day 38</span></div></a></article>
+<article class="entry" data-day="39"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ejnoya2vxre7"><div class="num">39</div><div class="meta"><b>Sevenoaks</b><span>2 January 2026 • Day 39</span></div></a></article>
+<article class="entry" data-day="40"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8190gc4csp6y"><div class="num">40</div><div class="meta"><b>Otford</b><span>3 January 2026 • Day 40</span></div></a></article>
+<article class="entry" data-day="41"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.d7t7u3jpq685"><div class="num">41</div><div class="meta"><b>Aylesford</b><span>4 January 2026 • Day 41</span></div></a></article>
+<article class="entry" data-day="42"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.6o2n3gspcp1z"><div class="num">42</div><div class="meta"><b>Maidstone</b><span>5 January 2026 • Day 42</span></div></a></article>
+<article class="entry" data-day="43"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.k5ikz4dmemxh"><div class="num">43</div><div class="meta"><b>Ashford</b><span>6 January 2026 • Day 43</span></div></a></article>
+<article class="entry" data-day="44"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7f8q0wlz6xcf"><div class="num">44</div><div class="meta"><b>Hythe</b><span>7 January 2026 • Day 44</span></div></a></article>
+<article class="entry" data-day="45"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.px083agx14jc"><div class="num">45</div><div class="meta"><b>Folkstone</b><span>8 January 2026 • Day 45</span></div></a></article>
+<article class="entry" data-day="46"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.r8lcwvek5mik"><div class="num">46</div><div class="meta"><b>Bath Spa</b><span>9 January 2026 • Day 46</span></div></a></article>
+<article class="entry" data-day="47"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cmi6xfju94e6"><div class="num">47</div><div class="meta"><b>Oldfield Park</b><span>10 January 2026 • Day 47</span></div></a></article>
+<article class="entry" data-day="48"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.bldc161ijegz"><div class="num">48</div><div class="meta"><b>Box</b><span>11 January 2026 • Day 48</span></div></a></article>
+<article class="entry" data-day="49"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y6ipq5lyi2qo"><div class="num">49</div><div class="meta"><b>Corsham</b><span>12 January 2026 • Day 49</span></div></a></article>
+<article class="entry" data-day="50"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.pqxdtx8q18ho"><div class="num">50</div><div class="meta"><b>Node-γ</b><span>13 January 2026 • Day 50</span></div></a></article>
+<article class="entry" data-day="51"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ef6f2jxs4rx2"><div class="num">51</div><div class="meta"><b>Chippenham</b><span>14 January 2026 • Day 51</span></div></a></article>
+<article class="entry" data-day="52"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.gp6rinagcjtx"><div class="num">52</div><div class="meta"><b>Christian Malford</b><span>15 January 2026 • Day 52</span></div></a></article>
+<article class="entry" data-day="53"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.38hxov8sydzs"><div class="num">53</div><div class="meta"><b>Royal Wootton Bassett</b><span>16 January 2026 • Day 53</span></div></a></article>
+<article class="entry" data-day="54"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.1yuqb27r5rme"><div class="num">54</div><div class="meta"><b>Swindon</b><span>17 January 2026 • Day 54</span></div></a></article>
+<article class="entry" data-day="55"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.3hg5jj8kmk3u"><div class="num">55</div><div class="meta"><b>Wanborough</b><span>18 January 2026 • Day 55</span></div></a></article>
+<article class="entry" data-day="56"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.b5zmiyeam65m"><div class="num">56</div><div class="meta"><b>Ashbury</b><span>19 January 2026 • Day 56</span></div></a></article>
+<article class="entry" data-day="57"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.p05tkhox9tro"><div class="num">57</div><div class="meta"><b>Lambourn</b><span>20 January 2026 • Day 57</span></div></a></article>
+<article class="entry" data-day="58"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ycwhl3f4zdt8"><div class="num">58</div><div class="meta"><b>Newbury</b><span>21 January 2026 • Day 58</span></div></a></article>
+<article class="entry" data-day="59"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.n5jk9mn00969"><div class="num">59</div><div class="meta"><b>Thatcham</b><span>22 January 2026 • Day 59</span></div></a></article>
+<article class="entry" data-day="60"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wdce47f8axur"><div class="num">60</div><div class="meta"><b>Theale</b><span>23 January 2026 • Day 60</span></div></a></article>
+<article class="entry" data-day="61"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ncos1twxe086"><div class="num">61</div><div class="meta"><b>Reading</b><span>24 January 2026 • Day 61</span></div></a></article>
+<article class="entry" data-day="62"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8fzk9m2hf8sf"><div class="num">62</div><div class="meta"><b>Sonning</b><span>25 January 2026 • Day 62</span></div></a></article>
+<article class="entry" data-day="63"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.kelw2ode3nep"><div class="num">63</div><div class="meta"><b>Twyford</b><span>26 January 2026 • Day 63</span></div></a></article>
+<article class="entry" data-day="64"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.p3ehulxmg5rr"><div class="num">64</div><div class="meta"><b>Wargrave</b><span>27 January 2026 • Day 64</span></div></a></article>
+<article class="entry" data-day="65"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.4x8odzexjpsi"><div class="num">65</div><div class="meta"><b>Henley</b><span>28 January 2026 • Day 65</span></div></a></article>
+<article class="entry" data-day="66"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.m4ml2ck3gzee"><div class="num">66</div><div class="meta"><b>Maidenhead</b><span>29 January 2026 • Day 66</span></div></a></article>
+<article class="entry" data-day="67"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.i6q41p8gbij8"><div class="num">67</div><div class="meta"><b>Phase-Lag</b><span>30 January 2026 • Day 67</span></div></a></article>
+<article class="entry" data-day="68"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.a2pdrecxoiwg"><div class="num">68</div><div class="meta"><b>Taplow</b><span>31 January 2026 • Day 68</span></div></a></article>
+<article class="entry" data-day="69"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.hrjjikld0cme"><div class="num">69</div><div class="meta"><b>Slough</b><span>1 February 2026 • Day 69</span></div></a></article>
+<article class="entry" data-day="70"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.b40jobxybzrk"><div class="num">70</div><div class="meta"><b>Langley</b><span>2 February 2026 • Day 70</span></div></a></article>
+<article class="entry" data-day="71"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.1jvwja8tmmrg"><div class="num">71</div><div class="meta"><b>West Drayton</b><span>3 February 2026 • Day 71</span></div></a></article>
+<article class="entry" data-day="72"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.lxjpr8kgddk"><div class="num">72</div><div class="meta"><b>Ealing Broadway</b><span>4 February 2026 • Day 72</span></div></a></article>
+<article class="entry" data-day="73"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nu3zsjwxsz4m"><div class="num">73</div><div class="meta"><b>Acton</b><span>5 February 2026 • Day 73</span></div></a></article>
+<article class="entry" data-day="74"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.uxuo92qa1inn"><div class="num">74</div><div class="meta"><b>Hammersmith</b><span>6 February 2026 • Day 74</span></div></a></article>
+<article class="entry" data-day="75"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.mnjengrkqz5m"><div class="num">75</div><div class="meta"><b>Fulham</b><span>7 February 2026 • Day 75</span></div></a></article>
+<article class="entry" data-day="76"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5eoq71hf63vl"><div class="num">76</div><div class="meta"><b>Battersea</b><span>8 February 2026 • Day 76</span></div></a></article>
+<article class="entry" data-day="77"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.fs7i24uqb42"><div class="num">77</div><div class="meta"><b>Brixton</b><span>9 February 2026 • Day 77</span></div></a></article>
+<article class="entry" data-day="78"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.l9tv98acaufp"><div class="num">78</div><div class="meta"><b>Herne Hill</b><span>10 February 2026 • Day 78</span></div></a></article>
+<article class="entry" data-day="79"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.uhr02ss0dwuv"><div class="num">79</div><div class="meta"><b>Crystal Palace</b><span>11 February 2026 • Day 79</span></div></a></article>
+<article class="entry" data-day="80"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.vpquinda1pqh"><div class="num">80</div><div class="meta"><b>Penge</b><span>12 February 2026 • Day 80</span></div></a></article>
+<article class="entry" data-day="81"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.27skoyyd6dqe"><div class="num">81</div><div class="meta"><b>Beckenham</b><span>13 February 2026 • Day 81</span></div></a></article>
+<article class="entry" data-day="82"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.vfnzn7h0ge2s"><div class="num">82</div><div class="meta"><b>Orpington</b><span>14 February 2026 • Day 82</span></div></a></article>
+<article class="entry" data-day="83"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.skhufryz221"><div class="num">83</div><div class="meta"><b>Echo-Bath</b><span>15 February 2026 • Day 83</span></div></a></article>
+<article class="entry" data-day="84"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.sy6exqlj53s1"><div class="num">84</div><div class="meta"><b>Knockholt</b><span>16 February 2026 • Day 84</span></div></a></article>
+<article class="entry" data-day="85"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.fr3n2e62pnrw"><div class="num">85</div><div class="meta"><b>Sevenoaks</b><span>17 February 2026 • Day 85</span></div></a></article>
+<article class="entry" data-day="86"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5bjbfxou3y3b"><div class="num">86</div><div class="meta"><b>Otford</b><span>18 February 2026 • Day 86</span></div></a></article>
+<article class="entry" data-day="87"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wcjc80vczlub"><div class="num">87</div><div class="meta"><b>Aylesford</b><span>19 February 2026 • Day 87</span></div></a></article>
+<article class="entry" data-day="88"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5v482mq66j9p"><div class="num">88</div><div class="meta"><b>Maidstone</b><span>20 February 2026 • Day 88</span></div></a></article>
+<article class="entry" data-day="89"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.pox5mg2ghw8d"><div class="num">89</div><div class="meta"><b>Ashford</b><span>21 February 2026 • Day 89</span></div></a></article>
+<article class="entry" data-day="90"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cfgp24vizq44"><div class="num">90</div><div class="meta"><b>Hythe</b><span>22 February 2026 • Day 90</span></div></a></article>
+<article class="entry" data-day="91"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.bfvg90n7i07b"><div class="num">91</div><div class="meta"><b>Folkstone</b><span>23 February 2026 • Day 91</span></div></a></article>
+<article class="entry" data-day="92"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ihd6w4moz8mm"><div class="num">92</div><div class="meta"><b>Bath Spa</b><span>24 February 2026 • Day 92</span></div></a></article>
+<article class="entry" data-day="93"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y53gps4i9ydc"><div class="num">93</div><div class="meta"><b>Oldfield Park</b><span>25 February 2026 • Day 93</span></div></a></article>
+<article class="entry" data-day="94"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.i1is7h593ohw"><div class="num">94</div><div class="meta"><b>Box</b><span>26 February 2026 • Day 94</span></div></a></article>
+<article class="entry" data-day="95"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.m3h2zo14yvtk"><div class="num">95</div><div class="meta"><b>Corsham</b><span>27 February 2026 • Day 95</span></div></a></article>
+<article class="entry" data-day="96"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ii4k963s7sz5"><div class="num">96</div><div class="meta"><b>Chippenham</b><span>28 February 2026 • Day 96</span></div></a></article>
+<article class="entry" data-day="97"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.gjksq68f8hcv"><div class="num">97</div><div class="meta"><b>Christian Malford</b><span>1 March 2026 • Day 97</span></div></a></article>
+<article class="entry" data-day="98"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.lzc4sk5i9jyj"><div class="num">98</div><div class="meta"><b>Royal Wootton Bassett</b><span>2 March 2026 • Day 98</span></div></a></article>
+<article class="entry" data-day="99"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.4v02jgualz1e"><div class="num">99</div><div class="meta"><b>Swindon</b><span>3 March 2026 • Day 99</span></div></a></article>
+<article class="entry" data-day="100"><a class="entry-head" href="https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qi9tiu26fgg5"><div class="num">100</div><div class="meta"><b>Wanborough</b><span>4 March 2026 • Day 100</span></div></a></article></div>
     </section>
 
     <!-- Protocol / Abstract Map -->
@@ -313,223 +412,391 @@
     <source src="data:audio/mp3;base64,//uQZAAAAAAAAAAAAAAAAAAAAA...trimmed..." type="audio/mp3" />
   </audio>
 
-  <script>
-  ;(() => {
-    const qs=(s,e=document)=>e.querySelector(s), qsa=(s,e=document)=>[...e.querySelectorAll(s)];
-    const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
-    const fmtDate=d=>new Intl.DateTimeFormat('en-GB',{day:'2-digit',month:'short',year:'numeric'}).format(d);
-    const buzz=(dur=12)=>{ if(navigator.vibrate){ try{navigator.vibrate(dur)}catch{}} };
+  
 
-    // Mobile-only gate
-    function mobileGate(){
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-        || (window.innerWidth <= 820 && window.innerHeight <= 1400);
-      qs('#desktop-gate').style.display = isMobile ? 'none' : 'flex';
-      document.body.style.overflow = isMobile ? 'auto' : 'hidden';
-    }
-    window.addEventListener('resize', mobileGate, {passive:true}); mobileGate();
+<script>
+;(() => {
+  /* === CONFIG === */
+  const SHEET_TSV_URL = 'https://docs.google.com/spreadsheets/d/1emwmr6Ty7NCvwy7Xb1K90vFTZ5O0xlZhBO1ldGkYhJ0/export?format=tsv&gid=0';
+  const qs=(s,e=document)=>e.querySelector(s), qsa=(s,e=document)=>[...e.querySelectorAll(s)];
+  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+  const fmtDate=d=>new Intl.DateTimeFormat('en-GB',{day:'2-digit',month:'short',year:'numeric'}).format(d);
+  const buzz=(dur=12)=>{ if(navigator.vibrate){ try{navigator.vibrate(dur)}catch{}} };
+  const START_ISO='2025-11-25', DAYS=100;
+  const nl2br = s => s ? s.replace(/\r?\n/g,'<br>') : '';
+const DAY_LINKS = {
+  1: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.tl7zb09g1zpu',
+  2: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.r8iwvul2fj19',
+  3: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.s5zl45siies',
+  4: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qglzcsfo338l',
+  5: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nphxkpry1ei7',
+  6: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.xcimzt5au4yb',
+  7: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.dtmmltgz5dj3',
+  8: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wedcrxtqitrb',
+  9: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.utz7kua9f4d',
+  10: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.x0pv9drio4u2',
+  11: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cxkpbjjrocqe',
+  12: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ou91kf8j71w3',
+  13: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.c5gmxd54d4mv',
+  14: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.79fstmdez3ry',
+  15: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.jpfwo5tkjb7d',
+  16: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.83cysjxta4m9',
+  17: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.914ubksa1zep',
+  18: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ctv2ghbk3hhz',
+  19: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7wp14wciqwrs',
+  20: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.g3yb9o38z8sx',
+  21: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.2rl0vsjxrv7',
+  22: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.6xsf358pji7h',
+  23: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.va2nd0w1endn',
+  24: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8vmh20oupi30',
+  25: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.zaj88yojtxzm',
+  26: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qz07basogyga',
+  27: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.g0d4u8iy630v',
+  28: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.z9lmztxm304m',
+  29: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nina37h8b9t1',
+  30: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ar0zq275yy7x',
+  31: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y414ttr9i0tu',
+  32: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.mf92y5jkycfw',
+  33: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.jnq5bgmk8xno',
+  34: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cdqn29hxzao4',
+  35: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.9ekzbvjet9p5',
+  36: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7viljwedrhau',
+  37: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.9qs78gi00jq',
+  38: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.kdnx1se5h6vr',
+  39: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ejnoya2vxre7',
+  40: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8190gc4csp6y',
+  41: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.d7t7u3jpq685',
+  42: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.6o2n3gspcp1z',
+  43: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.k5ikz4dmemxh',
+  44: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.7f8q0wlz6xcf',
+  45: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.px083agx14jc',
+  46: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.r8lcwvek5mik',
+  47: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cmi6xfju94e6',
+  48: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.bldc161ijegz',
+  49: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y6ipq5lyi2qo',
+  50: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.pqxdtx8q18ho',
+  51: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ef6f2jxs4rx2',
+  52: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.gp6rinagcjtx',
+  53: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.38hxov8sydzs',
+  54: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.1yuqb27r5rme',
+  55: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.3hg5jj8kmk3u',
+  56: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.b5zmiyeam65m',
+  57: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.p05tkhox9tro',
+  58: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ycwhl3f4zdt8',
+  59: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.n5jk9mn00969',
+  60: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wdce47f8axur',
+  61: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ncos1twxe086',
+  62: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.8fzk9m2hf8sf',
+  63: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.kelw2ode3nep',
+  64: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.p3ehulxmg5rr',
+  65: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.4x8odzexjpsi',
+  66: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.m4ml2ck3gzee',
+  67: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.i6q41p8gbij8',
+  68: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.a2pdrecxoiwg',
+  69: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.hrjjikld0cme',
+  70: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.b40jobxybzrk',
+  71: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.1jvwja8tmmrg',
+  72: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.lxjpr8kgddk',
+  73: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.nu3zsjwxsz4m',
+  74: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.uxuo92qa1inn',
+  75: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.mnjengrkqz5m',
+  76: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5eoq71hf63vl',
+  77: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.fs7i24uqb42',
+  78: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.l9tv98acaufp',
+  79: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.uhr02ss0dwuv',
+  80: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.vpquinda1pqh',
+  81: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.27skoyyd6dqe',
+  82: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.vfnzn7h0ge2s',
+  83: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.skhufryz221',
+  84: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.sy6exqlj53s1',
+  85: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.fr3n2e62pnrw',
+  86: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5bjbfxou3y3b',
+  87: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.wcjc80vczlub',
+  88: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.5v482mq66j9p',
+  89: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.pox5mg2ghw8d',
+  90: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.cfgp24vizq44',
+  91: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.bfvg90n7i07b',
+  92: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ihd6w4moz8mm',
+  93: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.y53gps4i9ydc',
+  94: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.i1is7h593ohw',
+  95: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.m3h2zo14yvtk',
+  96: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.ii4k963s7sz5',
+  97: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.gjksq68f8hcv',
+  98: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.lzc4sk5i9jyj',
+  99: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.4v02jgualz1e',
+  100: 'https://docs.google.com/document/d/1ExhHGRfWSnAJEd8ue_kc6X4Ik-YIJ14N7oM--AAJmqA/edit?tab=t.0#bookmark=id.qi9tiu26fgg5'
+};
 
-    // Tabs
-    const panels={diary:qs('#panel-diary'),map:qs('#panel-map'),about:qs('#panel-about')};
-    const topTabs={diary:qs('#tab-diary'),map:qs('#tab-map'),about:qs('#tab-about')};
-    const bottom={diary:qs('#go-diary'),map:qs('#go-map'),about:qs('#go-about')};
-    function show(name){
-      Object.entries(panels).forEach(([k,el])=>el.hidden=(k!==name));
-      Object.entries(topTabs).forEach(([k,el])=>el.setAttribute('aria-selected', k===name?'true':'false'));
-      Object.entries(bottom).forEach(([k,el])=>{ if(k===name) el.setAttribute('aria-current','page'); else el.removeAttribute('aria-current')});
-      buzz(6); try{ qs('#ping').currentTime=0; qs('#ping').play().catch(()=>{}) }catch{}
-    }
-    topTabs.diary.addEventListener('click',()=>show('diary'));
-    topTabs.map.addEventListener('click',()=>show('map'));
-    topTabs.about.addEventListener('click',()=>show('about'));
-    bottom.diary.addEventListener('click',()=>show('diary'));
-    bottom.map.addEventListener('click',()=>show('map'));
-    bottom.about.addEventListener('click',()=>show('about'));
+const dayUrl = n => `${DAY_URL_BASE}${String(n).padStart(3,'0')}.txt`;
+  const pad3 = n => String(n).padStart(3,'0');
 
-    // Timeline
-    const START_ISO='2025-11-25', DAYS=100;
-    function dayIndexFromToday(now=new Date()){ const s=new Date(START_ISO+'T00:00:00'); return Math.floor((now-s)/(1000*60*60*24)); }
-    function getPhase(diff){ if(diff<0) return 'Pre-launch'; if(diff<DAYS) return 'Live'; return 'Complete'; }
+  /* === Disable mobile-only overlay === */
+  function mobileGate(){
+    qs('#desktop-gate').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  window.addEventListener('resize', mobileGate, {passive:true});
+  mobileGate();
 
-    function renderRing(pct){
-      const c=qs('#ring'), ctx=c.getContext('2d'); const dpr=Math.max(1,window.devicePixelRatio||1);
-      const size=76; c.width=size*dpr; c.height=size*dpr; c.style.width=size+'px'; c.style.height=size+'px'; ctx.scale(dpr,dpr);
-      const cx=size/2,cy=size/2,r=(size/2)-6, start=-Math.PI/2;
-      ctx.clearRect(0,0,size,size);
-      ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=5; ctx.stroke();
-      const grad=ctx.createLinearGradient(0,0,size,0); grad.addColorStop(0,'#0df6e7'); grad.addColorStop(.6,'#ff3fd1'); grad.addColorStop(1,'#b0ff2a');
-      ctx.beginPath(); ctx.arc(cx,cy,r,start,start+(Math.PI*2*pct),false);
-      ctx.strokeStyle=grad; ctx.lineCap='round'; ctx.lineWidth=6; ctx.shadowColor='rgba(13,246,231,.35)'; ctx.shadowBlur=8; ctx.stroke();
-      qs('#pct').textContent=Math.round(pct*100)+'%';
-    }
-
-    function updateCountdown(){
-      const now=new Date(), start=new Date(START_ISO+'T00:00:00'), end=new Date(start.getTime()+(DAYS-1)*86400000);
-      const diff=dayIndexFromToday(now), phase=getPhase(diff);
-      qs('#phase').textContent=phase;
-      if(phase==='Pre-launch'){
-        const d=Math.ceil((start-now)/86400000);
-        qs('#countdown').textContent=`Starts in ${d} day${d===1?'':'s'} · ${fmtDate(start)}`;
-        renderRing(0); qs('#countdown-desc').textContent=`Project starts ${fmtDate(start)}.`;
-      } else if(phase==='Live'){
-        const day=clamp(diff+1,1,DAYS), pct=clamp(day/DAYS,0,1);
-        qs('#countdown').textContent=`Day ${day} of ${DAYS} · Ends ${fmtDate(end)}`;
-        renderRing(pct); qs('#countdown-desc').textContent=`Live: entry ${day} available.`;
-      } else {
-        qs('#countdown').textContent=`Complete · Ended ${fmtDate(end)}`;
-        renderRing(1); qs('#countdown-desc').textContent=`Completed on ${fmtDate(end)}.`;
+  /* === Load diary entries from Google Sheet === */
+  let _dayTextMap = null;
+  async function loadSheetOnce(){
+    if(_dayTextMap) return _dayTextMap;
+    _dayTextMap = new Map();
+    try{
+      const res = await fetch(SHEET_TSV_URL + '&bust=' + Date.now(), {cache:'no-store'});
+      const tsv = await res.text();
+      const lines = tsv.split(/\r?\n/).filter(Boolean);
+      lines.shift(); // header
+      for(const line of lines){
+        const [dayRaw, ...rest] = line.split('\t');
+        const key = (dayRaw||'').trim().padStart(3,'0');
+        const val = rest.join('\t').trim();
+        if(key) _dayTextMap.set(key, val);
       }
+    }catch(e){ console.error('Failed to load sheet', e); }
+    return _dayTextMap;
+  }
+
+  async function fetchDayText(day){
+    const map = await loadSheetOnce();
+    const key = pad3(day);
+    const text = (map && map.get(key)) || '';
+    return text.replace(/[<]/g,'&lt;');
+  }
+
+  /* === Countdown ring, phases, etc. (unchanged) === */
+  function dayIndexFromToday(now=new Date()){ const s=new Date(START_ISO+'T00:00:00'); return Math.floor((now-s)/(1000*60*60*24)); }
+  function getPhase(diff){ if(diff<0) return 'Pre-launch'; if(diff<DAYS) return 'Live'; return 'Complete'; }
+
+  function renderRing(pct){
+    const c=qs('#ring'), ctx=c.getContext('2d'); const dpr=Math.max(1,window.devicePixelRatio||1);
+    const size=76; c.width=size*dpr; c.height=size*dpr; c.style.width=size+'px'; c.style.height=size+'px'; ctx.scale(dpr,dpr);
+    const cx=size/2,cy=size/2,r=(size/2)-6, start=-Math.PI/2;
+    ctx.clearRect(0,0,size,size);
+    ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=5; ctx.stroke();
+    const grad=ctx.createLinearGradient(0,0,size,0);
+    grad.addColorStop(0,'#0df6e7'); grad.addColorStop(.6,'#ff3fd1'); grad.addColorStop(1,'#b0ff2a');
+    ctx.beginPath(); ctx.arc(cx,cy,r,start,start+(Math.PI*2*pct),false);
+    ctx.strokeStyle=grad; ctx.lineCap='round'; ctx.lineWidth=6; ctx.shadowColor='rgba(13,246,231,.35)';
+    ctx.shadowBlur=8; ctx.stroke();
+    qs('#pct').textContent=Math.round(pct*100)+'%';
+  }
+
+  function updateCountdown(){
+    const now=new Date(), start=new Date(START_ISO+'T00:00:00'), end=new Date(start.getTime()+(DAYS-1)*86400000);
+    const diff=dayIndexFromToday(now), phase=getPhase(diff);
+    qs('#phase').textContent=phase;
+    if(phase==='Pre-launch'){
+      const d=Math.ceil((start-now)/86400000);
+      qs('#countdown').textContent=`Starts in ${d} day${d===1?'':'s'} · ${fmtDate(start)}`;
+      renderRing(0);
+    } else if(phase==='Live'){
+      const day=clamp(diff+1,1,DAYS), pct=clamp(day/DAYS,0,1);
+      qs('#countdown').textContent=`Day ${day} of ${DAYS}`;
+      renderRing(pct);
+    } else {
+      qs('#countdown').textContent=`Complete · Ended ${fmtDate(end)}`;
+      renderRing(1);
     }
+  }
 
-    // === Real places + dispersed ghosts ===
-    const REAL_PLACES = [
-      "Bath Spa","Oldfield Park","Box","Corsham","Chippenham","Christian Malford",
-      "Royal Wootton Bassett","Swindon","Wanborough","Ashbury","Lambourn","Newbury","Thatcham","Theale",
-      "Reading","Sonning","Twyford","Wargrave","Shitlake","Henley-on-Thumbs","Maidenhead","Taplow","Burnham",
-      "Slough","Langley","Over","West Drayton","Hayes & Harlington","Southall","Ealing Broadway","Acton Main Line",
-      "Shepherd’s Pie Bush","Hammersmith","Fulham","Battersea","Vauxhall","Brixton","Herne Hill","Tulse Hill",
-      "West Norwood","Crystal Phallus","Penge East","Beckenham Junction","Shortlands","Bumley South","St Mary Cray",
-      "Orpington","Chelsfield","Knockholt","Halstead","Dunton Green","Sevenoaks","Otford","Kemsing",
-      "Wrotham","Borough Green","Plath","Addington","West Malling","East Malling","Aylesford","Maidstone East",
-      "Bearsted","Hollingbourne","Harrietsham","Lenham","Charing","Hothfield","Ashford International",
-      "Willesborough","Smeeth","Brabourne Lees","Aldington","Mersham","Sellindge","Newingreen","Hythe",
-      "Seabrook","Sandgate","Folkstone"
-    ];
-    const GHOSTS = [
-      "Folc-Stone","U-Kent Portal","BΔth Twin","Trans-It","Shift-01","Shift-02","Shift-03","Node-α",
-      "Node-β","Blarna","Bracket-R","Phase-Lag","Echo-Bath","GizFord","Soft-Port"
-    ];
-    function buildDispersedRoute(){
-      const total=100, gc=GHOSTS.length; const slots=new Set();
-      for(let i=0;i<gc;i++){ const idx=Math.round((i+1)*(total/(gc+1)))-1; slots.add(idx); }
-      const out=[]; let r=0,g=0;
-      for(let i=0;i<total;i++){
-        if(slots.has(i)){ out.push(GHOSTS[g%gc]); g++; }
-        else{ out.push(REAL_PLACES[r % REAL_PLACES.length]); r++; }
-      }
-      return out;
+  /* === Build fake route (same as before) === */
+  const REAL_PLACES=["Bath Spa","Oldfield Park","Box","Corsham","Chippenham","Christian Malford","Royal Wootton Bassett","Swindon","Wanborough","Ashbury","Lambourn","Newbury","Thatcham","Theale","Reading","Sonning","Twyford","Wargrave","Henley","Maidenhead","Taplow","Slough","Langley","West Drayton","Ealing Broadway","Acton","Hammersmith","Fulham","Battersea","Brixton","Herne Hill","Crystal Palace","Penge","Beckenham","Orpington","Knockholt","Sevenoaks","Otford","Aylesford","Maidstone","Ashford","Hythe","Folkstone"];
+  const GHOSTS=["Node-α","Node-β","Node-γ","Phase-Lag","Echo-Bath"];
+  function buildDispersedRoute(){
+    const total=100,gc=GHOSTS.length,slots=new Set();
+    for(let i=0;i<gc;i++){ const idx=Math.round((i+1)*(total/(gc+1)))-1; slots.add(idx); }
+    const out=[]; let r=0,g=0;
+    for(let i=0;i<total;i++){
+      if(slots.has(i)){ out.push(GHOSTS[g%gc]); g++; }
+      else{ out.push(REAL_PLACES[r%REAL_PLACES.length]); r++; }
     }
+    return out;
+  }
 
-    // === Option 1: pull text from .txt files hosted elsewhere ===
-    // Primary source: mocksim.org absolute URLs
-    const ENTRY_BASE_URL = 'https://mocksim.org/folkstone-entries/';
-
-    async function fetchDayText(day){
-      const key=`fp-daytxt-${day}-v1`;
-      const cached=localStorage.getItem(key);
-      if(cached) return cached;
-
-      const pad=String(day).padStart(3,'0');
-      const url = `${ENTRY_BASE_URL}day-${pad}.txt`;
-      try{
-        const res = await fetch(url, { cache:'no-store' });
-        if(!res.ok) throw new Error('not found');
-        const text = await res.text();
-        const cleaned = text.replace(/[<]/g,'&lt;'); // basic sanitise
-        localStorage.setItem(key, cleaned);
-        return cleaned;
-      }catch(e){
-        return ''; // gracefully show placeholder if missing/CORS blocked
-      }
-    }
-    const nl2br = s => s ? s.replace(/\r?\n/g,'<br>') : '';
-
-    // Diary rendering with lazy text loader
-    function renderDiary(){
-      const list=qs('#diary-list');
-      const places=buildDispersedRoute();
-      const nowDiff=dayIndexFromToday(new Date());
-      const phase=getPhase(nowDiff);
-
-      list.innerHTML='';
-      for(let i=0;i<100;i++){
-        const dayNum=i+1;
-        const unlocked=(phase==='Live' && nowDiff>=i) || (phase==='Complete');
-        const plannedDate=new Date(new Date(START_ISO+'T00:00:00').getTime()+i*86400000);
-
-        const el=document.createElement('article');
-        el.className='entry'; if(!unlocked) el.setAttribute('aria-disabled','true');
-        el.setAttribute('data-day',dayNum);
-
-        const head=document.createElement('button');
-        head.className='entry-head'; head.setAttribute('aria-expanded','false'); head.disabled=!unlocked;
-        head.innerHTML=`
-          <div class="num">${String(dayNum).padStart(2,'0')}</div>
-          <div class="meta">
-            <b>${places[i]}</b>
-            <span>${fmtDate(plannedDate)} • Day ${dayNum}</span>
-          </div>
-          <span class="pill">${unlocked ? 'View' : 'Locked'}</span>
-        `;
-
-        const body=document.createElement('div'); body.className='body';
-        const truthId=`truth-${dayNum}`;
-        body.innerHTML=`
-          <div class="card">
-            <p style="margin:0 0 6px"><strong>Entry</strong></p>
-            <p class="daytext" style="margin:0;color:var(--muted)">${unlocked ? 'Loading…' : 'Locked until date.'}</p>
-            <div class="truth" style="margin-top:8px">
-              <div id="${truthId}" class="toggle" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle Visited/Le Feiceáil">
-                <div class="knob"></div>
-              </div>
-              <span><b class="truth-label">Le Feiceáil?</b> Tap to toggle ambiguity.</span>
+  /* === Diary rendering (with Google Sheet loader) === */
+  function renderDiary() {
+    const list = qs('#diary-list');
+    const places = buildDispersedRoute();
+    list.innerHTML = '';
+    
+    for(let i = 0; i < 100; i++) {
+        const dayNum = i + 1;
+        const plannedDate = new Date(new Date(START_ISO + 'T00:00:00').getTime() + i * 86400000);
+        const url = DAY_LINKS[dayNum] || '#';
+        
+        const el = document.createElement('article');
+        el.className = 'entry';
+        el.setAttribute('data-day', dayNum);
+        
+        const head = document.createElement('a');
+        head.className = 'entry-head';
+        head.href = url;
+        head.rel = 'noopener';
+        head.innerHTML = `
+            <div class="num">${String(dayNum).padStart(2,'0')}</div>
+            <div class="meta">
+                <b>${places[i]}</b>
+                <span>${fmtDate(plannedDate)} • Day ${String(dayNum).padStart(2,'0')}</span>
             </div>
-          </div>
+            <span class="pill">View</span>
         `;
 
-        head.addEventListener('click',()=>{ const open=el.classList.toggle('open'); head.setAttribute('aria-expanded',open?'true':'false'); if(open) buzz(8); });
-        head.addEventListener('keydown',(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); head.click(); }});
+        const body = document.createElement('div');
+        body.className = 'body';
+        const truthId = `truth-${dayNum}`;
+        body.innerHTML = `
+            <div class="card">
+                <p style="margin:0 0 6px"><strong>Entry</strong></p>
+                <p class="daytext" style="margin:0;color:var(--muted)">Loading…</p>
+                <div class="truth" style="margin-top:8px">
+                    <div id="${truthId}" class="toggle" role="switch" aria-checked="false" tabindex="0">
+                        <div class="knob"></div>
+                    </div>
+                    <span><b class="truth-label">Le Feiceáil?</b> Tap to toggle ambiguity.</span>
+                </div>
+            </div>
+        `;
 
-        el.appendChild(head); el.appendChild(body); list.appendChild(el);
+        head.addEventListener('click', () => {
+            const open = el.classList.toggle('open');
+            head.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if(open) buzz(8);
+        });
 
-        // Lazy-load text on first open (only if unlocked)
-        if(unlocked){
-          let loaded=false;
-          const loadText = async ()=>{
-            if(loaded) return; loaded=true;
-            const t = await fetchDayText(dayNum);
-            const target = body.querySelector('.daytext');
-            target.innerHTML = t ? nl2br(t) : 'No diary text published yet.';
-          };
-          // Load when the entry opens
-          const obs = new MutationObserver(()=>{ if(el.classList.contains('open')) loadText(); });
-          obs.observe(el, { attributes:true, attributeFilter:['class'] });
+        el.appendChild(head);
+        el.appendChild(body);
+        list.appendChild(el);
 
-          // Toggle ambiguity switch persistence
-          const toggle=body.querySelector('#'+truthId), label=body.querySelector('.truth-label');
-          const saved=localStorage.getItem(`fp-truth-${dayNum}`)==='true';
-          if(saved){ toggle.setAttribute('aria-checked','true'); label.textContent='Visited?'; }
-          const setState=(val)=>{ toggle.setAttribute('aria-checked',val?'true':'false'); localStorage.setItem(`fp-truth-${dayNum}`,val?'true':'false'); label.textContent=val?'Visited?':'Le Feiceáil?'; buzz(6); try{qs('#ping').currentTime=0;qs('#ping').play().catch(()=>{})}catch{} };
-          toggle.addEventListener('click',()=>setState(toggle.getAttribute('aria-checked')!=='true'));
-          toggle.addEventListener('keydown',(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); setState(toggle.getAttribute('aria-checked')!=='true'); }});
-        }
-      }
+        setupLazyLoading(el, body, dayNum);
+        setupTruthToggle(body, truthId, dayNum);
+    }
+}
+
+function setupLazyLoading(el, body, dayNum) {
+    let loaded = false;
+    const loadText = async () => {
+        if(loaded) return;
+        loaded = true;
+        const text = await fetchDayText(dayNum);
+        const target = body.querySelector('.daytext');
+        target.innerHTML = text ? nl2br(text) : 'No diary text published yet.';
+    };
+
+    const observer = new MutationObserver(() => {
+        if(el.classList.contains('open')) loadText();
+    });
+    observer.observe(el, {attributes: true, attributeFilter: ['class']});
+}
+
+function setupTruthToggle(body, truthId, dayNum) {
+    const toggle = body.querySelector('#' + truthId);
+    const label = body.querySelector('.truth-label');
+    const saved = localStorage.getItem(`fp-truth-${dayNum}`) === 'true';
+    
+    if(saved) {
+        toggle.setAttribute('aria-checked', 'true');
+        label.textContent = 'Visited?';
     }
 
-    // Abstract route progress nodes
-    function renderNodes(){
-      const g=qs('#nodes'); const count=16; g.innerHTML='';
-      for(let i=0;i<count;i++){
-        const t=i/(count-1), x=40+(560-40)*t, y=210-70*Math.sin(t*Math.PI)-120*Math.pow(t,1.6);
-        const node=document.createElementNS('http://www.w3.org/2000/svg','g'); node.setAttribute('data-t',t.toFixed(3));
-        const halo=document.createElementNS('http://www.w3.org/2000/svg','circle'); halo.setAttribute('cx',x); halo.setAttribute('cy',y); halo.setAttribute('r',12); halo.setAttribute('fill','url(#halo)'); halo.setAttribute('opacity','.0');
-        const dot=document.createElementNS('http://www.w3.org/2000/svg','circle'); dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('r',3.2); dot.setAttribute('fill','url(#g1)'); dot.setAttribute('opacity','.25');
-        node.appendChild(halo); node.appendChild(dot); g.appendChild(node);
-      }
-      const diff=dayIndexFromToday(new Date()), phase=getPhase(diff); let pct=0;
-      if(phase==='Live') pct=clamp((diff+1)/100,0,1); if(phase==='Complete') pct=1;
-      qsa('#nodes g').forEach(n=>{ const t=parseFloat(n.getAttribute('data-t')); const active=t<=pct; const [h,d]=n.children; h.setAttribute('opacity',active?'.6':'.0'); d.setAttribute('opacity',active?'1':'.25'); });
-    }
+    const setState = (val) => {
+        toggle.setAttribute('aria-checked', val ? 'true' : 'false');
+        localStorage.setItem(`fp-truth-${dayNum}`, val ? 'true' : 'false');
+        label.textContent = val ? 'Visited?' : 'Le Feiceáil?';
+        buzz(6);
+    };
 
-    function init(){
-      updateCountdown(); renderDiary(); renderNodes(); show('diary');
-      const tick=()=>{ updateCountdown(); renderDiary(); renderNodes(); };
-      const msToNextHour=()=>{ const n=new Date(); const next=new Date(n); next.setHours(n.getHours()+1,0,0,0); return next-n; };
-      setTimeout(()=>{ tick(); setInterval(tick,3600000); }, msToNextHour());
-      window.addEventListener('focus', tick);
+    toggle.addEventListener('click', () => setState(toggle.getAttribute('aria-checked') !== 'true'));
+}
+
+  /* === Map node rendering (unchanged) === */
+  function renderNodes(){
+    const g=qs('#nodes'); const count=16; g.innerHTML='';
+    for(let i=0;i<count;i++){
+      const t=i/(count-1), x=40+(560-40)*t, y=210-70*Math.sin(t*Math.PI)-120*Math.pow(t,1.6);
+      const node=document.createElementNS('http://www.w3.org/2000/svg','g'); node.setAttribute('data-t',t.toFixed(3));
+      const halo=document.createElementNS('http://www.w3.org/2000/svg','circle'); halo.setAttribute('cx',x); halo.setAttribute('cy',y); halo.setAttribute('r',12); halo.setAttribute('fill','url(#halo)'); halo.setAttribute('opacity','.0');
+      const dot=document.createElementNS('http://www.w3.org/2000/svg','circle'); dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('r',3.2); dot.setAttribute('fill','url(#g1)'); dot.setAttribute('opacity','.25');
+      node.appendChild(halo); node.appendChild(dot); g.appendChild(node);
     }
-    document.addEventListener('DOMContentLoaded', init);
-  })();
-  </script>
+  }
+
+  /* === Tab switching etc. (same as before) === */
+  const panels={diary:qs('#panel-diary'),map:qs('#panel-map'),about:qs('#panel-about')};
+  const topTabs={diary:qs('#tab-diary'),map:qs('#tab-map'),about:qs('#tab-about')};
+  const bottom={diary:qs('#go-diary'),map:qs('#go-map'),about:qs('#go-about')};
+  function show(name){
+    Object.entries(panels).forEach(([k,el])=>el.hidden=(k!==name));
+    Object.entries(topTabs).forEach(([k,el])=>el.setAttribute('aria-selected', k===name?'true':'false'));
+    Object.entries(bottom).forEach(([k,el])=>{if(k===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
+    buzz(6);
+  }
+  topTabs.diary.addEventListener('click',()=>show('diary'));
+  topTabs.map.addEventListener('click',()=>show('map'));
+  topTabs.about.addEventListener('click',()=>show('about'));
+  bottom.diary.addEventListener('click',()=>show('diary'));
+  bottom.map.addEventListener('click',()=>show('map'));
+  bottom.about.addEventListener('click',()=>show('about'));
+
+  /* === Init === */
+  function init(){
+    updateCountdown();
+    renderDiary();
+    renderNodes();
+    show('diary');
+    window.addEventListener('focus', updateCountdown);
+  }
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+
+
+
+
+
+<script>
+(function(){
+  const panelByKey = {
+    diary: document.getElementById('panel-diary'),
+    map: document.getElementById('panel-map'),
+    about: document.getElementById('panel-about')
+  };
+  const tabIds = ['tab-diary','tab-map','tab-about','go-diary','go-map','go-about'];
+  function show(which){
+    // hide all
+    for(const k in panelByKey){ panelByKey[k].style.display='none'; }
+    // show chosen
+    (panelByKey[which]||panelByKey.diary).style.display='block';
+    // reflect selection on all tabs
+    tabIds.forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      const key = id.includes('diary')?'diary':id.includes('map')?'map':'about';
+      el.setAttribute('aria-selected', String(key===which));
+    });
+  }
+  // attach listeners
+  tabIds.forEach(id=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    const key = id.includes('diary')?'diary':id.includes('map')?'map':'about';
+    el.addEventListener('click', ()=>show(key));
+  });
+  // default
+  show('diary');
+
+  // Mobile gate: desktop overlay
+  function mobileGate(){
+    const w = Math.max(document.documentElement.clientWidth, window.innerWidth||0);
+    const gate = document.getElementById('desktop-gate');
+    if(!gate) return;
+    gate.style.display = (w>768) ? 'flex' : 'none';
+  }
+  window.addEventListener('resize', mobileGate, {passive:true});
+  mobileGate();
+})();
+</script>
+
 </body>
 </html>
