@@ -154,9 +154,9 @@
   <section class="hero-media" aria-label="Project image">
     <div class="hero-figure">
       <picture>
-        <source type="image/avif" srcset="/timespacetransmat/Mark-OKnee/folkstone-hero-16x9.avif" />
+        <source type="image/avif" srcset="./media/folkstone-hero-16x9.avif" />
         <source type="image/webp" srcset="./media/folkstone-hero-16x9.webp" />
-        <img src="/timespacetransmat/Mark-OKnee/folkstone-hero-16x9.avif" alt="Silhouette and turbines composition, landscape 16:9." loading="eager" />
+        <img src="./media/folkstone-hero-16x9.jpg" alt="Silhouette and turbines composition, landscape 16:9." loading="eager" />
       </picture>
       <div class="hero-mask" aria-hidden="true"></div>
     </div>
@@ -169,7 +169,7 @@
 
 
 <p>
-  Mark O’Knee will re-stage a famous journey between Bath and Folkestone UK over 
+  Mark O’Knee will re-stage a famous journey between Bath and Folkestone ‘U’K over 
   <b>one hundred days</b>, beginning <b>25 November 2025</b>. Daily diary entries will appear along the route. 
   Unorthodox techniques may be employed. There are many forms of transport, and different ways to travel.
 </p>
@@ -617,38 +617,87 @@ const dayUrl = n => `${DAY_URL_BASE}${String(n).padStart(3,'0')}.txt`;
     return out;
   }
 
-  /* === Diary rendering === */
-function renderDiary() {
-    const list = qs('#diary-list');
-    const places = buildDispersedRoute();
-    list.innerHTML = '';
-    
-    for(let i = 0; i < 100; i++) {
-        const dayNum = i + 1;
-        const plannedDate = new Date(new Date(START_ISO + 'T00:00:00').getTime() + i * 86400000);
-        const url = DAY_LINKS[dayNum] || '#';
-        
-        const el = document.createElement('article');
-        el.className = 'entry';
-        el.setAttribute('data-day', dayNum);
-        
-        const head = document.createElement('a');
-        head.className = 'entry-head';
-        head.href = url;
-        head.rel = 'noopener';
-        head.innerHTML = `
-            <div class="num">${String(dayNum).padStart(2,'0')}</div>
-            <div class="meta">
-                <b>${places[i]}</b>
-                <span>${fmtDate(plannedDate)} • Day ${String(dayNum).padStart(2,'0')}</span>
-            </div>
-            <span class="pill">View</span>
-        `;
-
-        el.appendChild(head);
-        list.appendChild(el);
-    }
+  /* === Diary rendering (with Google Sheet loader) === */
+  function renderDiary(){
+  const list = qs('#diary-list');
+  const places = buildDispersedRoute();
+  list.innerHTML = '';
+  for(let i=0;i<100;i++){
+    const dayNum = i+1;
+    const plannedDate = new Date(new Date(START_ISO + 'T00:00:00').getTime() + i*86400000);
+    const url = DAY_LINKS[dayNum] || '#';
+    const el = document.createElement('article');
+    el.className = 'entry';
+    el.setAttribute('data-day', dayNum);
+    const head = document.createElement('a');
+    head.className = 'entry-head';
+    head.href = url;
+    head.rel = 'noopener';
+    head.innerHTML = `
+      <div class="num">${String(dayNum).padStart(2,'0')}</div>
+      <div class="meta">
+        <b>${places[i]}</b>
+        <span>${fmtDate(plannedDate)} • Day ${String(dayNum).padStart(2,'0')}</span>
+      </div>`;
+    el.appendChild(head);
+    list.appendChild(el);
+  }
 }
+</div>
+      <div class="meta">
+        <b>${places[i]}</b>
+        <span>${fmtDate(plannedDate)} • Day ${dayNum}</span>
+      </div>`;
+    el.appendChild(head);
+    list.appendChild(el);
+  }
+}
+</div>
+        <div class="meta">
+          <b>${places[i]}</b>
+          <span>${fmtDate(plannedDate)} • Day ${dayNum}</span>
+        </div>
+        <span class="pill">View</span>`;
+
+      const body=document.createElement('div');
+      body.className='body';
+      const truthId=`truth-${dayNum}`;
+      body.innerHTML=`
+        <div class="card">
+          <p style="margin:0 0 6px"><strong>Entry</strong></p>
+          <p class="daytext" style="margin:0;color:var(--muted)">Loading…</p>
+          <div class="truth" style="margin-top:8px">
+            <div id="${truthId}" class="toggle" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle Visited/Le Feiceáil">
+              <div class="knob"></div>
+            </div>
+            <span><b class="truth-label">Le Feiceáil?</b> Tap to toggle ambiguity.</span>
+          </div>
+        </div>`;
+
+      head.addEventListener('click',()=>{const open=el.classList.toggle('open');head.setAttribute('aria-expanded',open?'true':'false');if(open)buzz(8);});
+      head.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();head.click();}});
+
+      el.appendChild(head); el.appendChild(body); list.appendChild(el);
+
+      let loaded=false;
+      const loadText=async()=>{
+        if(loaded) return; loaded=true;
+        const t=await fetchDayText(dayNum);
+        const target=body.querySelector('.daytext');
+        target.innerHTML=t?nl2br(t):'No diary text published yet.';
+      };
+      const obs=new MutationObserver(()=>{if(el.classList.contains('open'))loadText();});
+      obs.observe(el,{attributes:true,attributeFilter:['class']});
+
+      // toggle switch
+      const toggle=body.querySelector('#'+truthId),label=body.querySelector('.truth-label');
+      const saved=localStorage.getItem(`fp-truth-${dayNum}`)==='true';
+      if(saved){toggle.setAttribute('aria-checked','true');label.textContent='Visited?';}
+      const setState=(val)=>{toggle.setAttribute('aria-checked',val?'true':'false');localStorage.setItem(`fp-truth-${dayNum}`,val?'true':'false');label.textContent=val?'Visited?':'Le Feiceáil?';buzz(6);};
+      toggle.addEventListener('click',()=>setState(toggle.getAttribute('aria-checked')!=='true'));
+      toggle.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setState(toggle.getAttribute('aria-checked')!=='true');}});
+    }
+  }
 
   /* === Map node rendering (unchanged) === */
   function renderNodes(){
